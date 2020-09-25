@@ -1,0 +1,433 @@
+2020-02-11 16:59:06 | INFO | CASA Version 5.4.2-5
+2020-02-11 16:59:06 | INFO | Starting import vla data
+2020-02-11 16:59:06 | INFO | Create directory: ./summary/
+2020-02-11 16:59:06 | INFO | Input files: ['../../data/VLA/AV230/AV230_G970906.xp1', '../../data/VLA/AV230/AV230_G970906.xp2']
+2020-02-11 16:59:06 | INFO | Output msfile: AV230.ms
+2020-02-11 16:59:06 | INFO | Executing command: importvla(archivefiles = ['../../data/VLA/AV230/AV230_G970906.xp1', '../../data/VLA/AV230/AV230_G970906.xp2'], vis = 'AV230.ms')
+2020-02-11 16:59:23 | INFO | Completed import vla data
+2020-02-11 16:59:23 | INFO | Starting listobs summary.
+2020-02-11 16:59:23 | INFO | Writing listobs summary of data set to: ./summary/AV230.ms.listobs.summary
+2020-02-11 16:59:23 | INFO | Completed listobs summary.
+2020-02-11 16:59:23 | INFO | Starting data transform.
+2020-02-11 16:59:23 | INFO | Executing command: mstransform(vis='AV230.ms', outputvis='AV230.ms_1', field='0134+329, H', spw='2, 3', observation='')
+2020-02-11 16:59:27 | INFO | Updating config file (AV230_params.cfg) to set mstransform values.
+2020-02-11 16:59:27 | INFO | Deleted: AV230.ms.flagversions
+2020-02-11 16:59:27 | INFO | Create directory: AV230.ms.flagversions
+2020-02-11 16:59:27 | INFO | Deleted: AV230.ms
+2020-02-11 16:59:27 | INFO | Moved AV230.ms_1 to AV230.ms
+2020-02-11 16:59:27 | INFO | Completed data transformation.
+2020-02-11 16:59:27 | INFO | Starting listobs summary.
+2020-02-11 16:59:27 | INFO | Deleted: ./summary/AV230.ms.listobs.summary
+2020-02-11 16:59:27 | INFO | Writing listobs summary of data set to: ./summary/AV230.ms.listobs.summary
+2020-02-11 16:59:27 | INFO | Completed listobs summary.
+2020-02-11 16:59:27 | INFO | Reading ms file information for MS: AV230.ms
+2020-02-11 16:59:27 | INFO | Sources in MS AV230.ms: 0134+329,H
+2020-02-11 16:59:27 | INFO | > Sources (2): 0134+329,H
+2020-02-11 16:59:27 | INFO | > Number of spw: 2
+2020-02-11 16:59:27 | INFO | > Channels per spw: 63
+2020-02-11 16:59:27 | INFO | Starting plotting elevation.
+2020-02-11 16:59:27 | INFO | Create directory: ./plots/
+2020-02-11 16:59:27 | INFO | Plotting elevation to: ./plots/AV230.ms_elevation.png
+2020-02-11 16:59:35 | INFO | Completed plotting elevation.
+2020-02-11 16:59:35 | INFO | Starting plotting antenna positions.
+2020-02-11 16:59:35 | INFO | Plotting antenna positions to: ./plots/AV230.ms_antpos.png
+2020-02-11 16:59:36 | INFO | Completed plotting antenna positions.
+2020-02-11 16:59:36 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-02-11 16:59:39 | INFO | CASA Version 5.4.2-5
+2020-02-11 16:59:39 | INFO | Saving flag version as: Original.
+2020-02-11 16:59:39 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='save', versionname='Original')
+2020-02-11 16:59:40 | INFO | Completed saving flag version.
+2020-02-11 16:59:40 | INFO | Starting manual flagging.
+2020-02-11 16:59:40 | INFO | Applying flags from manual_flags.list
+2020-02-11 16:59:40 | WARNING | 'manual_flags.list' does not exist. Continuing without manual flagging.
+2020-02-11 16:59:40 | INFO | Starting basic flagging.
+2020-02-11 16:59:40 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-02-11 16:59:40 | INFO | Executing command: flagdata(vis='AV230.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-02-11 16:59:44 | INFO | Flagging zero amplitude data.
+2020-02-11 16:59:44 | INFO | Executing command: flagdata(vis='AV230.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-02-11 16:59:48 | INFO | Flagging first 5.0 s of every scan.
+2020-02-11 16:59:48 | INFO | Executing command: flagdata(vis='AV230.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-02-11 16:59:51 | INFO | Completed basic flagging.
+2020-02-11 16:59:51 | INFO | Starting running TFCrop.
+2020-02-11 16:59:51 | INFO | Executing command: flagdata(vis='AV230.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-02-11 17:00:05 | INFO | Completed running TFCrop.
+2020-02-11 17:00:05 | INFO | Removing flag version: initial.
+2020-02-11 17:00:05 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='delete', versionname='initial')
+2020-02-11 17:00:05 | INFO | Completed removing flag version.
+2020-02-11 17:00:05 | INFO | Saving flag version as: initial.
+2020-02-11 17:00:05 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='save', versionname='initial')
+2020-02-11 17:00:05 | INFO | Completed saving flag version.
+2020-02-11 17:00:05 | INFO | Starting writing flag summary to: ./summary/AV230.ms.initialflags.summary.
+2020-02-11 17:00:07 | INFO | Total flagged data: 14.27%
+2020-02-11 17:00:07 | INFO | Completed writing flag summary.
+2020-02-11 17:00:07 | INFO | Starting reference antenna selection.
+2020-02-11 17:00:07 | INFO | Reference antenna already set as: VA24.
+2020-02-11 17:00:07 | INFO | Starting set field purposes.
+2020-02-11 17:00:07 | INFO | Target field(s) already set as: ['H'].
+2020-02-11 17:00:07 | INFO | Flux calibrator already set as: ['0134+329', '0134+329'].
+2020-02-11 17:00:07 | INFO | Flux models already set as: ['3C48_L.im', '3C48_L.im'].
+2020-02-11 17:00:07 | INFO | Bandpass calibrator already set as: ['0134+329', '0134+329'].
+2020-02-11 17:00:07 | INFO | Phase calibrator already set as: ['0134+329'].
+2020-02-11 17:00:07 | INFO | No changes made to preset target and calibrator fields.
+2020-02-11 17:00:07 | INFO | Completed setting field purposes.
+2020-02-11 17:00:07 | INFO | Making flags plots for flag version: initial
+2020-02-11 17:00:07 | INFO | Making flags plots for H.
+2020-02-11 17:00:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H_freq_ob0_spw0.png
+2020-02-11 17:00:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H_time_ob0_spw0.png
+2020-02-11 17:00:18 | INFO | Making flags plots for H.
+2020-02-11 17:00:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H_freq_ob0_spw1.png
+2020-02-11 17:00:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H_time_ob0_spw1.png
+2020-02-11 17:00:28 | INFO | Making flags plots for H.
+2020-02-11 17:00:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H_freq_ob1_spw0.png
+2020-02-11 17:00:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H_time_ob1_spw0.png
+2020-02-11 17:00:40 | INFO | Making flags plots for H.
+2020-02-11 17:00:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H_freq_ob1_spw1.png
+2020-02-11 17:00:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H_time_ob1_spw1.png
+2020-02-11 17:00:50 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:00:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw0.png
+2020-02-11 17:00:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw0.png
+2020-02-11 17:00:58 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:00:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw1.png
+2020-02-11 17:01:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw1.png
+2020-02-11 17:01:06 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:01:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw0.png
+2020-02-11 17:01:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw0.png
+2020-02-11 17:01:13 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:01:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw1.png
+2020-02-11 17:01:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw1.png
+2020-02-11 17:01:20 | INFO | Completed flags plots 
+2020-02-11 17:01:20 | INFO | Starting calibration.
+2020-02-11 17:01:20 | INFO | Create directory: ./cal_tabs/
+2020-02-11 17:01:20 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-02-11 17:01:20 | INFO | Executing command: gencal(vis='AV230.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-02-11 17:01:21 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-02-11 17:01:21 | INFO | Executing command: setjy(vis='AV230.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-02-11 17:01:22 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-02-11 17:01:24 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-02-11 17:01:24 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA24', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1')
+2020-02-11 17:01:29 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-02-11 17:01:29 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA24', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1')
+2020-02-11 17:01:36 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-02-11 17:01:37 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-02-11 17:01:39 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-02-11 17:01:39 | INFO | Executing command: bandpass(vis='AV230.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329', refant='VA24', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1')
+2020-02-11 17:01:44 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-02-11 17:01:45 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-02-11 17:01:45 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/intphase.gcal', refant='VA24', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1')
+2020-02-11 17:01:52 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-02-11 17:01:52 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/scanphase.gcal', refant='VA24', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1')
+2020-02-11 17:01:57 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-02-11 17:01:57 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/amp.gcal', refant='VA24', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1')
+2020-02-11 17:02:02 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-02-11 17:02:03 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-02-11 17:02:05 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-02-11 17:02:06 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-02-11 17:02:08 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-02-11 17:02:08 | INFO | Applying calibration to: 0134+329
+2020-02-11 17:02:08 | INFO | Executing command: applycal(vis='AV230.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:02:11 | INFO | Applying calibration to: 0134+329
+2020-02-11 17:02:11 | INFO | Executing command: applycal(vis='AV230.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:02:14 | INFO | Plotting corrected phases for ['0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-02-11 17:02:16 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-02-11 17:02:18 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-02-11 17:02:18 | INFO | Applying calibration to: H
+2020-02-11 17:02:18 | INFO | Executing command: applycal(vis='AV230.ms', field='H', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:02:22 | INFO | Completed calibration.
+2020-02-11 17:02:22 | INFO | Starting running rflag with a threshold of 4.0.
+2020-02-11 17:02:22 | INFO | Executing command: flagdata(vis='AV230.ms', mode='rflag', action='apply', datacolumn='corrected', freqdevscale=4.0, timedevscale=4.0, display='', flagbackup=False)
+2020-02-11 17:02:44 | INFO | Completed running rflag.
+2020-02-11 17:02:44 | INFO | Removing flag version: rflag.
+2020-02-11 17:02:44 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='delete', versionname='rflag')
+2020-02-11 17:02:44 | INFO | Completed removing flag version.
+2020-02-11 17:02:44 | INFO | Saving flag version as: rflag.
+2020-02-11 17:02:44 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='save', versionname='rflag')
+2020-02-11 17:02:44 | INFO | Completed saving flag version.
+2020-02-11 17:02:44 | INFO | Starting writing flag summary to: ./summary/AV230.ms.rflagflags.summary.
+2020-02-11 17:02:46 | INFO | Total flagged data: 19.61%
+2020-02-11 17:02:46 | INFO | Completed writing flag summary.
+2020-02-11 17:02:46 | INFO | Starting extending existing flags.
+2020-02-11 17:02:46 | INFO | Executing command: flagdata(vis='AV230.ms', mode='extend', spw='', extendpols=True, action='apply', display='', flagbackup=False)
+2020-02-11 17:02:49 | INFO | Executing command: flagdata(vis='AV230.ms', mode='extend', spw='', growtime=75.0, growfreq=90.0, action='apply', display='', flagbackup=False)
+2020-02-11 17:02:52 | INFO | Completed extending existing flags.
+2020-02-11 17:02:52 | INFO | Removing flag version: extended.
+2020-02-11 17:02:52 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='delete', versionname='extended')
+2020-02-11 17:02:52 | INFO | Completed removing flag version.
+2020-02-11 17:02:52 | INFO | Saving flag version as: extended.
+2020-02-11 17:02:52 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='save', versionname='extended')
+2020-02-11 17:02:52 | INFO | Completed saving flag version.
+2020-02-11 17:02:52 | INFO | Starting writing flag summary to: ./summary/AV230.ms.extendedflags.summary.
+2020-02-11 17:02:54 | INFO | Total flagged data: 19.89%
+2020-02-11 17:02:54 | INFO | Completed writing flag summary.
+2020-02-11 17:02:54 | INFO | Starting calibration.
+2020-02-11 17:02:54 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-02-11 17:02:54 | INFO | Executing command: gencal(vis='AV230.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-02-11 17:02:54 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-02-11 17:02:54 | INFO | Executing command: setjy(vis='AV230.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-02-11 17:02:56 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-02-11 17:02:58 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-02-11 17:02:58 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA24', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1')
+2020-02-11 17:03:03 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-02-11 17:03:03 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA24', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1')
+2020-02-11 17:03:10 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-02-11 17:03:11 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-02-11 17:03:13 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-02-11 17:03:13 | INFO | Executing command: bandpass(vis='AV230.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329', refant='VA24', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1')
+2020-02-11 17:03:18 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-02-11 17:03:20 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-02-11 17:03:20 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/intphase.gcal', refant='VA24', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1')
+2020-02-11 17:03:27 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-02-11 17:03:27 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/scanphase.gcal', refant='VA24', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1')
+2020-02-11 17:03:31 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-02-11 17:03:31 | INFO | Executing command: gaincal(vis='AV230.ms', field='0134+329', caltable='./cal_tabs/amp.gcal', refant='VA24', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1')
+2020-02-11 17:03:36 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-02-11 17:03:38 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-02-11 17:03:39 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-02-11 17:03:41 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-02-11 17:03:42 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-02-11 17:03:42 | INFO | Applying calibration to: 0134+329
+2020-02-11 17:03:42 | INFO | Executing command: applycal(vis='AV230.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:03:45 | INFO | Applying calibration to: 0134+329
+2020-02-11 17:03:45 | INFO | Executing command: applycal(vis='AV230.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:03:48 | INFO | Plotting corrected phases for ['0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-02-11 17:03:50 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-02-11 17:03:52 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-02-11 17:03:52 | INFO | Applying calibration to: H
+2020-02-11 17:03:52 | INFO | Executing command: applycal(vis='AV230.ms', field='H', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-02-11 17:03:56 | INFO | Completed calibration.
+2020-02-11 17:03:56 | INFO | Removing flag version: final.
+2020-02-11 17:03:56 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='delete', versionname='final')
+2020-02-11 17:03:56 | INFO | Completed removing flag version.
+2020-02-11 17:03:56 | INFO | Saving flag version as: final.
+2020-02-11 17:03:56 | INFO | Executing command: flagmanager(vis='AV230.ms', mode='save', versionname='final')
+2020-02-11 17:03:57 | INFO | Completed saving flag version.
+2020-02-11 17:03:57 | INFO | Starting writing flag summary to: ./summary/AV230.ms.finalflags.summary.
+2020-02-11 17:03:58 | INFO | Total flagged data: 19.89%
+2020-02-11 17:03:58 | INFO | Completed writing flag summary.
+2020-02-11 17:03:58 | INFO | Making flags plots for flag version: final
+2020-02-11 17:03:58 | INFO | Making flags plots for H.
+2020-02-11 17:03:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H_freq_ob0_spw0.png
+2020-02-11 17:04:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H_time_ob0_spw0.png
+2020-02-11 17:04:09 | INFO | Making flags plots for H.
+2020-02-11 17:04:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H_freq_ob0_spw1.png
+2020-02-11 17:04:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H_time_ob0_spw1.png
+2020-02-11 17:04:21 | INFO | Making flags plots for H.
+2020-02-11 17:04:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H_freq_ob1_spw0.png
+2020-02-11 17:04:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H_time_ob1_spw0.png
+2020-02-11 17:04:33 | INFO | Making flags plots for H.
+2020-02-11 17:04:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H_freq_ob1_spw1.png
+2020-02-11 17:04:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H_time_ob1_spw1.png
+2020-02-11 17:04:44 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:04:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw0.png
+2020-02-11 17:04:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw0.png
+2020-02-11 17:04:54 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:04:54 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw1.png
+2020-02-11 17:04:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw1.png
+2020-02-11 17:05:01 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:05:01 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw0.png
+2020-02-11 17:05:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw0.png
+2020-02-11 17:05:08 | INFO | Making flags plots for 0134+329.
+2020-02-11 17:05:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw1.png
+2020-02-11 17:05:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw1.png
+2020-02-11 17:05:15 | INFO | Completed flags plots 
+2020-02-11 17:05:15 | INFO | Starting split fields.
+2020-02-11 17:05:15 | INFO | Create directory: ./sources/
+2020-02-11 17:05:15 | INFO | The two SPWs which HCG10 was observed with have the frequency ranges:
+2020-02-11 17:05:15 | INFO | SPW0: 1396.1504-1399.1775 MHz
+2020-02-11 17:05:15 | INFO | SPW1: 1393.416-1396.4431 MHz
+2020-02-11 17:05:15 | INFO | The two SPWs overlap and will be combined.
+2020-02-11 17:05:15 | INFO | SPWs [0, 1] will now be combined for HCG10.
+2020-02-11 17:05:15 | INFO | Executing command: mstransform(vis='AV230.ms', outputvis='sources/HCG10.split', field='H', spw='0,1', combinespws=True)
+2020-02-11 17:05:25 | INFO | Writing listobs summary for split data set to: ./summary/HCG10.listobs.summary
+2020-02-11 17:05:25 | INFO | Completed split fields.
+2020-02-11 17:05:25 | INFO | The parameters in AV230_params.cfg have been modified during this pipeline step.
+2020-02-11 17:05:25 | INFO | Deleted: diff_params.txt
+2020-02-11 17:05:25 | INFO | The changes are as follows:
+2020-02-11 17:05:25 | INFO | 40a41
+
+2020-02-11 17:05:25 | INFO | > mosaic = False
+
+2020-02-11 17:05:25 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-02-11 17:05:29 | INFO | CASA Version 5.4.2-5
+2020-02-11 17:05:29 | INFO | Starting making dirty continuum image.
+2020-02-11 17:05:29 | INFO | Removing any existing dirty continuum images.
+2020-02-11 17:05:29 | INFO | Checking clean parameters for dirty image (inc. continuum).
+2020-02-11 17:05:29 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-02-11 17:05:29 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:05:29 | INFO | Image sizes set as: ['512'] pixels.
+2020-02-11 17:05:29 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:05:29 | INFO | Making dirty image of HCG10 (inc. continuum).
+2020-02-11 17:05:29 | INFO | Executing command: tclean(vis='sources/HCG10.split', field='H', imagename='images/HCG10.cont.dirty', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, interactive=False)
+2020-02-11 17:06:14 | INFO | Completed making dirty continuum image.
+2020-02-11 17:06:14 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-02-11 17:06:17 | INFO | CASA Version 5.4.2-5
+2020-02-11 17:06:17 | INFO | Starting plotting amplitude spectrum.
+2020-02-11 17:06:17 | INFO | Plotting amplitude vs channel to ./plots/HCG10_amp_chn.png
+2020-02-11 17:06:27 | INFO | Plotting amplitude vs velocity to ./plots/HCG10_amp_vel.png
+2020-02-11 17:06:41 | INFO | Completed plotting amplitude spectrum.
+2020-02-11 17:06:41 | INFO | Starting continuum subtraction.
+2020-02-11 17:06:41 | INFO | Checking for line free channel ranges in parameters.
+2020-02-11 17:06:41 | INFO | Line free channels set as: ['0:2~25'].
+2020-02-11 17:06:41 | INFO | Fit order(s) set as: 0.
+2020-02-11 17:06:41 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:06:41 | INFO | Subtracting the continuum from field: HCG10
+2020-02-11 17:06:41 | INFO | Executing command: uvcontsub(vis='sources/HCG10'+'.split', field='H', fitspw='0:2~25', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-02-11 17:06:51 | INFO | Completed continuum subtraction.
+2020-02-11 17:06:51 | INFO | Starting plotting amplitude spectrum.
+2020-02-11 17:06:51 | INFO | Plotting amplitude vs channel to ./plots/HCG10_contsub_amp_chn.png
+2020-02-11 17:07:01 | INFO | Completed plotting amplitude spectrum.
+2020-02-11 17:07:01 | INFO | Starting making dirty image.
+2020-02-11 17:07:01 | INFO | Removing any existing dirty images.
+2020-02-11 17:07:01 | INFO | Checking clean parameters for dirty image.
+2020-02-11 17:07:01 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-02-11 17:07:01 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:07:01 | INFO | Image sizes set as: ['512'] pixels.
+2020-02-11 17:07:01 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:07:01 | INFO | Line emission channels set as: ['0:2~116'].
+2020-02-11 17:07:01 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:07:01 | INFO | Making dirty image of HCG10 (line only).
+2020-02-11 17:07:01 | INFO | Executing command: tclean(vis='sources/HCG10'+'.split.contsub', field='H', imagename='images/HCG10'+'.dirty', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, interactive=False)
+2020-02-11 17:07:47 | INFO | Completed making dirty image.
+2020-02-11 17:07:47 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-02-11 17:07:50 | INFO | CASA Version 5.4.2-5
+2020-02-11 17:07:50 | INFO | Deleting any existing clean image(s).
+2020-02-11 17:07:50 | INFO | Starting making noise estimation.
+2020-02-11 17:07:51 | INFO | Effective integration time for HCG10: 4498 s
+2020-02-11 17:07:51 | INFO | Expected rms noise for HCG10: 0.000840380014867 Jy/beam
+2020-02-11 17:07:51 | INFO | Completed making noise estimation.
+2020-02-11 17:07:51 | INFO | Starting generation of clean image(s).
+2020-02-11 17:07:51 | INFO | Line emission channels set as: ['0:2~116'].
+2020-02-11 17:07:51 | INFO | For the targets: ['HCG10'].
+2020-02-11 17:07:51 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-02-11 17:07:51 | INFO | Starting HCG10 image.
+2020-02-11 17:07:51 | INFO | Automasking parameters set as:
+2020-02-11 17:07:51 | INFO | sidelobethreshold = 2.0
+2020-02-11 17:07:51 | INFO | noisethreshold = 3.0
+2020-02-11 17:07:51 | INFO | lownoisethreshold = 1.5
+2020-02-11 17:07:51 | INFO | minbeamfraction = 0.3
+2020-02-11 17:07:51 | INFO | negativethreshold = 15.0
+2020-02-11 17:07:51 | INFO | The maximum recoverable scale for HCG10 is 820 arcsec.
+2020-02-11 17:07:51 | INFO | CLEANing with scales of [0, 8, 25, 75] pixels.
+2020-02-11 17:07:51 | INFO | CLEANing HCG10 to a threshold of 0.00210095003717 Jy.
+2020-02-11 17:07:51 | INFO | Executing command: tclean(vis='sources/HCG10'+'.split.contsub', field='H', spw='0:2~116', imagename='images/HCG10', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 25, 75], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00210095003717Jy', usemask='auto-multithresh', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-02-11 17:40:40 | INFO | CLEANing finished. Image cube saved as HCG10.image.
+2020-02-11 17:40:40 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-02-11 17:40:40 | INFO | Executing command: imregrid(imagename='images/HCG10'+'.image', template='J2000', output='images/HCG10'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-02-11 17:40:43 | INFO | HCG10.image.J2000 regridded in J2000 coordinates.
+2020-02-11 17:40:43 | INFO | Executing command: imregrid(imagename='images/HCG10'+'.image.pbcor', template='J2000', output='images/HCG10'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-02-11 17:40:46 | INFO | HCG10.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-02-11 17:40:46 | INFO | Saving image cube as HCG10_HI.fits
+2020-02-11 17:40:46 | INFO | Executing command: exportfits(imagename='images/HCG10.image.J2000', fitsimage='images/HCG10_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-02-11 17:40:46 | INFO | Saving primary beam corrected image cube as HCG10_HI.pbcor.fits
+2020-02-11 17:40:46 | INFO | Executing command: exportfits(imagename='images/HCG10.image.pbcor.J2000', fitsimage='images/HCG10_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-02-11 17:40:47 | INFO | Completed generation of clean image(s).
+2020-02-11 17:40:47 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-02-11 17:40:51 | INFO | CASA Version 5.4.2-5
+2020-02-11 17:40:51 | INFO | Deleting any existing moment(s).
+2020-02-11 17:40:51 | INFO | Starting making noise estimation.
+2020-02-11 17:40:51 | INFO | Effective integration time for HCG10: 4498 s
+2020-02-11 17:40:51 | INFO | Expected rms noise for HCG10: 0.000840380014867 Jy/beam
+2020-02-11 17:40:51 | INFO | Completed making noise estimation.
+2020-02-11 17:40:51 | INFO | Create directory: ./moments/
+2020-02-11 17:40:51 | INFO | Starting generation of moment map(s).
+2020-02-11 17:40:51 | INFO | Executing command: immoments(imagename='images/HCG10.image.J2000',includepix=[0.0025211400446,2521.1400446],chans='',outfile='moments/HCG10.mom0')
+2020-02-11 17:40:55 | INFO | Executing command: exportfits(imagename='moments/HCG10.mom0', fitsimage='moments/HCG10.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-02-11 17:40:55 | INFO | Completed generation of moment map(s).
+2020-04-15 16:03:02 | INFO | CASA version: 5.4.2
+2020-04-15 16:03:03 | INFO | Starting plotting amplitude spectrum.
+2020-04-15 16:03:03 | INFO | Plotting amplitude vs channel to ./plots/HCG10_amp_chn.png
+2020-04-15 16:03:48 | INFO | Plotting amplitude vs velocity to ./plots/HCG10_amp_vel.png
+2020-04-15 16:04:03 | INFO | Completed plotting amplitude spectrum.
+2020-04-15 16:04:03 | INFO | Starting continuum subtraction.
+2020-04-15 16:04:03 | INFO | Checking for line free channel ranges in parameters.
+2020-04-15 16:04:03 | INFO | Line free channels set as: ['0:2~25;84~88'].
+2020-04-15 16:04:03 | INFO | Fit order(s) set as: 1.
+2020-04-15 16:04:03 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:04:03 | INFO | Subtracting the continuum from field: HCG10
+2020-04-15 16:04:03 | INFO | Executing command: uvcontsub(vis='sources/HCG10'+'.split', field='H', fitspw='0:2~25;84~88', spw='0', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2020-04-15 16:05:00 | INFO | Completed continuum subtraction.
+2020-04-15 16:05:00 | INFO | Starting plotting amplitude spectrum.
+2020-04-15 16:05:00 | INFO | Plotting amplitude vs channel to ./plots/HCG10_contsub_amp_chn.png
+2020-04-15 16:05:22 | INFO | Completed plotting amplitude spectrum.
+2020-04-15 16:05:22 | INFO | Deleting existing dirty image(s): ['images/HCG10.dirty.sumwt', 'images/HCG10.dirty.image', 'images/HCG10.dirty.pb', 'images/HCG10.dirty.residual', 'images/HCG10.dirty.psf', 'images/HCG10.dirty.model']
+2020-04-15 16:05:24 | INFO | Starting making dirty image.
+2020-04-15 16:05:24 | INFO | Removing any existing dirty images.
+2020-04-15 16:05:24 | INFO | Checking clean parameters for dirty image.
+2020-04-15 16:05:24 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-04-15 16:05:24 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:05:24 | INFO | Image sizes set as: ['512'] pixels.
+2020-04-15 16:05:24 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:05:24 | INFO | Line emission channels set as: ['0:2~116'].
+2020-04-15 16:05:24 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:05:24 | INFO | Making dirty image of HCG10 (line only).
+2020-04-15 16:08:25 | INFO | CASA version: 5.4.2
+2020-04-15 16:08:25 | INFO | Starting plotting amplitude spectrum.
+2020-04-15 16:08:25 | INFO | Plotting amplitude vs channel to ./plots/HCG10_amp_chn.png
+2020-04-15 16:08:37 | INFO | Plotting amplitude vs velocity to ./plots/HCG10_amp_vel.png
+2020-04-15 16:08:53 | INFO | Completed plotting amplitude spectrum.
+2020-04-15 16:08:53 | INFO | Starting continuum subtraction.
+2020-04-15 16:08:53 | INFO | Checking for line free channel ranges in parameters.
+2020-04-15 16:08:53 | INFO | Line free channels set as: ['0:2~25;84~88'].
+2020-04-15 16:08:53 | INFO | Fit order(s) set as: 1.
+2020-04-15 16:08:53 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:08:53 | INFO | Subtracting the continuum from field: HCG10
+2020-04-15 16:08:53 | INFO | Executing command: uvcontsub(vis='sources/HCG10'+'.split', field='H', fitspw='0:2~25;84~88', spw='0', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2020-04-15 16:09:34 | INFO | Completed continuum subtraction.
+2020-04-15 16:09:34 | INFO | Starting plotting amplitude spectrum.
+2020-04-15 16:09:34 | INFO | Plotting amplitude vs channel to ./plots/HCG10_contsub_amp_chn.png
+2020-04-15 16:09:45 | INFO | Completed plotting amplitude spectrum.
+2020-04-15 16:09:45 | INFO | Starting making dirty image.
+2020-04-15 16:09:45 | INFO | Removing any existing dirty images.
+2020-04-15 16:09:45 | INFO | Checking clean parameters for dirty image.
+2020-04-15 16:09:45 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-04-15 16:09:45 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:09:45 | INFO | Image sizes set as: ['512'] pixels.
+2020-04-15 16:09:45 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:09:45 | INFO | Line emission channels set as: ['0:2~116'].
+2020-04-15 16:09:45 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:09:45 | INFO | Making dirty image of HCG10 (line only).
+2020-04-15 16:09:45 | INFO | Executing command: tclean(vis='sources/HCG10'+'.split.contsub', field='H', imagename='images/HCG10'+'.dirty', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-04-15 16:11:01 | INFO | Completed making dirty image.
+2020-04-15 16:11:01 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-04-15 16:11:06 | INFO | CASA version: 5.4.2
+2020-04-15 16:11:06 | INFO | Deleting any existing clean image(s).
+2020-04-15 16:11:09 | INFO | Starting making noise estimation.
+2020-04-15 16:11:09 | INFO | Effective integration time for HCG10: 4499 s
+2020-04-15 16:11:09 | INFO | Expected rms noise for HCG10: 0.000840286574284 Jy/beam
+2020-04-15 16:11:09 | INFO | Completed making noise estimation.
+2020-04-15 16:11:09 | INFO | Starting generation of clean image(s).
+2020-04-15 16:11:09 | INFO | Line emission channels set as: ['0:2~116'].
+2020-04-15 16:11:09 | INFO | For the targets: ['HCG10'].
+2020-04-15 16:11:09 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-04-15 16:11:09 | INFO | Starting HCG10 image.
+2020-04-15 16:11:10 | INFO | Automasking parameters set as:
+2020-04-15 16:11:10 | INFO | sidelobethreshold = 2.0
+2020-04-15 16:11:10 | INFO | noisethreshold = 3.0
+2020-04-15 16:11:10 | INFO | lownoisethreshold = 1.5
+2020-04-15 16:11:10 | INFO | minbeamfraction = 0.3
+2020-04-15 16:11:10 | INFO | negativethreshold = 15.0
+2020-04-15 16:11:11 | INFO | The maximum recoverable scale for HCG10 is 820 arcsec.
+2020-04-15 16:11:11 | INFO | CLEANing with scales of [0, 8, 25, 75] pixels.
+2020-04-15 16:11:11 | INFO | CLEANing HCG10 to a threshold of 0.00210071643571 Jy.
+2020-04-15 16:11:11 | INFO | Executing command: tclean(vis='sources/HCG10'+'.split.contsub', field='H', spw='0:2~116', imagename='images/HCG10', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 25, 75], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00210071643571Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-04-15 16:39:59 | INFO | CLEANing finished. Image cube saved as HCG10.image.
+2020-04-15 16:39:59 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-04-15 16:39:59 | INFO | Executing command: imregrid(imagename='images/HCG10'+'.image', template='J2000', output='images/HCG10'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-04-15 16:40:02 | INFO | HCG10.image.J2000 regridded in J2000 coordinates.
+2020-04-15 16:40:02 | INFO | Executing command: imregrid(imagename='images/HCG10'+'.image.pbcor', template='J2000', output='images/HCG10'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-04-15 16:40:04 | INFO | HCG10.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-04-15 16:40:04 | INFO | Saving image cube as HCG10_HI.fits
+2020-04-15 16:40:04 | INFO | Executing command: exportfits(imagename='images/HCG10.image.J2000', fitsimage='images/HCG10_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-04-15 16:40:05 | INFO | Saving primary beam corrected image cube as HCG10_HI.pbcor.fits
+2020-04-15 16:40:05 | INFO | Executing command: exportfits(imagename='images/HCG10.image.pbcor.J2000', fitsimage='images/HCG10_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-04-15 16:40:06 | INFO | Completed generation of clean image(s).
+2020-04-15 16:40:06 | INFO | Backing up AV230_params.cfg to backup.AV230_params.cfg.
+2020-04-15 16:40:14 | INFO | CASA version: 5.4.2
+2020-04-15 16:40:14 | INFO | Deleting any existing moment(s).
+2020-04-15 16:40:15 | INFO | Starting making noise estimation.
+2020-04-15 16:40:15 | INFO | Effective integration time for HCG10: 4499 s
+2020-04-15 16:40:15 | INFO | Expected rms noise for HCG10: 0.000840286574284 Jy/beam
+2020-04-15 16:40:15 | INFO | Completed making noise estimation.
+2020-04-15 16:40:15 | INFO | Starting generation of moment map(s).
+2020-04-15 16:40:15 | INFO | Executing command: immoments(imagename='images/HCG10.image.J2000',includepix=[0.00252085972285,2520.85972285],chans='',outfile='moments/HCG10.mom0')
+2020-04-15 16:40:16 | INFO | Executing command: exportfits(imagename='moments/HCG10.mom0', fitsimage='moments/HCG10.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-04-15 16:40:16 | INFO | Completed generation of moment map(s).

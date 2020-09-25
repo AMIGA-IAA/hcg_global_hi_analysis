@@ -1,0 +1,564 @@
+2020-03-19 16:29:03 | INFO | 5.4.2
+2020-03-19 16:29:03 | INFO | Deleted: summary
+2020-03-19 16:29:03 | INFO | Deleted: plots
+2020-03-19 16:29:03 | INFO | Deleted: AV221.ms
+2020-03-19 16:29:03 | INFO | Deleted: AV221.ms.flagversions
+2020-03-19 16:29:03 | INFO | Starting import vla data
+2020-03-19 16:29:03 | INFO | Create directory: ./summary/
+2020-03-19 16:29:03 | INFO | Input files: ['../../data/VLA/AV221/AV221_A960127.xp1', '../../data/VLA/AV221/AV221_B960221.xp1', '../../data/VLA/AV221/AV221_B960221.xp2']
+2020-03-19 16:29:03 | INFO | Output msfile: AV221.ms
+2020-03-19 16:29:03 | INFO | Executing command: importvla(archivefiles = ['../../data/VLA/AV221/AV221_A960127.xp1', '../../data/VLA/AV221/AV221_B960221.xp1', '../../data/VLA/AV221/AV221_B960221.xp2'], vis = 'AV221.ms')
+2020-03-19 16:29:22 | INFO | Completed import vla data
+2020-03-19 16:29:22 | INFO | Starting listobs summary.
+2020-03-19 16:29:22 | INFO | Writing listobs summary of data set to: ./summary/AV221.ms.listobs.summary
+2020-03-19 16:29:23 | INFO | Completed listobs summary.
+2020-03-19 16:29:23 | INFO | Starting data transform.
+2020-03-19 16:29:23 | INFO | No transformation made.
+2020-03-19 16:29:23 | INFO | Reading ms file information for MS: AV221.ms
+2020-03-19 16:29:23 | INFO | Sources in MS AV221.ms: 0134+329,0538+498,2328+107,H95,H96
+2020-03-19 16:29:23 | INFO | > Sources (5): 0134+329,0538+498,2328+107,H95,H96
+2020-03-19 16:29:23 | INFO | > Number of spw: 4
+2020-03-19 16:29:23 | INFO | > Channels per spw: 31
+2020-03-19 16:29:23 | INFO | Starting plotting elevation.
+2020-03-19 16:29:23 | INFO | Create directory: ./plots/
+2020-03-19 16:29:23 | INFO | Plotting elevation to: ./plots/AV221.ms_elevation.png
+2020-03-19 16:29:48 | INFO | Completed plotting elevation.
+2020-03-19 16:29:48 | INFO | Starting plotting antenna positions.
+2020-03-19 16:29:48 | INFO | Plotting antenna positions to: ./plots/AV221.ms_antpos.png
+2020-03-19 16:29:48 | INFO | Completed plotting antenna positions.
+2020-03-19 16:29:48 | INFO | Backing up AV221_params.cfg to backup.AV221_params.cfg.
+2020-03-19 16:29:51 | INFO | 5.4.2
+2020-03-19 16:29:51 | INFO | Restoring flag version from: Original.
+2020-03-19 16:29:51 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='restore', versionname='Original')
+2020-03-19 16:29:52 | INFO | Completed restoring flag version.
+2020-03-19 16:29:52 | INFO | Starting manual flagging.
+2020-03-19 16:29:52 | INFO | Applying flags from manual_flags.list
+2020-03-19 16:29:52 | INFO | Executing command: flagdata(vis='AV221.ms', mode='list', action='apply', inpfile=["mode='manual' scan='1'"])
+2020-03-19 16:29:55 | INFO | Completed manual flagging.
+2020-03-19 16:29:55 | INFO | Starting basic flagging.
+2020-03-19 16:29:55 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-03-19 16:29:55 | INFO | Executing command: flagdata(vis='AV221.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-03-19 16:30:07 | INFO | Flagging zero amplitude data.
+2020-03-19 16:30:07 | INFO | Executing command: flagdata(vis='AV221.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-03-19 16:30:18 | INFO | Flagging first 5.0 s of every scan.
+2020-03-19 16:30:18 | INFO | Executing command: flagdata(vis='AV221.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-03-19 16:30:23 | INFO | Completed basic flagging.
+2020-03-19 16:30:23 | INFO | Starting running TFCrop.
+2020-03-19 16:30:23 | INFO | Executing command: flagdata(vis='AV221.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-03-19 16:31:05 | INFO | Completed running TFCrop.
+2020-03-19 16:31:05 | INFO | Removing flag version: initial.
+2020-03-19 16:31:05 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='delete', versionname='initial')
+2020-03-19 16:31:05 | INFO | Completed removing flag version.
+2020-03-19 16:31:05 | INFO | Saving flag version as: initial.
+2020-03-19 16:31:05 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='save', versionname='initial')
+2020-03-19 16:31:05 | INFO | Completed saving flag version.
+2020-03-19 16:31:05 | INFO | Starting writing flag summary to: ./summary/AV221.ms.initialflags.summary.
+2020-03-19 16:31:12 | INFO | Total flagged data: 12.19%
+2020-03-19 16:31:12 | INFO | Completed writing flag summary.
+2020-03-19 16:31:12 | INFO | Starting reference antenna selection.
+2020-03-19 16:31:12 | INFO | Reference antenna already set as: VA03.
+2020-03-19 16:31:12 | INFO | Starting set field purposes.
+2020-03-19 16:31:12 | INFO | Target field(s) already set as: ['H96', 'H95'].
+2020-03-19 16:31:12 | INFO | Flux calibrator already set as: ['0134+329', '0134+329', '0134+329', '0134+329'].
+2020-03-19 16:31:12 | INFO | Flux models already set as: ['3C48_L.im', '3C48_L.im', '3C48_L.im', '3C48_L.im'].
+2020-03-19 16:31:12 | INFO | Bandpass calibrator already set as: ['0134+329', '0134+329', '0134+329', '0134+329'].
+2020-03-19 16:31:12 | INFO | Phase calibrator already set as: ['2328+107', '2328+107'].
+2020-03-19 16:31:12 | INFO | No changes made to preset target and calibrator fields.
+2020-03-19 16:31:12 | INFO | Completed setting field purposes.
+2020-03-19 16:31:12 | INFO | Making flags plots for flag version: initial
+2020-03-19 16:31:13 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw0.png
+2020-03-19 16:31:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw0.png
+2020-03-19 16:31:22 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw1.png
+2020-03-19 16:31:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw1.png
+2020-03-19 16:31:30 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw2.png
+2020-03-19 16:31:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw2.png
+2020-03-19 16:31:32 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw3.png
+2020-03-19 16:31:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw3.png
+2020-03-19 16:31:33 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw0.png
+2020-03-19 16:31:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw0.png
+2020-03-19 16:31:35 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw1.png
+2020-03-19 16:31:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw1.png
+2020-03-19 16:31:36 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw2.png
+2020-03-19 16:31:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw2.png
+2020-03-19 16:31:44 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw3.png
+2020-03-19 16:31:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw3.png
+2020-03-19 16:31:53 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw0.png
+2020-03-19 16:31:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw0.png
+2020-03-19 16:31:56 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw1.png
+2020-03-19 16:31:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw1.png
+2020-03-19 16:31:57 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw2.png
+2020-03-19 16:31:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw2.png
+2020-03-19 16:31:59 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:31:59 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw3.png
+2020-03-19 16:31:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw3.png
+2020-03-19 16:32:00 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob0_spw0.png
+2020-03-19 16:32:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob0_spw0.png
+2020-03-19 16:32:08 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob0_spw1.png
+2020-03-19 16:32:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob0_spw1.png
+2020-03-19 16:32:17 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob0_spw2.png
+2020-03-19 16:32:19 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob0_spw2.png
+2020-03-19 16:32:20 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob0_spw3.png
+2020-03-19 16:32:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob0_spw3.png
+2020-03-19 16:32:21 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob1_spw0.png
+2020-03-19 16:32:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob1_spw0.png
+2020-03-19 16:32:23 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob1_spw1.png
+2020-03-19 16:32:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob1_spw1.png
+2020-03-19 16:32:24 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:24 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob1_spw2.png
+2020-03-19 16:32:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob1_spw2.png
+2020-03-19 16:32:32 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob1_spw3.png
+2020-03-19 16:32:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob1_spw3.png
+2020-03-19 16:32:40 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob2_spw0.png
+2020-03-19 16:32:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob2_spw0.png
+2020-03-19 16:32:42 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob2_spw1.png
+2020-03-19 16:32:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob2_spw1.png
+2020-03-19 16:32:44 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob2_spw2.png
+2020-03-19 16:32:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob2_spw2.png
+2020-03-19 16:32:51 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:32:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2328+107_freq_ob2_spw3.png
+2020-03-19 16:32:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2328+107_time_ob2_spw3.png
+2020-03-19 16:33:00 | INFO | Making flags plots for H95.
+2020-03-19 16:33:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob0_spw2.png
+2020-03-19 16:33:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob0_spw2.png
+2020-03-19 16:33:02 | INFO | Making flags plots for H95.
+2020-03-19 16:33:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob0_spw3.png
+2020-03-19 16:33:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob0_spw3.png
+2020-03-19 16:33:04 | INFO | Making flags plots for H95.
+2020-03-19 16:33:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob1_spw2.png
+2020-03-19 16:33:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob1_spw2.png
+2020-03-19 16:33:12 | INFO | Making flags plots for H95.
+2020-03-19 16:33:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob1_spw3.png
+2020-03-19 16:33:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob1_spw3.png
+2020-03-19 16:33:22 | INFO | Making flags plots for H95.
+2020-03-19 16:33:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob2_spw2.png
+2020-03-19 16:33:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob2_spw2.png
+2020-03-19 16:33:40 | INFO | Making flags plots for H95.
+2020-03-19 16:33:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H95_freq_ob2_spw3.png
+2020-03-19 16:33:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H95_time_ob2_spw3.png
+2020-03-19 16:33:58 | INFO | Making flags plots for H96.
+2020-03-19 16:33:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob0_spw0.png
+2020-03-19 16:34:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob0_spw0.png
+2020-03-19 16:34:10 | INFO | Making flags plots for H96.
+2020-03-19 16:34:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob0_spw1.png
+2020-03-19 16:34:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob0_spw1.png
+2020-03-19 16:34:21 | INFO | Making flags plots for H96.
+2020-03-19 16:34:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob1_spw0.png
+2020-03-19 16:34:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob1_spw0.png
+2020-03-19 16:34:23 | INFO | Making flags plots for H96.
+2020-03-19 16:34:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob1_spw1.png
+2020-03-19 16:34:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob1_spw1.png
+2020-03-19 16:34:25 | INFO | Making flags plots for H96.
+2020-03-19 16:34:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob2_spw0.png
+2020-03-19 16:34:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob2_spw0.png
+2020-03-19 16:34:27 | INFO | Making flags plots for H96.
+2020-03-19 16:34:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_H96_freq_ob2_spw1.png
+2020-03-19 16:34:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_H96_time_ob2_spw1.png
+2020-03-19 16:34:28 | INFO | Completed flags plots 
+2020-03-19 16:34:28 | INFO | Starting calibration.
+2020-03-19 16:34:29 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-03-19 16:34:29 | INFO | Executing command: gencal(vis='AV221.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-03-19 16:34:30 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-03-19 16:34:30 | INFO | Executing command: setjy(vis='AV221.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-03-19 16:34:32 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-03-19 16:34:34 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329', '0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-03-19 16:34:34 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,0134+329,0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA03', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1,2,3')
+2020-03-19 16:34:41 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329', '0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-03-19 16:34:41 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,0134+329,0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA03', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1,2,3')
+2020-03-19 16:34:55 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-03-19 16:34:56 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-03-19 16:34:58 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob2.png
+2020-03-19 16:34:59 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-03-19 16:34:59 | INFO | Executing command: bandpass(vis='AV221.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329,0134+329,0134+329', refant='VA03', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1,2,3')
+2020-03-19 16:35:06 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-03-19 16:35:08 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-03-19 16:35:08 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/intphase.gcal', refant='VA03', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3')
+2020-03-19 16:35:41 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-03-19 16:35:41 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/scanphase.gcal', refant='VA03', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3')
+2020-03-19 16:35:56 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-03-19 16:35:56 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/amp.gcal', refant='VA03', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1,2,3')
+2020-03-19 16:36:13 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-03-19 16:36:15 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-03-19 16:36:16 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-03-19 16:36:18 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-03-19 16:36:20 | INFO | Plotting phase solutions to: ./plots/phasesol_ob2.png
+2020-03-19 16:36:21 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob2.png
+2020-03-19 16:36:23 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-03-19 16:36:23 | INFO | Executing command: flux_info = fluxscale(vis='AV221.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='0134+329,0134+329,0134+329,0134+329', incremental=True)
+2020-03-19 16:36:24 | INFO | Writing calibrator fluxes summary to: ./summary/AV221.ms.flux.summary.
+2020-03-19 16:36:24 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-03-19 16:36:24 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:36:24 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:36:31 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:36:31 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:36:36 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:36:36 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:36:41 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:36:41 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:36:45 | INFO | Plotting corrected phases for ['0134+329', '0134+329', '0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-03-19 16:36:47 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329', '0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-03-19 16:36:49 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-03-19 16:36:50 | INFO | Applying calibration to: 2328+107
+2020-03-19 16:36:50 | INFO | Executing command: applycal(vis='AV221.ms', field='2328+107', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:36:58 | INFO | Applying calibration to: H96
+2020-03-19 16:36:58 | INFO | Executing command: applycal(vis='AV221.ms', field='H96', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:37:04 | INFO | Applying calibration to: 2328+107
+2020-03-19 16:37:04 | INFO | Executing command: applycal(vis='AV221.ms', field='2328+107', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:37:11 | INFO | Applying calibration to: H95
+2020-03-19 16:37:11 | INFO | Executing command: applycal(vis='AV221.ms', field='H95', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:37:21 | INFO | Completed calibration.
+2020-03-19 16:37:21 | INFO | Starting running rflag with a threshold of 4.0.
+2020-03-19 16:37:21 | INFO | Executing command: flagdata(vis='AV221.ms', mode='rflag', action='apply', datacolumn='corrected', freqdevscale=4.0, timedevscale=4.0, display='', flagbackup=False)
+2020-03-19 16:38:20 | INFO | Completed running rflag.
+2020-03-19 16:38:20 | INFO | Removing flag version: rflag.
+2020-03-19 16:38:20 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='delete', versionname='rflag')
+2020-03-19 16:38:20 | INFO | Completed removing flag version.
+2020-03-19 16:38:20 | INFO | Saving flag version as: rflag.
+2020-03-19 16:38:20 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='save', versionname='rflag')
+2020-03-19 16:38:20 | INFO | Completed saving flag version.
+2020-03-19 16:38:20 | INFO | Starting writing flag summary to: ./summary/AV221.ms.rflagflags.summary.
+2020-03-19 16:38:27 | INFO | Total flagged data: 19.80%
+2020-03-19 16:38:27 | INFO | Completed writing flag summary.
+2020-03-19 16:38:27 | INFO | Starting extending existing flags.
+2020-03-19 16:38:27 | INFO | Executing command: flagdata(vis='AV221.ms', mode='extend', spw='', extendpols=True, action='apply', display='', flagbackup=False)
+2020-03-19 16:38:35 | INFO | Executing command: flagdata(vis='AV221.ms', mode='extend', spw='', growtime=75.0, growfreq=90.0, action='apply', display='', flagbackup=False)
+2020-03-19 16:38:43 | INFO | Completed extending existing flags.
+2020-03-19 16:38:43 | INFO | Removing flag version: extended.
+2020-03-19 16:38:43 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='delete', versionname='extended')
+2020-03-19 16:38:43 | INFO | Completed removing flag version.
+2020-03-19 16:38:43 | INFO | Saving flag version as: extended.
+2020-03-19 16:38:43 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='save', versionname='extended')
+2020-03-19 16:38:44 | INFO | Completed saving flag version.
+2020-03-19 16:38:44 | INFO | Starting writing flag summary to: ./summary/AV221.ms.extendedflags.summary.
+2020-03-19 16:38:51 | INFO | Total flagged data: 20.19%
+2020-03-19 16:38:51 | INFO | Completed writing flag summary.
+2020-03-19 16:38:51 | INFO | Starting calibration.
+2020-03-19 16:38:52 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-03-19 16:38:52 | INFO | Executing command: gencal(vis='AV221.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-03-19 16:38:52 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-03-19 16:38:52 | INFO | Executing command: setjy(vis='AV221.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-03-19 16:38:55 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-03-19 16:38:57 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329', '0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-03-19 16:38:57 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,0134+329,0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA03', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1,2,3')
+2020-03-19 16:39:03 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329', '0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-03-19 16:39:03 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,0134+329,0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA03', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1,2,3')
+2020-03-19 16:39:17 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-03-19 16:39:19 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-03-19 16:39:21 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob2.png
+2020-03-19 16:39:22 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-03-19 16:39:22 | INFO | Executing command: bandpass(vis='AV221.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329,0134+329,0134+329', refant='VA03', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1,2,3')
+2020-03-19 16:39:29 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-03-19 16:39:31 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-03-19 16:39:31 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/intphase.gcal', refant='VA03', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3')
+2020-03-19 16:40:04 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-03-19 16:40:04 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/scanphase.gcal', refant='VA03', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3')
+2020-03-19 16:40:20 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-03-19 16:40:20 | INFO | Executing command: gaincal(vis='AV221.ms', field='0134+329,2328+107', caltable='./cal_tabs/amp.gcal', refant='VA03', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1,2,3')
+2020-03-19 16:40:37 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-03-19 16:40:38 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-03-19 16:40:40 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-03-19 16:40:42 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-03-19 16:40:43 | INFO | Plotting phase solutions to: ./plots/phasesol_ob2.png
+2020-03-19 16:40:45 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob2.png
+2020-03-19 16:40:47 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-03-19 16:40:47 | INFO | Executing command: flux_info = fluxscale(vis='AV221.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='0134+329,0134+329,0134+329,0134+329', incremental=True)
+2020-03-19 16:40:48 | INFO | Writing calibrator fluxes summary to: ./summary/AV221.ms.flux.summary.
+2020-03-19 16:40:48 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-03-19 16:40:48 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:40:48 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:40:52 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:40:52 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:40:57 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:40:57 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:41:02 | INFO | Applying calibration to: 0134+329
+2020-03-19 16:41:02 | INFO | Executing command: applycal(vis='AV221.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-03-19 16:41:07 | INFO | Plotting corrected phases for ['0134+329', '0134+329', '0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-03-19 16:41:09 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329', '0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-03-19 16:41:11 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-03-19 16:41:11 | INFO | Applying calibration to: 2328+107
+2020-03-19 16:41:11 | INFO | Executing command: applycal(vis='AV221.ms', field='2328+107', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:41:18 | INFO | Applying calibration to: H96
+2020-03-19 16:41:18 | INFO | Executing command: applycal(vis='AV221.ms', field='H96', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:41:24 | INFO | Applying calibration to: 2328+107
+2020-03-19 16:41:24 | INFO | Executing command: applycal(vis='AV221.ms', field='2328+107', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:41:31 | INFO | Applying calibration to: H95
+2020-03-19 16:41:31 | INFO | Executing command: applycal(vis='AV221.ms', field='H95', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2328+107', '2328+107', '2328+107'], calwt=False)
+2020-03-19 16:41:41 | INFO | Completed calibration.
+2020-03-19 16:41:41 | INFO | Removing flag version: final.
+2020-03-19 16:41:41 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='delete', versionname='final')
+2020-03-19 16:41:41 | INFO | Completed removing flag version.
+2020-03-19 16:41:41 | INFO | Saving flag version as: final.
+2020-03-19 16:41:41 | INFO | Executing command: flagmanager(vis='AV221.ms', mode='save', versionname='final')
+2020-03-19 16:41:41 | INFO | Completed saving flag version.
+2020-03-19 16:41:41 | INFO | Starting writing flag summary to: ./summary/AV221.ms.finalflags.summary.
+2020-03-19 16:41:48 | INFO | Total flagged data: 20.24%
+2020-03-19 16:41:48 | INFO | Completed writing flag summary.
+2020-03-19 16:41:48 | INFO | Making flags plots for flag version: final
+2020-03-19 16:41:49 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:41:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw0.png
+2020-03-19 16:41:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw0.png
+2020-03-19 16:41:56 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:41:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw1.png
+2020-03-19 16:42:00 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw1.png
+2020-03-19 16:42:04 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw2.png
+2020-03-19 16:42:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw2.png
+2020-03-19 16:42:06 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw3.png
+2020-03-19 16:42:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw3.png
+2020-03-19 16:42:07 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw0.png
+2020-03-19 16:42:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw0.png
+2020-03-19 16:42:09 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw1.png
+2020-03-19 16:42:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw1.png
+2020-03-19 16:42:11 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw2.png
+2020-03-19 16:42:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw2.png
+2020-03-19 16:42:18 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw3.png
+2020-03-19 16:42:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw3.png
+2020-03-19 16:42:27 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw0.png
+2020-03-19 16:42:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw0.png
+2020-03-19 16:42:29 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:29 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw1.png
+2020-03-19 16:42:30 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw1.png
+2020-03-19 16:42:31 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:31 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw2.png
+2020-03-19 16:42:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw2.png
+2020-03-19 16:42:32 | INFO | Making flags plots for 0134+329.
+2020-03-19 16:42:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw3.png
+2020-03-19 16:42:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw3.png
+2020-03-19 16:42:34 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob0_spw0.png
+2020-03-19 16:42:38 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob0_spw0.png
+2020-03-19 16:42:42 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob0_spw1.png
+2020-03-19 16:42:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob0_spw1.png
+2020-03-19 16:42:51 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob0_spw2.png
+2020-03-19 16:42:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob0_spw2.png
+2020-03-19 16:42:54 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:54 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob0_spw3.png
+2020-03-19 16:42:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob0_spw3.png
+2020-03-19 16:42:55 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob1_spw0.png
+2020-03-19 16:42:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob1_spw0.png
+2020-03-19 16:42:57 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob1_spw1.png
+2020-03-19 16:42:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob1_spw1.png
+2020-03-19 16:42:58 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:42:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob1_spw2.png
+2020-03-19 16:43:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob1_spw2.png
+2020-03-19 16:43:06 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:43:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob1_spw3.png
+2020-03-19 16:43:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob1_spw3.png
+2020-03-19 16:43:14 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:43:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob2_spw0.png
+2020-03-19 16:43:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob2_spw0.png
+2020-03-19 16:43:16 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:43:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob2_spw1.png
+2020-03-19 16:43:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob2_spw1.png
+2020-03-19 16:43:18 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:43:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob2_spw2.png
+2020-03-19 16:43:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob2_spw2.png
+2020-03-19 16:43:26 | INFO | Making flags plots for 2328+107.
+2020-03-19 16:43:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2328+107_freq_ob2_spw3.png
+2020-03-19 16:43:30 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2328+107_time_ob2_spw3.png
+2020-03-19 16:43:34 | INFO | Making flags plots for H95.
+2020-03-19 16:43:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob0_spw2.png
+2020-03-19 16:43:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob0_spw2.png
+2020-03-19 16:43:37 | INFO | Making flags plots for H95.
+2020-03-19 16:43:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob0_spw3.png
+2020-03-19 16:43:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob0_spw3.png
+2020-03-19 16:43:38 | INFO | Making flags plots for H95.
+2020-03-19 16:43:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob1_spw2.png
+2020-03-19 16:43:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob1_spw2.png
+2020-03-19 16:43:48 | INFO | Making flags plots for H95.
+2020-03-19 16:43:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob1_spw3.png
+2020-03-19 16:43:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob1_spw3.png
+2020-03-19 16:43:58 | INFO | Making flags plots for H95.
+2020-03-19 16:43:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob2_spw2.png
+2020-03-19 16:44:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob2_spw2.png
+2020-03-19 16:44:19 | INFO | Making flags plots for H95.
+2020-03-19 16:44:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H95_freq_ob2_spw3.png
+2020-03-19 16:44:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H95_time_ob2_spw3.png
+2020-03-19 16:44:41 | INFO | Making flags plots for H96.
+2020-03-19 16:44:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob0_spw0.png
+2020-03-19 16:44:50 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob0_spw0.png
+2020-03-19 16:44:55 | INFO | Making flags plots for H96.
+2020-03-19 16:44:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob0_spw1.png
+2020-03-19 16:45:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob0_spw1.png
+2020-03-19 16:45:09 | INFO | Making flags plots for H96.
+2020-03-19 16:45:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob1_spw0.png
+2020-03-19 16:45:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob1_spw0.png
+2020-03-19 16:45:11 | INFO | Making flags plots for H96.
+2020-03-19 16:45:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob1_spw1.png
+2020-03-19 16:45:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob1_spw1.png
+2020-03-19 16:45:12 | INFO | Making flags plots for H96.
+2020-03-19 16:45:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob2_spw0.png
+2020-03-19 16:45:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob2_spw0.png
+2020-03-19 16:45:14 | INFO | Making flags plots for H96.
+2020-03-19 16:45:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_H96_freq_ob2_spw1.png
+2020-03-19 16:45:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_H96_time_ob2_spw1.png
+2020-03-19 16:45:15 | INFO | Completed flags plots 
+2020-03-19 16:45:15 | INFO | Starting split fields.
+2020-03-19 16:45:15 | INFO | Create directory: ./sources/
+2020-03-19 16:45:16 | INFO | The two SPWs which HCG96 was observed with have the frequency ranges:
+2020-03-19 16:45:16 | INFO | SPW0: 1377.1824-1380.1123 MHz
+2020-03-19 16:45:16 | INFO | SPW1: 1379.3308-1382.2608 MHz
+2020-03-19 16:45:16 | INFO | The two SPWs overlap and will be combined.
+2020-03-19 16:45:16 | INFO | SPWs [0, 1] will now be combined for HCG96.
+2020-03-19 16:45:16 | INFO | Executing command: mstransform(vis='AV221.ms', outputvis='sources/HCG96.split', field='H96', spw='0,1', combinespws=True)
+2020-03-19 16:45:25 | INFO | Writing listobs summary for split data set to: ./summary/HCG96.listobs.summary
+2020-03-19 16:45:25 | INFO | The two SPWs which HCG95 was observed with have the frequency ranges:
+2020-03-19 16:45:25 | INFO | SPW2: 1363.398-1366.3278 MHz
+2020-03-19 16:45:25 | INFO | SPW3: 1365.4488-1368.3786 MHz
+2020-03-19 16:45:25 | INFO | The two SPWs overlap and will be combined.
+2020-03-19 16:45:25 | INFO | SPWs [2, 3] will now be combined for HCG95.
+2020-03-19 16:45:25 | INFO | Executing command: mstransform(vis='AV221.ms', outputvis='sources/HCG95.split', field='H95', spw='2,3', combinespws=True)
+2020-03-19 16:45:41 | INFO | Writing listobs summary for split data set to: ./summary/HCG95.listobs.summary
+2020-03-19 16:45:41 | INFO | Completed split fields.
+2020-03-19 16:45:41 | INFO | Backing up AV221_params.cfg to backup.AV221_params.cfg.
+2020-03-19 16:45:45 | INFO | 5.4.2
+2020-03-19 16:45:45 | INFO | Starting making dirty continuum image.
+2020-03-19 16:45:45 | INFO | Removing any existing dirty continuum images.
+2020-03-19 16:45:45 | INFO | Checking clean parameters for dirty image (inc. continuum).
+2020-03-19 16:45:45 | INFO | Pixel sizes set as: ['2arcsec', '3arcsec'].
+2020-03-19 16:45:45 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:45:45 | INFO | Image sizes set as: ['256', '256'] pixels.
+2020-03-19 16:45:45 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:45:45 | INFO | Making dirty image of HCG96 (inc. continuum).
+2020-03-19 16:45:45 | INFO | Executing command: tclean(vis='sources/HCG96.split', field='H96', imagename='images/HCG96.cont.dirty', cell='2arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-03-19 16:46:04 | INFO | Making dirty image of HCG95 (inc. continuum).
+2020-03-19 16:46:04 | INFO | Executing command: tclean(vis='sources/HCG95.split', field='H95', imagename='images/HCG95.cont.dirty', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-03-19 16:46:38 | INFO | Completed making dirty continuum image.
+2020-03-19 16:46:38 | INFO | Backing up AV221_params.cfg to backup.AV221_params.cfg.
+2020-03-19 16:46:41 | INFO | 5.4.2
+2020-03-19 16:46:41 | INFO | Starting plotting amplitude spectrum.
+2020-03-19 16:46:41 | INFO | Plotting amplitude vs channel to ./plots/HCG96_amp_chn.png
+2020-03-19 16:46:49 | INFO | Plotting amplitude vs velocity to ./plots/HCG96_amp_vel.png
+2020-03-19 16:47:00 | INFO | Plotting amplitude vs channel to ./plots/HCG95_amp_chn.png
+2020-03-19 16:47:17 | INFO | Plotting amplitude vs velocity to ./plots/HCG95_amp_vel.png
+2020-03-19 16:47:37 | INFO | Completed plotting amplitude spectrum.
+2020-03-19 16:47:37 | INFO | Starting continuum subtraction.
+2020-03-19 16:47:37 | INFO | Checking for line free channel ranges in parameters.
+2020-03-19 16:47:37 | INFO | Line free channels set as: ['0:2~4', '0:2~14;42~49'].
+2020-03-19 16:47:37 | INFO | Fit order(s) set as: 0.
+2020-03-19 16:47:37 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:47:37 | INFO | Subtracting the continuum from field: HCG96
+2020-03-19 16:47:37 | INFO | Executing command: uvcontsub(vis='sources/HCG96'+'.split', field='H96', fitspw='0:2~4', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-03-19 16:47:48 | INFO | Subtracting the continuum from field: HCG95
+2020-03-19 16:47:48 | INFO | Executing command: uvcontsub(vis='sources/HCG95'+'.split', field='H95', fitspw='0:2~14;42~49', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-03-19 16:48:10 | INFO | Completed continuum subtraction.
+2020-03-19 16:48:10 | INFO | Starting plotting amplitude spectrum.
+2020-03-19 16:48:10 | INFO | Plotting amplitude vs channel to ./plots/HCG96_contsub_amp_chn.png
+2020-03-19 16:48:17 | INFO | Plotting amplitude vs channel to ./plots/HCG95_contsub_amp_chn.png
+2020-03-19 16:48:35 | INFO | Completed plotting amplitude spectrum.
+2020-03-19 16:48:35 | INFO | Starting making dirty image.
+2020-03-19 16:48:35 | INFO | Removing any existing dirty images.
+2020-03-19 16:48:35 | INFO | Checking clean parameters for dirty image.
+2020-03-19 16:48:35 | INFO | Pixel sizes set as: ['2arcsec', '3arcsec'].
+2020-03-19 16:48:35 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:48:35 | INFO | Image sizes set as: ['256', '256'] pixels.
+2020-03-19 16:48:35 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:48:35 | INFO | Line emission channels set as: ['0:2~50', '0:2~49'].
+2020-03-19 16:48:35 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:48:35 | INFO | Making dirty image of HCG96 (line only).
+2020-03-19 16:48:35 | INFO | Executing command: tclean(vis='sources/HCG96'+'.split.contsub', field='H96', imagename='images/HCG96'+'.dirty', cell='2arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-03-19 16:49:07 | INFO | Making dirty image of HCG95 (line only).
+2020-03-19 16:49:07 | INFO | Executing command: tclean(vis='sources/HCG95'+'.split.contsub', field='H95', imagename='images/HCG95'+'.dirty', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-03-19 16:50:05 | INFO | Completed making dirty image.
+2020-03-19 16:50:05 | INFO | Backing up AV221_params.cfg to backup.AV221_params.cfg.
+2020-03-19 16:50:09 | INFO | 5.4.2
+2020-03-19 16:50:09 | INFO | Deleting any existing clean image(s).
+2020-03-19 16:50:09 | INFO | Starting making noise estimation.
+2020-03-19 16:50:10 | INFO | Effective integration time for HCG96: 4334 s
+2020-03-19 16:50:10 | INFO | Expected rms noise for HCG96: 0.000478786312048 Jy/beam
+2020-03-19 16:50:11 | INFO | Effective integration time for HCG95: 8593 s
+2020-03-19 16:50:11 | INFO | Expected rms noise for HCG95: 0.000340059061704 Jy/beam
+2020-03-19 16:50:11 | INFO | Completed making noise estimation.
+2020-03-19 16:50:11 | INFO | Starting generation of clean image(s).
+2020-03-19 16:50:11 | INFO | Line emission channels set as: ['0:2~50', '0:2~49'].
+2020-03-19 16:50:11 | INFO | For the targets: ['HCG96', 'HCG95'].
+2020-03-19 16:50:11 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-03-19 16:50:11 | INFO | Starting HCG96 image.
+2020-03-19 16:50:11 | INFO | Automasking parameters set as:
+2020-03-19 16:50:11 | INFO | sidelobethreshold = 2.0
+2020-03-19 16:50:11 | INFO | noisethreshold = 3.0
+2020-03-19 16:50:11 | INFO | lownoisethreshold = 1.5
+2020-03-19 16:50:11 | INFO | minbeamfraction = 0.3
+2020-03-19 16:50:11 | INFO | negativethreshold = 15.0
+2020-03-19 16:50:11 | INFO | The maximum recoverable scale for HCG96 is 479 arcsec.
+2020-03-19 16:50:11 | INFO | CLEANing with scales of [0, 14, 42, 128] pixels.
+2020-03-19 16:50:11 | INFO | CLEANing HCG96 to a threshold of 0.00119696578012 Jy.
+2020-03-19 16:50:11 | INFO | Executing command: tclean(vis='sources/HCG96'+'.split.contsub', field='H96', spw='0:2~50', imagename='images/HCG96', cell='2arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 14, 42, 128], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00119696578012Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-03-19 16:55:15 | INFO | CLEANing finished. Image cube saved as HCG96.image.
+2020-03-19 16:55:15 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-03-19 16:55:15 | INFO | Executing command: imregrid(imagename='images/HCG96'+'.image', template='J2000', output='images/HCG96'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-19 16:55:16 | INFO | HCG96.image.J2000 regridded in J2000 coordinates.
+2020-03-19 16:55:16 | INFO | Executing command: imregrid(imagename='images/HCG96'+'.image.pbcor', template='J2000', output='images/HCG96'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-19 16:55:16 | INFO | HCG96.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-03-19 16:55:16 | INFO | Saving image cube as HCG96_HI.fits
+2020-03-19 16:55:16 | INFO | Executing command: exportfits(imagename='images/HCG96.image.J2000', fitsimage='images/HCG96_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:55:16 | INFO | Saving primary beam corrected image cube as HCG96_HI.pbcor.fits
+2020-03-19 16:55:16 | INFO | Executing command: exportfits(imagename='images/HCG96.image.pbcor.J2000', fitsimage='images/HCG96_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:55:16 | INFO | Starting HCG95 image.
+2020-03-19 16:55:16 | INFO | Automasking parameters set as:
+2020-03-19 16:55:16 | INFO | sidelobethreshold = 2.0
+2020-03-19 16:55:16 | INFO | noisethreshold = 3.0
+2020-03-19 16:55:16 | INFO | lownoisethreshold = 1.5
+2020-03-19 16:55:16 | INFO | minbeamfraction = 0.3
+2020-03-19 16:55:16 | INFO | negativethreshold = 15.0
+2020-03-19 16:55:17 | INFO | The maximum recoverable scale for HCG95 is 484 arcsec.
+2020-03-19 16:55:17 | INFO | CLEANing with scales of [0, 11, 35, 106] pixels.
+2020-03-19 16:55:17 | INFO | CLEANing HCG95 to a threshold of 0.000850147654261 Jy.
+2020-03-19 16:55:17 | INFO | Executing command: tclean(vis='sources/HCG95'+'.split.contsub', field='H95', spw='0:2~49', imagename='images/HCG95', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 11, 35, 106], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.000850147654261Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-03-19 16:57:59 | INFO | CLEANing finished. Image cube saved as HCG95.image.
+2020-03-19 16:57:59 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-03-19 16:57:59 | INFO | Executing command: imregrid(imagename='images/HCG95'+'.image', template='J2000', output='images/HCG95'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-19 16:58:00 | INFO | HCG95.image.J2000 regridded in J2000 coordinates.
+2020-03-19 16:58:00 | INFO | Executing command: imregrid(imagename='images/HCG95'+'.image.pbcor', template='J2000', output='images/HCG95'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-19 16:58:00 | INFO | HCG95.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-03-19 16:58:00 | INFO | Saving image cube as HCG95_HI.fits
+2020-03-19 16:58:00 | INFO | Executing command: exportfits(imagename='images/HCG95.image.J2000', fitsimage='images/HCG95_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:58:00 | INFO | Saving primary beam corrected image cube as HCG95_HI.pbcor.fits
+2020-03-19 16:58:00 | INFO | Executing command: exportfits(imagename='images/HCG95.image.pbcor.J2000', fitsimage='images/HCG95_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:58:00 | INFO | Completed generation of clean image(s).
+2020-03-19 16:58:00 | INFO | Backing up AV221_params.cfg to backup.AV221_params.cfg.
+2020-03-19 16:58:04 | INFO | 5.4.2
+2020-03-19 16:58:04 | INFO | Deleting any existing moment(s).
+2020-03-19 16:58:04 | INFO | Starting making noise estimation.
+2020-03-19 16:58:04 | INFO | Effective integration time for HCG96: 4334 s
+2020-03-19 16:58:04 | INFO | Expected rms noise for HCG96: 0.000478786312048 Jy/beam
+2020-03-19 16:58:06 | INFO | Effective integration time for HCG95: 8593 s
+2020-03-19 16:58:06 | INFO | Expected rms noise for HCG95: 0.000340059061704 Jy/beam
+2020-03-19 16:58:06 | INFO | Completed making noise estimation.
+2020-03-19 16:58:06 | INFO | Create directory: ./moments/
+2020-03-19 16:58:06 | INFO | Starting generation of moment map(s).
+2020-03-19 16:58:06 | INFO | Executing command: immoments(imagename='images/HCG96.image.J2000',includepix=[0.00143635893614,1436.35893614],chans='',outfile='moments/HCG96.mom0')
+2020-03-19 16:58:06 | INFO | Executing command: exportfits(imagename='moments/HCG96.mom0', fitsimage='moments/HCG96.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:58:06 | INFO | Executing command: immoments(imagename='images/HCG95.image.J2000',includepix=[0.00102017718511,1020.17718511],chans='',outfile='moments/HCG95.mom0')
+2020-03-19 16:58:06 | INFO | Executing command: exportfits(imagename='moments/HCG95.mom0', fitsimage='moments/HCG95.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-19 16:58:06 | INFO | Completed generation of moment map(s).

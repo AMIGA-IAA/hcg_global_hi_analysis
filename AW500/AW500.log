@@ -1,0 +1,1730 @@
+2020-07-03 13:45:28 | INFO | CASA version: 5.4.2
+2020-07-03 13:45:28 | INFO | Starting import vla data
+2020-07-03 13:45:28 | INFO | Create directory: ./summary/
+2020-07-03 13:45:28 | INFO | Input files: ['../../data/VLA/AW500/AW500_A990110.xp1', '../../data/VLA/AW500/AW500_A990110.xp2', '../../data/VLA/AW500/AW500_A990111.xp3', '../../data/VLA/AW500/AW500_C990113.xp1', '../../data/VLA/AW500/AW500_C990209.xp1', '../../data/VLA/AW500/AW500_C990209.xp2', '../../data/VLA/AW500/AW500_D990114.xp1', '../../data/VLA/AW500/AW500_D990316.xp1', '../../data/VLA/AW500/AW500_D990316.xp2']
+2020-07-03 13:45:28 | INFO | Output msfile: AW500.ms
+2020-07-03 13:45:28 | INFO | Executing command: importvla(archivefiles = ['../../data/VLA/AW500/AW500_A990110.xp1', '../../data/VLA/AW500/AW500_A990110.xp2', '../../data/VLA/AW500/AW500_A990111.xp3', '../../data/VLA/AW500/AW500_C990113.xp1', '../../data/VLA/AW500/AW500_C990209.xp1', '../../data/VLA/AW500/AW500_C990209.xp2', '../../data/VLA/AW500/AW500_D990114.xp1', '../../data/VLA/AW500/AW500_D990316.xp1', '../../data/VLA/AW500/AW500_D990316.xp2'], vis = 'AW500.ms')
+2020-07-03 13:46:54 | INFO | Completed import vla data
+2020-07-03 13:46:54 | INFO | Starting archive file summary.
+2020-07-03 13:46:54 | INFO | To find the exact files imported here search the VLA archive (https://archive.nrao.edu/archive/advquery.jsp) for:
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-01-10 19:24:50	End Time: 1999-01-10 21:46:50
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-01-10 21:47:10	End Time: 1999-01-11 01:20:45
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-01-11 06:26:50	End Time: 1999-01-11 12:18:55
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-01-13 22:41:10	End Time: 1999-01-14 00:41:30
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-02-09 05:30:50	End Time: 1999-02-09 08:20:30
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-02-09 08:20:50	End Time: 1999-02-09 12:24:35
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-01-14 00:41:50	End Time: 1999-01-14 04:38:15
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-03-16 19:09:05	End Time: 1999-03-16 20:57:10
+2020-07-03 13:46:54 | INFO | Project: AW500	Start Time: 1999-03-16 20:57:30	End Time: 1999-03-16 22:04:55
+2020-07-03 13:46:54 | INFO | Completed archive file summary.
+2020-07-03 13:46:54 | INFO | Starting listobs summary.
+2020-07-03 13:46:54 | INFO | Writing listobs summary of data set to: ./summary/AW500.ms.listobs.summary
+2020-07-03 13:46:54 | INFO | Completed listobs summary.
+2020-07-03 13:46:54 | INFO | Starting data transform.
+2020-07-03 13:46:54 | INFO | No transformation made.
+2020-07-03 13:46:54 | INFO | Reading ms file information for MS: AW500.ms
+2020-07-03 13:46:54 | INFO | Sources in MS AW500.ms: 0134+329,0159-117,1203+645,1328+307,2234+282,HCG16,HCG49,HCG92
+2020-07-03 13:46:55 | INFO | > Sources (8): 0134+329,0159-117,1203+645,1328+307,2234+282,HCG16,HCG49,HCG92
+2020-07-03 13:46:55 | INFO | > Number of spw: 7
+2020-07-03 13:46:55 | INFO | > Channels per spw: 31
+2020-07-03 13:46:55 | INFO | Starting plotting elevation.
+2020-07-03 13:46:55 | INFO | Create directory: ./plots/
+2020-07-03 13:46:55 | INFO | Plotting elevation to: ./plots/AW500.ms_elevation.png
+2020-07-03 13:48:02 | INFO | Completed plotting elevation.
+2020-07-03 13:48:02 | INFO | Starting plotting antenna positions.
+2020-07-03 13:48:02 | INFO | Plotting antenna positions to: ./plots/AW500.ms_antpos.png
+2020-07-03 13:48:03 | INFO | Completed plotting antenna positions.
+2020-07-03 13:48:03 | INFO | Backing up AW500_params.cfg to backup.AW500_params.cfg.
+2020-07-03 13:48:07 | INFO | CASA version: 5.4.2
+2020-07-03 13:48:07 | INFO | Restoring flag version from: Original.
+2020-07-03 13:48:07 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='restore', versionname='Original')
+2020-07-03 13:48:16 | INFO | Completed restoring flag version.
+2020-07-03 13:48:16 | INFO | Starting manual flagging.
+2020-07-03 13:48:16 | INFO | Applying flags from manual_flags.list
+2020-07-03 13:48:16 | INFO | Executing command: flagdata(vis='AW500.ms', mode='list', action='apply', inpfile=["mode='manual' scan='1,17,32,37'"])
+2020-07-03 13:48:26 | INFO | Completed manual flagging.
+2020-07-03 13:48:26 | INFO | Starting basic flagging.
+2020-07-03 13:48:26 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-07-03 13:48:26 | INFO | Executing command: flagdata(vis='AW500.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-07-03 13:49:00 | INFO | Flagging zero amplitude data.
+2020-07-03 13:49:00 | INFO | Executing command: flagdata(vis='AW500.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-07-03 13:49:30 | INFO | Flagging first 5.0 s of every scan.
+2020-07-03 13:49:30 | INFO | Executing command: flagdata(vis='AW500.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-07-03 13:49:41 | INFO | Completed basic flagging.
+2020-07-03 13:49:41 | INFO | Starting running TFCrop.
+2020-07-03 13:49:41 | INFO | Executing command: flagdata(vis='AW500.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-07-03 13:51:26 | INFO | Completed running TFCrop.
+2020-07-03 13:51:26 | INFO | Removing flag version: initial.
+2020-07-03 13:51:26 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='delete', versionname='initial')
+2020-07-03 13:51:26 | INFO | Completed removing flag version.
+2020-07-03 13:51:26 | INFO | Saving flag version as: initial.
+2020-07-03 13:51:26 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='save', versionname='initial')
+2020-07-03 13:51:33 | INFO | Completed saving flag version.
+2020-07-03 13:51:33 | INFO | Starting writing flag summary to: ./summary/AW500.ms.initialflags.summary.
+2020-07-03 13:51:51 | INFO | Total flagged data: 29.07%
+2020-07-03 13:51:51 | INFO | Completed writing flag summary.
+2020-07-03 13:51:51 | INFO | Starting reference antenna selection.
+2020-07-03 13:51:51 | INFO | Reference antenna already set as: VA25.
+2020-07-03 13:51:51 | INFO | Starting set field purposes.
+2020-07-03 13:51:51 | INFO | Target field(s) already set as: ['HCG92', 'HCG49', 'HCG16'].
+2020-07-03 13:51:51 | WARNING | There are more target names than target fields.
+2020-07-03 13:51:51 | INFO | Current target names: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16']
+2020-07-03 13:51:51 | WARNING | The target names will now be set to: ['HCG92', 'HCG49', 'HCG16']
+2020-07-03 13:51:52 | INFO | Flux calibrator already set as: ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'].
+2020-07-03 13:51:52 | INFO | Flux models already set as: ['3C48_L.im', '3C48_L.im', '3C286_L.im', '3C48_L.im', '3C286_L.im', '3C48_L.im', '3C48_L.im'].
+2020-07-03 13:51:52 | INFO | Bandpass calibrator already set as: ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'].
+2020-07-03 13:51:52 | INFO | Phase calibrator already set as: ['2234+282', '1203+645', '0159-117'].
+2020-07-03 13:51:52 | INFO | Updating config file to set target and calibrator fields.
+2020-07-03 13:51:52 | INFO | Completed setting field purposes.
+2020-07-03 13:51:52 | INFO | Making flags plots for flag version: initial
+2020-07-03 13:51:52 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:51:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob0_spw0.png
+2020-07-03 13:51:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob0_spw0.png
+2020-07-03 13:52:00 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob0_spw1.png
+2020-07-03 13:52:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob0_spw1.png
+2020-07-03 13:52:06 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob0_spw5.png
+2020-07-03 13:52:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob0_spw5.png
+2020-07-03 13:52:08 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob0_spw6.png
+2020-07-03 13:52:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob0_spw6.png
+2020-07-03 13:52:10 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob1_spw0.png
+2020-07-03 13:52:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob1_spw0.png
+2020-07-03 13:52:15 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob1_spw1.png
+2020-07-03 13:52:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob1_spw1.png
+2020-07-03 13:52:21 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob1_spw5.png
+2020-07-03 13:52:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob1_spw5.png
+2020-07-03 13:52:23 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob1_spw6.png
+2020-07-03 13:52:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob1_spw6.png
+2020-07-03 13:52:25 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob2_spw0.png
+2020-07-03 13:52:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob2_spw0.png
+2020-07-03 13:52:27 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob2_spw1.png
+2020-07-03 13:52:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob2_spw1.png
+2020-07-03 13:52:28 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob2_spw5.png
+2020-07-03 13:52:29 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob2_spw5.png
+2020-07-03 13:52:30 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob2_spw6.png
+2020-07-03 13:52:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob2_spw6.png
+2020-07-03 13:52:32 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob3_spw0.png
+2020-07-03 13:52:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob3_spw0.png
+2020-07-03 13:52:33 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob3_spw1.png
+2020-07-03 13:52:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob3_spw1.png
+2020-07-03 13:52:35 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob3_spw5.png
+2020-07-03 13:52:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob3_spw5.png
+2020-07-03 13:52:37 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob3_spw6.png
+2020-07-03 13:52:38 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob3_spw6.png
+2020-07-03 13:52:39 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob4_spw0.png
+2020-07-03 13:52:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob4_spw0.png
+2020-07-03 13:52:41 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob4_spw1.png
+2020-07-03 13:52:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob4_spw1.png
+2020-07-03 13:52:42 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob4_spw5.png
+2020-07-03 13:52:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob4_spw5.png
+2020-07-03 13:52:44 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob4_spw6.png
+2020-07-03 13:52:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob4_spw6.png
+2020-07-03 13:52:46 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob5_spw0.png
+2020-07-03 13:52:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob5_spw0.png
+2020-07-03 13:52:48 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob5_spw1.png
+2020-07-03 13:52:48 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob5_spw1.png
+2020-07-03 13:52:49 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob5_spw5.png
+2020-07-03 13:52:50 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob5_spw5.png
+2020-07-03 13:52:51 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob5_spw6.png
+2020-07-03 13:52:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob5_spw6.png
+2020-07-03 13:52:53 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob6_spw0.png
+2020-07-03 13:52:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob6_spw0.png
+2020-07-03 13:52:55 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob6_spw1.png
+2020-07-03 13:52:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob6_spw1.png
+2020-07-03 13:52:56 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob6_spw5.png
+2020-07-03 13:52:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob6_spw5.png
+2020-07-03 13:52:58 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:52:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob6_spw6.png
+2020-07-03 13:52:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob6_spw6.png
+2020-07-03 13:53:00 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob7_spw0.png
+2020-07-03 13:53:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob7_spw0.png
+2020-07-03 13:53:05 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob7_spw1.png
+2020-07-03 13:53:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob7_spw1.png
+2020-07-03 13:53:11 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob7_spw5.png
+2020-07-03 13:53:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob7_spw5.png
+2020-07-03 13:53:15 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob7_spw6.png
+2020-07-03 13:53:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob7_spw6.png
+2020-07-03 13:53:20 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob8_spw0.png
+2020-07-03 13:53:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob8_spw0.png
+2020-07-03 13:53:21 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob8_spw1.png
+2020-07-03 13:53:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob8_spw1.png
+2020-07-03 13:53:23 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob8_spw5.png
+2020-07-03 13:53:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob8_spw5.png
+2020-07-03 13:53:29 | INFO | Making flags plots for 2234+282.
+2020-07-03 13:53:29 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_2234+282_freq_ob8_spw6.png
+2020-07-03 13:53:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_2234+282_time_ob8_spw6.png
+2020-07-03 13:53:34 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob0_spw3.png
+2020-07-03 13:53:35 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob0_spw3.png
+2020-07-03 13:53:36 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob1_spw3.png
+2020-07-03 13:53:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob1_spw3.png
+2020-07-03 13:53:38 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob2_spw3.png
+2020-07-03 13:53:38 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob2_spw3.png
+2020-07-03 13:53:39 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob3_spw3.png
+2020-07-03 13:53:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob3_spw3.png
+2020-07-03 13:53:45 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob4_spw3.png
+2020-07-03 13:53:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob4_spw3.png
+2020-07-03 13:53:47 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:47 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob5_spw3.png
+2020-07-03 13:53:48 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob5_spw3.png
+2020-07-03 13:53:49 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:53:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob6_spw3.png
+2020-07-03 13:53:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob6_spw3.png
+2020-07-03 13:54:00 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:54:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob7_spw3.png
+2020-07-03 13:54:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob7_spw3.png
+2020-07-03 13:54:03 | INFO | Making flags plots for 0159-117.
+2020-07-03 13:54:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0159-117_freq_ob8_spw3.png
+2020-07-03 13:54:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0159-117_time_ob8_spw3.png
+2020-07-03 13:54:05 | INFO | Making flags plots for HCG92.
+2020-07-03 13:54:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob0_spw0.png
+2020-07-03 13:54:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob0_spw0.png
+2020-07-03 13:54:27 | INFO | Making flags plots for HCG92.
+2020-07-03 13:54:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob0_spw1.png
+2020-07-03 13:54:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob0_spw1.png
+2020-07-03 13:54:51 | INFO | Making flags plots for HCG92.
+2020-07-03 13:54:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob0_spw5.png
+2020-07-03 13:54:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob0_spw5.png
+2020-07-03 13:54:55 | INFO | Making flags plots for HCG92.
+2020-07-03 13:54:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob0_spw6.png
+2020-07-03 13:54:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob0_spw6.png
+2020-07-03 13:54:56 | INFO | Making flags plots for HCG92.
+2020-07-03 13:54:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob1_spw0.png
+2020-07-03 13:55:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob1_spw0.png
+2020-07-03 13:55:18 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob1_spw1.png
+2020-07-03 13:55:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob1_spw1.png
+2020-07-03 13:55:41 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob1_spw5.png
+2020-07-03 13:55:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob1_spw5.png
+2020-07-03 13:55:44 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob1_spw6.png
+2020-07-03 13:55:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob1_spw6.png
+2020-07-03 13:55:46 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob2_spw0.png
+2020-07-03 13:55:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob2_spw0.png
+2020-07-03 13:55:48 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob2_spw1.png
+2020-07-03 13:55:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob2_spw1.png
+2020-07-03 13:55:50 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob2_spw5.png
+2020-07-03 13:55:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob2_spw5.png
+2020-07-03 13:55:51 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob2_spw6.png
+2020-07-03 13:55:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob2_spw6.png
+2020-07-03 13:55:53 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob3_spw0.png
+2020-07-03 13:55:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob3_spw0.png
+2020-07-03 13:55:55 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob3_spw1.png
+2020-07-03 13:55:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob3_spw1.png
+2020-07-03 13:55:57 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob3_spw5.png
+2020-07-03 13:55:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob3_spw5.png
+2020-07-03 13:55:59 | INFO | Making flags plots for HCG92.
+2020-07-03 13:55:59 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob3_spw6.png
+2020-07-03 13:56:00 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob3_spw6.png
+2020-07-03 13:56:00 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob4_spw0.png
+2020-07-03 13:56:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob4_spw0.png
+2020-07-03 13:56:02 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob4_spw1.png
+2020-07-03 13:56:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob4_spw1.png
+2020-07-03 13:56:04 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob4_spw5.png
+2020-07-03 13:56:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob4_spw5.png
+2020-07-03 13:56:06 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob4_spw6.png
+2020-07-03 13:56:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob4_spw6.png
+2020-07-03 13:56:08 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob5_spw0.png
+2020-07-03 13:56:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob5_spw0.png
+2020-07-03 13:56:10 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob5_spw1.png
+2020-07-03 13:56:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob5_spw1.png
+2020-07-03 13:56:12 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob5_spw5.png
+2020-07-03 13:56:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob5_spw5.png
+2020-07-03 13:56:13 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob5_spw6.png
+2020-07-03 13:56:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob5_spw6.png
+2020-07-03 13:56:15 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob6_spw0.png
+2020-07-03 13:56:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob6_spw0.png
+2020-07-03 13:56:17 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob6_spw1.png
+2020-07-03 13:56:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob6_spw1.png
+2020-07-03 13:56:19 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob6_spw5.png
+2020-07-03 13:56:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob6_spw5.png
+2020-07-03 13:56:21 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob6_spw6.png
+2020-07-03 13:56:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob6_spw6.png
+2020-07-03 13:56:22 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob7_spw0.png
+2020-07-03 13:56:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob7_spw0.png
+2020-07-03 13:56:39 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob7_spw1.png
+2020-07-03 13:56:48 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob7_spw1.png
+2020-07-03 13:56:56 | INFO | Making flags plots for HCG92.
+2020-07-03 13:56:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob7_spw5.png
+2020-07-03 13:57:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob7_spw5.png
+2020-07-03 13:57:09 | INFO | Making flags plots for HCG92.
+2020-07-03 13:57:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob7_spw6.png
+2020-07-03 13:57:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob7_spw6.png
+2020-07-03 13:57:21 | INFO | Making flags plots for HCG92.
+2020-07-03 13:57:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob8_spw0.png
+2020-07-03 13:57:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob8_spw0.png
+2020-07-03 13:57:30 | INFO | Making flags plots for HCG92.
+2020-07-03 13:57:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob8_spw1.png
+2020-07-03 13:57:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob8_spw1.png
+2020-07-03 13:57:38 | INFO | Making flags plots for HCG92.
+2020-07-03 13:57:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob8_spw5.png
+2020-07-03 13:57:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob8_spw5.png
+2020-07-03 13:57:51 | INFO | Making flags plots for HCG92.
+2020-07-03 13:57:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG92_freq_ob8_spw6.png
+2020-07-03 13:57:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG92_time_ob8_spw6.png
+2020-07-03 13:58:04 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob0_spw3.png
+2020-07-03 13:58:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob0_spw3.png
+2020-07-03 13:58:07 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob1_spw3.png
+2020-07-03 13:58:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob1_spw3.png
+2020-07-03 13:58:09 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob2_spw3.png
+2020-07-03 13:58:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob2_spw3.png
+2020-07-03 13:58:11 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob3_spw3.png
+2020-07-03 13:58:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob3_spw3.png
+2020-07-03 13:58:50 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob4_spw3.png
+2020-07-03 13:58:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob4_spw3.png
+2020-07-03 13:58:56 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob5_spw3.png
+2020-07-03 13:58:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob5_spw3.png
+2020-07-03 13:58:57 | INFO | Making flags plots for HCG16.
+2020-07-03 13:58:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob6_spw3.png
+2020-07-03 13:59:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob6_spw3.png
+2020-07-03 13:59:35 | INFO | Making flags plots for HCG16.
+2020-07-03 13:59:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob7_spw3.png
+2020-07-03 13:59:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob7_spw3.png
+2020-07-03 13:59:40 | INFO | Making flags plots for HCG16.
+2020-07-03 13:59:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG16_freq_ob8_spw3.png
+2020-07-03 13:59:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG16_time_ob8_spw3.png
+2020-07-03 13:59:42 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob0_spw2.png
+2020-07-03 13:59:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob0_spw2.png
+2020-07-03 13:59:44 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob0_spw4.png
+2020-07-03 13:59:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob0_spw4.png
+2020-07-03 13:59:45 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob1_spw2.png
+2020-07-03 13:59:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob1_spw2.png
+2020-07-03 13:59:47 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:47 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob1_spw4.png
+2020-07-03 13:59:48 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob1_spw4.png
+2020-07-03 13:59:49 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob2_spw2.png
+2020-07-03 13:59:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob2_spw2.png
+2020-07-03 13:59:58 | INFO | Making flags plots for 1203+645.
+2020-07-03 13:59:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob2_spw4.png
+2020-07-03 13:59:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob2_spw4.png
+2020-07-03 14:00:00 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob3_spw2.png
+2020-07-03 14:00:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob3_spw2.png
+2020-07-03 14:00:02 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob3_spw4.png
+2020-07-03 14:00:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob3_spw4.png
+2020-07-03 14:00:04 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob4_spw2.png
+2020-07-03 14:00:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob4_spw2.png
+2020-07-03 14:00:05 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob4_spw4.png
+2020-07-03 14:00:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob4_spw4.png
+2020-07-03 14:00:13 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob5_spw2.png
+2020-07-03 14:00:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob5_spw2.png
+2020-07-03 14:00:15 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob5_spw4.png
+2020-07-03 14:00:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob5_spw4.png
+2020-07-03 14:00:27 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob6_spw2.png
+2020-07-03 14:00:29 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob6_spw2.png
+2020-07-03 14:00:30 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob6_spw4.png
+2020-07-03 14:00:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob6_spw4.png
+2020-07-03 14:00:32 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob7_spw2.png
+2020-07-03 14:00:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob7_spw2.png
+2020-07-03 14:00:34 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob7_spw4.png
+2020-07-03 14:00:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob7_spw4.png
+2020-07-03 14:00:35 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob8_spw2.png
+2020-07-03 14:00:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob8_spw2.png
+2020-07-03 14:00:37 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:00:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1203+645_freq_ob8_spw4.png
+2020-07-03 14:00:38 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1203+645_time_ob8_spw4.png
+2020-07-03 14:00:39 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw0.png
+2020-07-03 14:00:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw0.png
+2020-07-03 14:00:41 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw1.png
+2020-07-03 14:00:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw1.png
+2020-07-03 14:00:42 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw3.png
+2020-07-03 14:00:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw3.png
+2020-07-03 14:00:44 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw5.png
+2020-07-03 14:00:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw5.png
+2020-07-03 14:00:46 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob0_spw6.png
+2020-07-03 14:00:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob0_spw6.png
+2020-07-03 14:00:48 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw0.png
+2020-07-03 14:00:50 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw0.png
+2020-07-03 14:00:53 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw1.png
+2020-07-03 14:00:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw1.png
+2020-07-03 14:00:58 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:00:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw3.png
+2020-07-03 14:00:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw3.png
+2020-07-03 14:01:00 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw5.png
+2020-07-03 14:01:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw5.png
+2020-07-03 14:01:01 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:01 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob1_spw6.png
+2020-07-03 14:01:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob1_spw6.png
+2020-07-03 14:01:03 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw0.png
+2020-07-03 14:01:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw0.png
+2020-07-03 14:01:05 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw1.png
+2020-07-03 14:01:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw1.png
+2020-07-03 14:01:07 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw3.png
+2020-07-03 14:01:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw3.png
+2020-07-03 14:01:08 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw5.png
+2020-07-03 14:01:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw5.png
+2020-07-03 14:01:10 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob2_spw6.png
+2020-07-03 14:01:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob2_spw6.png
+2020-07-03 14:01:12 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob3_spw0.png
+2020-07-03 14:01:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob3_spw0.png
+2020-07-03 14:01:14 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob3_spw1.png
+2020-07-03 14:01:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob3_spw1.png
+2020-07-03 14:01:15 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob3_spw3.png
+2020-07-03 14:01:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob3_spw3.png
+2020-07-03 14:01:17 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob3_spw5.png
+2020-07-03 14:01:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob3_spw5.png
+2020-07-03 14:01:19 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob3_spw6.png
+2020-07-03 14:01:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob3_spw6.png
+2020-07-03 14:01:20 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob4_spw0.png
+2020-07-03 14:01:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob4_spw0.png
+2020-07-03 14:01:22 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob4_spw1.png
+2020-07-03 14:01:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob4_spw1.png
+2020-07-03 14:01:24 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:24 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob4_spw3.png
+2020-07-03 14:01:25 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob4_spw3.png
+2020-07-03 14:01:26 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob4_spw5.png
+2020-07-03 14:01:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob4_spw5.png
+2020-07-03 14:01:27 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob4_spw6.png
+2020-07-03 14:01:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob4_spw6.png
+2020-07-03 14:01:29 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:29 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob5_spw0.png
+2020-07-03 14:01:30 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob5_spw0.png
+2020-07-03 14:01:31 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:31 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob5_spw1.png
+2020-07-03 14:01:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob5_spw1.png
+2020-07-03 14:01:33 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob5_spw3.png
+2020-07-03 14:01:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob5_spw3.png
+2020-07-03 14:01:34 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob5_spw5.png
+2020-07-03 14:01:35 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob5_spw5.png
+2020-07-03 14:01:36 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob5_spw6.png
+2020-07-03 14:01:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob5_spw6.png
+2020-07-03 14:01:38 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob6_spw0.png
+2020-07-03 14:01:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob6_spw0.png
+2020-07-03 14:01:40 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob6_spw1.png
+2020-07-03 14:01:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob6_spw1.png
+2020-07-03 14:01:41 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob6_spw3.png
+2020-07-03 14:01:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob6_spw3.png
+2020-07-03 14:01:48 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob6_spw5.png
+2020-07-03 14:01:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob6_spw5.png
+2020-07-03 14:01:50 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob6_spw6.png
+2020-07-03 14:01:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob6_spw6.png
+2020-07-03 14:01:52 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob7_spw0.png
+2020-07-03 14:01:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob7_spw0.png
+2020-07-03 14:01:56 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:01:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob7_spw1.png
+2020-07-03 14:01:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob7_spw1.png
+2020-07-03 14:02:00 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob7_spw3.png
+2020-07-03 14:02:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob7_spw3.png
+2020-07-03 14:02:02 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob7_spw5.png
+2020-07-03 14:02:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob7_spw5.png
+2020-07-03 14:02:06 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob7_spw6.png
+2020-07-03 14:02:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob7_spw6.png
+2020-07-03 14:02:11 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob8_spw0.png
+2020-07-03 14:02:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob8_spw0.png
+2020-07-03 14:02:12 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob8_spw1.png
+2020-07-03 14:02:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob8_spw1.png
+2020-07-03 14:02:14 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob8_spw3.png
+2020-07-03 14:02:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob8_spw3.png
+2020-07-03 14:02:16 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob8_spw5.png
+2020-07-03 14:02:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob8_spw5.png
+2020-07-03 14:02:18 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:02:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_0134+329_freq_ob8_spw6.png
+2020-07-03 14:02:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_0134+329_time_ob8_spw6.png
+2020-07-03 14:02:19 | INFO | Making flags plots for HCG49.
+2020-07-03 14:02:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob0_spw2.png
+2020-07-03 14:02:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob0_spw2.png
+2020-07-03 14:02:21 | INFO | Making flags plots for HCG49.
+2020-07-03 14:02:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob0_spw4.png
+2020-07-03 14:02:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob0_spw4.png
+2020-07-03 14:02:23 | INFO | Making flags plots for HCG49.
+2020-07-03 14:02:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob1_spw2.png
+2020-07-03 14:02:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob1_spw2.png
+2020-07-03 14:02:25 | INFO | Making flags plots for HCG49.
+2020-07-03 14:02:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob1_spw4.png
+2020-07-03 14:02:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob1_spw4.png
+2020-07-03 14:02:27 | INFO | Making flags plots for HCG49.
+2020-07-03 14:02:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob2_spw2.png
+2020-07-03 14:02:48 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob2_spw2.png
+2020-07-03 14:03:08 | INFO | Making flags plots for HCG49.
+2020-07-03 14:03:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob2_spw4.png
+2020-07-03 14:03:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob2_spw4.png
+2020-07-03 14:03:13 | INFO | Making flags plots for HCG49.
+2020-07-03 14:03:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob3_spw2.png
+2020-07-03 14:03:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob3_spw2.png
+2020-07-03 14:03:15 | INFO | Making flags plots for HCG49.
+2020-07-03 14:03:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob3_spw4.png
+2020-07-03 14:03:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob3_spw4.png
+2020-07-03 14:03:17 | INFO | Making flags plots for HCG49.
+2020-07-03 14:03:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob4_spw2.png
+2020-07-03 14:03:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob4_spw2.png
+2020-07-03 14:03:19 | INFO | Making flags plots for HCG49.
+2020-07-03 14:03:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob4_spw4.png
+2020-07-03 14:03:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob4_spw4.png
+2020-07-03 14:04:04 | INFO | Making flags plots for HCG49.
+2020-07-03 14:04:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob5_spw2.png
+2020-07-03 14:04:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob5_spw2.png
+2020-07-03 14:04:10 | INFO | Making flags plots for HCG49.
+2020-07-03 14:04:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob5_spw4.png
+2020-07-03 14:04:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob5_spw4.png
+2020-07-03 14:04:56 | INFO | Making flags plots for HCG49.
+2020-07-03 14:04:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob6_spw2.png
+2020-07-03 14:05:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob6_spw2.png
+2020-07-03 14:05:02 | INFO | Making flags plots for HCG49.
+2020-07-03 14:05:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob6_spw4.png
+2020-07-03 14:05:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob6_spw4.png
+2020-07-03 14:05:04 | INFO | Making flags plots for HCG49.
+2020-07-03 14:05:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob7_spw2.png
+2020-07-03 14:05:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob7_spw2.png
+2020-07-03 14:05:05 | INFO | Making flags plots for HCG49.
+2020-07-03 14:05:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob7_spw4.png
+2020-07-03 14:05:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob7_spw4.png
+2020-07-03 14:05:07 | INFO | Making flags plots for HCG49.
+2020-07-03 14:05:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob8_spw2.png
+2020-07-03 14:05:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob8_spw2.png
+2020-07-03 14:05:09 | INFO | Making flags plots for HCG49.
+2020-07-03 14:05:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG49_freq_ob8_spw4.png
+2020-07-03 14:05:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG49_time_ob8_spw4.png
+2020-07-03 14:05:11 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob0_spw2.png
+2020-07-03 14:05:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob0_spw2.png
+2020-07-03 14:05:13 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob0_spw4.png
+2020-07-03 14:05:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob0_spw4.png
+2020-07-03 14:05:14 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob1_spw2.png
+2020-07-03 14:05:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob1_spw2.png
+2020-07-03 14:05:16 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob1_spw4.png
+2020-07-03 14:05:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob1_spw4.png
+2020-07-03 14:05:18 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob2_spw2.png
+2020-07-03 14:05:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob2_spw2.png
+2020-07-03 14:05:23 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob2_spw4.png
+2020-07-03 14:05:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob2_spw4.png
+2020-07-03 14:05:25 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob3_spw2.png
+2020-07-03 14:05:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob3_spw2.png
+2020-07-03 14:05:26 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob3_spw4.png
+2020-07-03 14:05:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob3_spw4.png
+2020-07-03 14:05:28 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob4_spw2.png
+2020-07-03 14:05:29 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob4_spw2.png
+2020-07-03 14:05:30 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob4_spw4.png
+2020-07-03 14:05:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob4_spw4.png
+2020-07-03 14:05:32 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob5_spw2.png
+2020-07-03 14:05:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob5_spw2.png
+2020-07-03 14:05:33 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob5_spw4.png
+2020-07-03 14:05:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob5_spw4.png
+2020-07-03 14:05:41 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob6_spw2.png
+2020-07-03 14:05:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob6_spw2.png
+2020-07-03 14:05:43 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:43 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob6_spw4.png
+2020-07-03 14:05:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob6_spw4.png
+2020-07-03 14:05:45 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob7_spw2.png
+2020-07-03 14:05:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob7_spw2.png
+2020-07-03 14:05:47 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:47 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob7_spw4.png
+2020-07-03 14:05:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob7_spw4.png
+2020-07-03 14:05:48 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob8_spw2.png
+2020-07-03 14:05:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob8_spw2.png
+2020-07-03 14:05:50 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:05:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob8_spw4.png
+2020-07-03 14:05:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob8_spw4.png
+2020-07-03 14:05:52 | INFO | Completed flags plots 
+2020-07-03 14:05:52 | INFO | Starting calibration.
+2020-07-03 14:05:52 | INFO | Create directory: ./cal_tabs/
+2020-07-03 14:05:56 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-07-03 14:05:56 | INFO | Executing command: gencal(vis='AW500.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-07-03 14:05:57 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-07-03 14:05:57 | INFO | Executing command: setjy(vis='AW500.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-07-03 14:06:05 | INFO | Load model for flux calibrator 1328+307 (3C286_L.im).
+2020-07-03 14:06:05 | INFO | Executing command: setjy(vis='AW500.ms', field='1328+307', scalebychan=True, model='3C286_L.im')
+2020-07-03 14:06:16 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-07-03 14:06:18 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-07-03 14:06:18 | INFO | Executing command: gaincal(vis='AW500.ms', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA25', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:06:27 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-07-03 14:06:27 | INFO | Executing command: gaincal(vis='AW500.ms', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA25', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:06:40 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-07-03 14:06:41 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-07-03 14:06:43 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob2.png
+2020-07-03 14:06:46 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob3.png
+2020-07-03 14:06:46 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob4.png
+2020-07-03 14:06:47 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob5.png
+2020-07-03 14:06:50 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob6.png
+2020-07-03 14:06:52 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob7.png
+2020-07-03 14:06:54 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob8.png
+2020-07-03 14:06:55 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-07-03 14:06:55 | INFO | Executing command: bandpass(vis='AW500.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', refant='VA25', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:07:04 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-07-03 14:07:07 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-07-03 14:07:07 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/intphase.gcal', refant='VA25', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:07:48 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-07-03 14:07:48 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/scanphase.gcal', refant='VA25', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:08:08 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-07-03 14:08:08 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/amp.gcal', refant='VA25', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:08:27 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-07-03 14:08:29 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-07-03 14:08:31 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-07-03 14:08:34 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-07-03 14:08:36 | INFO | Plotting phase solutions to: ./plots/phasesol_ob2.png
+2020-07-03 14:08:38 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob2.png
+2020-07-03 14:08:40 | INFO | Plotting phase solutions to: ./plots/phasesol_ob3.png
+2020-07-03 14:08:42 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob3.png
+2020-07-03 14:08:44 | INFO | Plotting phase solutions to: ./plots/phasesol_ob4.png
+2020-07-03 14:08:46 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob4.png
+2020-07-03 14:08:48 | INFO | Plotting phase solutions to: ./plots/phasesol_ob5.png
+2020-07-03 14:08:51 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob5.png
+2020-07-03 14:08:53 | INFO | Plotting phase solutions to: ./plots/phasesol_ob6.png
+2020-07-03 14:08:55 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob6.png
+2020-07-03 14:08:57 | INFO | Plotting phase solutions to: ./plots/phasesol_ob7.png
+2020-07-03 14:08:59 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob7.png
+2020-07-03 14:09:01 | INFO | Plotting phase solutions to: ./plots/phasesol_ob8.png
+2020-07-03 14:09:03 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob8.png
+2020-07-03 14:09:05 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-07-03 14:09:05 | INFO | Executing command: flux_info = fluxscale(vis='AW500.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', incremental=True)
+2020-07-03 14:09:08 | INFO | Writing calibrator fluxes summary to: ./summary/AW500.ms.flux.summary.
+2020-07-03 14:09:08 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-07-03 14:09:08 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:09:08 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:09:17 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:09:17 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:09:26 | INFO | Applying calibration to: 1328+307
+2020-07-03 14:09:26 | INFO | Executing command: applycal(vis='AW500.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-07-03 14:09:34 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:09:34 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:09:43 | INFO | Applying calibration to: 1328+307
+2020-07-03 14:09:43 | INFO | Executing command: applycal(vis='AW500.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-07-03 14:09:51 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:09:51 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:10:00 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:10:00 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:10:09 | INFO | Plotting corrected phases for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-07-03 14:10:12 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-07-03 14:10:16 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-07-03 14:10:16 | INFO | Applying calibration to: 2234+282
+2020-07-03 14:10:16 | INFO | Executing command: applycal(vis='AW500.ms', field='2234+282', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2234+282', '2234+282', '2234+282'], calwt=False)
+2020-07-03 14:10:27 | INFO | Applying calibration to: HCG92
+2020-07-03 14:10:27 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG92', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2234+282', '2234+282', '2234+282'], calwt=False)
+2020-07-03 14:10:57 | INFO | Applying calibration to: 1203+645
+2020-07-03 14:10:57 | INFO | Executing command: applycal(vis='AW500.ms', field='1203+645', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '1328+307', '1328+307', '1203+645', '1203+645', '1203+645'], calwt=False)
+2020-07-03 14:11:07 | INFO | Applying calibration to: HCG49
+2020-07-03 14:11:07 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG49', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '1328+307', '1328+307', '1203+645', '1203+645', '1203+645'], calwt=False)
+2020-07-03 14:11:34 | INFO | Applying calibration to: 0159-117
+2020-07-03 14:11:34 | INFO | Executing command: applycal(vis='AW500.ms', field='0159-117', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '0159-117', '0159-117', '0159-117'], calwt=False)
+2020-07-03 14:11:43 | INFO | Applying calibration to: HCG16
+2020-07-03 14:11:43 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG16', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '0159-117', '0159-117', '0159-117'], calwt=False)
+2020-07-03 14:12:01 | INFO | Completed calibration.
+2020-07-03 14:12:01 | INFO | Starting running rflag with a threshold of 4.0.
+2020-07-03 14:12:01 | INFO | Executing command: flagdata(vis='AW500.ms', mode='rflag', action='apply', datacolumn='corrected', freqdevscale=4.0, timedevscale=4.0, display='', flagbackup=False)
+2020-07-03 14:14:24 | INFO | Completed running rflag.
+2020-07-03 14:14:24 | INFO | Removing flag version: rflag.
+2020-07-03 14:14:24 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='delete', versionname='rflag')
+2020-07-03 14:14:24 | INFO | Completed removing flag version.
+2020-07-03 14:14:24 | INFO | Saving flag version as: rflag.
+2020-07-03 14:14:24 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='save', versionname='rflag')
+2020-07-03 14:14:29 | INFO | Completed saving flag version.
+2020-07-03 14:14:29 | INFO | Starting writing flag summary to: ./summary/AW500.ms.rflagflags.summary.
+2020-07-03 14:14:47 | INFO | Total flagged data: 40.29%
+2020-07-03 14:14:47 | INFO | Completed writing flag summary.
+2020-07-03 14:14:47 | INFO | Starting extending existing flags.
+2020-07-03 14:14:47 | INFO | Executing command: flagdata(vis='AW500.ms', mode='extend', spw='', extendpols=True, action='apply', display='', flagbackup=False)
+2020-07-03 14:15:09 | INFO | Executing command: flagdata(vis='AW500.ms', mode='extend', spw='', growtime=75.0, growfreq=90.0, action='apply', display='', flagbackup=False)
+2020-07-03 14:15:31 | INFO | Completed extending existing flags.
+2020-07-03 14:15:31 | INFO | Removing flag version: extended.
+2020-07-03 14:15:31 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='delete', versionname='extended')
+2020-07-03 14:15:31 | INFO | Completed removing flag version.
+2020-07-03 14:15:31 | INFO | Saving flag version as: extended.
+2020-07-03 14:15:31 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='save', versionname='extended')
+2020-07-03 14:15:38 | INFO | Completed saving flag version.
+2020-07-03 14:15:38 | INFO | Starting writing flag summary to: ./summary/AW500.ms.extendedflags.summary.
+2020-07-03 14:15:56 | INFO | Total flagged data: 40.65%
+2020-07-03 14:15:56 | INFO | Completed writing flag summary.
+2020-07-03 14:15:56 | INFO | Starting calibration.
+2020-07-03 14:16:00 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-07-03 14:16:00 | INFO | Executing command: gencal(vis='AW500.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-07-03 14:16:01 | INFO | Load model for flux calibrator 0134+329 (3C48_L.im).
+2020-07-03 14:16:01 | INFO | Executing command: setjy(vis='AW500.ms', field='0134+329', scalebychan=True, model='3C48_L.im')
+2020-07-03 14:16:10 | INFO | Load model for flux calibrator 1328+307 (3C286_L.im).
+2020-07-03 14:16:10 | INFO | Executing command: setjy(vis='AW500.ms', field='1328+307', scalebychan=True, model='3C286_L.im')
+2020-07-03 14:16:20 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-07-03 14:16:23 | INFO | Calibrating delays for bandpass calibrators ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] (./cal_tabs/delays.cal).
+2020-07-03 14:16:23 | INFO | Executing command: gaincal(vis='AW500.ms', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', caltable='./cal_tabs/delays.cal', refant='VA25', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:16:30 | INFO | Make bandpass calibrator phase solutions for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] (./cal_tabs/bpphase.gcal).
+2020-07-03 14:16:30 | INFO | Executing command: gaincal(vis='AW500.ms', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329',  caltable='./cal_tabs/bpphase.gcal', refant='VA25', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:16:43 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-07-03 14:16:43 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob1.png
+2020-07-03 14:16:46 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob2.png
+2020-07-03 14:16:48 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob3.png
+2020-07-03 14:16:49 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob4.png
+2020-07-03 14:16:50 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob5.png
+2020-07-03 14:16:52 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob6.png
+2020-07-03 14:16:55 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob7.png
+2020-07-03 14:16:57 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob8.png
+2020-07-03 14:16:58 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-07-03 14:16:58 | INFO | Executing command: bandpass(vis='AW500.ms', caltable='./cal_tabs/bandpass.bcal', field='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', refant='VA25', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0,1,2,3,4,5,6')
+2020-07-03 14:17:07 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-07-03 14:17:09 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-07-03 14:17:09 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/intphase.gcal', refant='VA25', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:17:48 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-07-03 14:17:48 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/scanphase.gcal', refant='VA25', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:18:10 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-07-03 14:18:10 | INFO | Executing command: gaincal(vis='AW500.ms', field='2234+282,0134+329,0159-117,1203+645,1328+307', caltable='./cal_tabs/amp.gcal', refant='VA25', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0,1,2,3,4,5,6')
+2020-07-03 14:18:31 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-07-03 14:18:34 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-07-03 14:18:36 | INFO | Plotting phase solutions to: ./plots/phasesol_ob1.png
+2020-07-03 14:18:38 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob1.png
+2020-07-03 14:18:40 | INFO | Plotting phase solutions to: ./plots/phasesol_ob2.png
+2020-07-03 14:18:43 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob2.png
+2020-07-03 14:18:45 | INFO | Plotting phase solutions to: ./plots/phasesol_ob3.png
+2020-07-03 14:18:48 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob3.png
+2020-07-03 14:18:50 | INFO | Plotting phase solutions to: ./plots/phasesol_ob4.png
+2020-07-03 14:18:53 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob4.png
+2020-07-03 14:18:55 | INFO | Plotting phase solutions to: ./plots/phasesol_ob5.png
+2020-07-03 14:18:57 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob5.png
+2020-07-03 14:19:00 | INFO | Plotting phase solutions to: ./plots/phasesol_ob6.png
+2020-07-03 14:19:02 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob6.png
+2020-07-03 14:19:04 | INFO | Plotting phase solutions to: ./plots/phasesol_ob7.png
+2020-07-03 14:19:07 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob7.png
+2020-07-03 14:19:09 | INFO | Plotting phase solutions to: ./plots/phasesol_ob8.png
+2020-07-03 14:19:12 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob8.png
+2020-07-03 14:19:14 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-07-03 14:19:14 | INFO | Executing command: flux_info = fluxscale(vis='AW500.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='0134+329,0134+329,1328+307,0134+329,1328+307,0134+329,0134+329', incremental=True)
+2020-07-03 14:19:17 | INFO | Writing calibrator fluxes summary to: ./summary/AW500.ms.flux.summary.
+2020-07-03 14:19:17 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-07-03 14:19:17 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:19:17 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:19:28 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:19:28 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:19:38 | INFO | Applying calibration to: 1328+307
+2020-07-03 14:19:38 | INFO | Executing command: applycal(vis='AW500.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-07-03 14:19:48 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:19:48 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:19:58 | INFO | Applying calibration to: 1328+307
+2020-07-03 14:19:58 | INFO | Executing command: applycal(vis='AW500.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-07-03 14:20:08 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:20:08 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:20:19 | INFO | Applying calibration to: 0134+329
+2020-07-03 14:20:19 | INFO | Executing command: applycal(vis='AW500.ms', field='0134+329', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '0134+329', '0134+329', '0134+329', '0134+329'], calwt=False)
+2020-07-03 14:20:30 | INFO | Plotting corrected phases for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] to: ./plots/corr_phase.png
+2020-07-03 14:20:33 | INFO | Plotting corrected amplitudes for ['0134+329', '0134+329', '1328+307', '0134+329', '1328+307', '0134+329', '0134+329'] to: ./plots/corr_amp.png
+2020-07-03 14:20:36 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-07-03 14:20:37 | INFO | Applying calibration to: 2234+282
+2020-07-03 14:20:37 | INFO | Executing command: applycal(vis='AW500.ms', field='2234+282', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2234+282', '2234+282', '2234+282'], calwt=False)
+2020-07-03 14:20:49 | INFO | Applying calibration to: HCG92
+2020-07-03 14:20:49 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG92', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '2234+282', '2234+282', '2234+282'], calwt=False)
+2020-07-03 14:21:25 | INFO | Applying calibration to: 1203+645
+2020-07-03 14:21:25 | INFO | Executing command: applycal(vis='AW500.ms', field='1203+645', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '1328+307', '1328+307', '1203+645', '1203+645', '1203+645'], calwt=False)
+2020-07-03 14:21:36 | INFO | Applying calibration to: HCG49
+2020-07-03 14:21:36 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG49', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '1328+307', '1328+307', '1203+645', '1203+645', '1203+645'], calwt=False)
+2020-07-03 14:22:08 | INFO | Applying calibration to: 0159-117
+2020-07-03 14:22:08 | INFO | Executing command: applycal(vis='AW500.ms', field='0159-117', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '0159-117', '0159-117', '0159-117'], calwt=False)
+2020-07-03 14:22:19 | INFO | Applying calibration to: HCG16
+2020-07-03 14:22:19 | INFO | Executing command: applycal(vis='AW500.ms', field='HCG16', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '0134+329', '0134+329', '0159-117', '0159-117', '0159-117'], calwt=False)
+2020-07-03 14:22:41 | INFO | Completed calibration.
+2020-07-03 14:22:41 | INFO | Removing flag version: final.
+2020-07-03 14:22:41 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='delete', versionname='final')
+2020-07-03 14:22:41 | INFO | Completed removing flag version.
+2020-07-03 14:22:41 | INFO | Saving flag version as: final.
+2020-07-03 14:22:41 | INFO | Executing command: flagmanager(vis='AW500.ms', mode='save', versionname='final')
+2020-07-03 14:22:48 | INFO | Completed saving flag version.
+2020-07-03 14:22:48 | INFO | Starting writing flag summary to: ./summary/AW500.ms.finalflags.summary.
+2020-07-03 14:23:07 | INFO | Total flagged data: 58.17%
+2020-07-03 14:23:07 | INFO | Completed writing flag summary.
+2020-07-03 14:23:07 | INFO | Making flags plots for flag version: final
+2020-07-03 14:23:07 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob0_spw0.png
+2020-07-03 14:23:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob0_spw0.png
+2020-07-03 14:23:13 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob0_spw1.png
+2020-07-03 14:23:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob0_spw1.png
+2020-07-03 14:23:19 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob0_spw5.png
+2020-07-03 14:23:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob0_spw5.png
+2020-07-03 14:23:21 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob0_spw6.png
+2020-07-03 14:23:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob0_spw6.png
+2020-07-03 14:23:23 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob1_spw0.png
+2020-07-03 14:23:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob1_spw0.png
+2020-07-03 14:23:29 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:29 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob1_spw1.png
+2020-07-03 14:23:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob1_spw1.png
+2020-07-03 14:23:36 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob1_spw5.png
+2020-07-03 14:23:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob1_spw5.png
+2020-07-03 14:23:38 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob1_spw6.png
+2020-07-03 14:23:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob1_spw6.png
+2020-07-03 14:23:40 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob2_spw0.png
+2020-07-03 14:23:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob2_spw0.png
+2020-07-03 14:23:41 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob2_spw1.png
+2020-07-03 14:23:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob2_spw1.png
+2020-07-03 14:23:43 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:43 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob2_spw5.png
+2020-07-03 14:23:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob2_spw5.png
+2020-07-03 14:23:45 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob2_spw6.png
+2020-07-03 14:23:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob2_spw6.png
+2020-07-03 14:23:47 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:47 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob3_spw0.png
+2020-07-03 14:23:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob3_spw0.png
+2020-07-03 14:23:48 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob3_spw1.png
+2020-07-03 14:23:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob3_spw1.png
+2020-07-03 14:23:50 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob3_spw5.png
+2020-07-03 14:23:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob3_spw5.png
+2020-07-03 14:23:52 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob3_spw6.png
+2020-07-03 14:23:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob3_spw6.png
+2020-07-03 14:23:54 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:54 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob4_spw0.png
+2020-07-03 14:23:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob4_spw0.png
+2020-07-03 14:23:55 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob4_spw1.png
+2020-07-03 14:23:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob4_spw1.png
+2020-07-03 14:23:57 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob4_spw5.png
+2020-07-03 14:23:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob4_spw5.png
+2020-07-03 14:23:59 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:23:59 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob4_spw6.png
+2020-07-03 14:24:00 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob4_spw6.png
+2020-07-03 14:24:01 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:01 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob5_spw0.png
+2020-07-03 14:24:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob5_spw0.png
+2020-07-03 14:24:02 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob5_spw1.png
+2020-07-03 14:24:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob5_spw1.png
+2020-07-03 14:24:04 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob5_spw5.png
+2020-07-03 14:24:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob5_spw5.png
+2020-07-03 14:24:06 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob5_spw6.png
+2020-07-03 14:24:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob5_spw6.png
+2020-07-03 14:24:08 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob6_spw0.png
+2020-07-03 14:24:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob6_spw0.png
+2020-07-03 14:24:09 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob6_spw1.png
+2020-07-03 14:24:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob6_spw1.png
+2020-07-03 14:24:11 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob6_spw5.png
+2020-07-03 14:24:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob6_spw5.png
+2020-07-03 14:24:13 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob6_spw6.png
+2020-07-03 14:24:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob6_spw6.png
+2020-07-03 14:24:15 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob7_spw0.png
+2020-07-03 14:24:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob7_spw0.png
+2020-07-03 14:24:20 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob7_spw1.png
+2020-07-03 14:24:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob7_spw1.png
+2020-07-03 14:24:25 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob7_spw5.png
+2020-07-03 14:24:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob7_spw5.png
+2020-07-03 14:24:30 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob7_spw6.png
+2020-07-03 14:24:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob7_spw6.png
+2020-07-03 14:24:35 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob8_spw0.png
+2020-07-03 14:24:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob8_spw0.png
+2020-07-03 14:24:37 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob8_spw1.png
+2020-07-03 14:24:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob8_spw1.png
+2020-07-03 14:24:38 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob8_spw5.png
+2020-07-03 14:24:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob8_spw5.png
+2020-07-03 14:24:44 | INFO | Making flags plots for 2234+282.
+2020-07-03 14:24:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_2234+282_freq_ob8_spw6.png
+2020-07-03 14:24:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_2234+282_time_ob8_spw6.png
+2020-07-03 14:24:50 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:24:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob0_spw3.png
+2020-07-03 14:24:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob0_spw3.png
+2020-07-03 14:24:51 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:24:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob1_spw3.png
+2020-07-03 14:24:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob1_spw3.png
+2020-07-03 14:24:53 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:24:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob2_spw3.png
+2020-07-03 14:24:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob2_spw3.png
+2020-07-03 14:24:55 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:24:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob3_spw3.png
+2020-07-03 14:24:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob3_spw3.png
+2020-07-03 14:25:01 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:25:01 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob4_spw3.png
+2020-07-03 14:25:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob4_spw3.png
+2020-07-03 14:25:04 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:25:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob5_spw3.png
+2020-07-03 14:25:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob5_spw3.png
+2020-07-03 14:25:05 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:25:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob6_spw3.png
+2020-07-03 14:25:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob6_spw3.png
+2020-07-03 14:25:17 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:25:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob7_spw3.png
+2020-07-03 14:25:19 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob7_spw3.png
+2020-07-03 14:25:20 | INFO | Making flags plots for 0159-117.
+2020-07-03 14:25:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0159-117_freq_ob8_spw3.png
+2020-07-03 14:25:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0159-117_time_ob8_spw3.png
+2020-07-03 14:25:22 | INFO | Making flags plots for HCG92.
+2020-07-03 14:25:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob0_spw0.png
+2020-07-03 14:25:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob0_spw0.png
+2020-07-03 14:26:02 | INFO | Making flags plots for HCG92.
+2020-07-03 14:26:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob0_spw1.png
+2020-07-03 14:26:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob0_spw1.png
+2020-07-03 14:26:46 | INFO | Making flags plots for HCG92.
+2020-07-03 14:26:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob0_spw5.png
+2020-07-03 14:26:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob0_spw5.png
+2020-07-03 14:26:52 | INFO | Making flags plots for HCG92.
+2020-07-03 14:26:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob0_spw6.png
+2020-07-03 14:26:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob0_spw6.png
+2020-07-03 14:26:54 | INFO | Making flags plots for HCG92.
+2020-07-03 14:26:54 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob1_spw0.png
+2020-07-03 14:27:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob1_spw0.png
+2020-07-03 14:27:49 | INFO | Making flags plots for HCG92.
+2020-07-03 14:27:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob1_spw1.png
+2020-07-03 14:28:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob1_spw1.png
+2020-07-03 14:28:50 | INFO | Making flags plots for HCG92.
+2020-07-03 14:28:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob1_spw5.png
+2020-07-03 14:28:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob1_spw5.png
+2020-07-03 14:28:58 | INFO | Making flags plots for HCG92.
+2020-07-03 14:28:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob1_spw6.png
+2020-07-03 14:28:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob1_spw6.png
+2020-07-03 14:29:00 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob2_spw0.png
+2020-07-03 14:29:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob2_spw0.png
+2020-07-03 14:29:02 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob2_spw1.png
+2020-07-03 14:29:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob2_spw1.png
+2020-07-03 14:29:03 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob2_spw5.png
+2020-07-03 14:29:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob2_spw5.png
+2020-07-03 14:29:05 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob2_spw6.png
+2020-07-03 14:29:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob2_spw6.png
+2020-07-03 14:29:07 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob3_spw0.png
+2020-07-03 14:29:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob3_spw0.png
+2020-07-03 14:29:09 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob3_spw1.png
+2020-07-03 14:29:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob3_spw1.png
+2020-07-03 14:29:11 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob3_spw5.png
+2020-07-03 14:29:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob3_spw5.png
+2020-07-03 14:29:13 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob3_spw6.png
+2020-07-03 14:29:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob3_spw6.png
+2020-07-03 14:29:15 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob4_spw0.png
+2020-07-03 14:29:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob4_spw0.png
+2020-07-03 14:29:17 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob4_spw1.png
+2020-07-03 14:29:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob4_spw1.png
+2020-07-03 14:29:19 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob4_spw5.png
+2020-07-03 14:29:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob4_spw5.png
+2020-07-03 14:29:20 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob4_spw6.png
+2020-07-03 14:29:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob4_spw6.png
+2020-07-03 14:29:22 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob5_spw0.png
+2020-07-03 14:29:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob5_spw0.png
+2020-07-03 14:29:24 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:24 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob5_spw1.png
+2020-07-03 14:29:25 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob5_spw1.png
+2020-07-03 14:29:26 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob5_spw5.png
+2020-07-03 14:29:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob5_spw5.png
+2020-07-03 14:29:28 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob5_spw6.png
+2020-07-03 14:29:29 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob5_spw6.png
+2020-07-03 14:29:30 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob6_spw0.png
+2020-07-03 14:29:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob6_spw0.png
+2020-07-03 14:29:32 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob6_spw1.png
+2020-07-03 14:29:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob6_spw1.png
+2020-07-03 14:29:33 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob6_spw5.png
+2020-07-03 14:29:34 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob6_spw5.png
+2020-07-03 14:29:35 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:35 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob6_spw6.png
+2020-07-03 14:29:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob6_spw6.png
+2020-07-03 14:29:37 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob7_spw0.png
+2020-07-03 14:29:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob7_spw0.png
+2020-07-03 14:29:55 | INFO | Making flags plots for HCG92.
+2020-07-03 14:29:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob7_spw1.png
+2020-07-03 14:30:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob7_spw1.png
+2020-07-03 14:30:15 | INFO | Making flags plots for HCG92.
+2020-07-03 14:30:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob7_spw5.png
+2020-07-03 14:30:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob7_spw5.png
+2020-07-03 14:30:28 | INFO | Making flags plots for HCG92.
+2020-07-03 14:30:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob7_spw6.png
+2020-07-03 14:30:35 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob7_spw6.png
+2020-07-03 14:30:41 | INFO | Making flags plots for HCG92.
+2020-07-03 14:30:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob8_spw0.png
+2020-07-03 14:30:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob8_spw0.png
+2020-07-03 14:30:50 | INFO | Making flags plots for HCG92.
+2020-07-03 14:30:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob8_spw1.png
+2020-07-03 14:30:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob8_spw1.png
+2020-07-03 14:31:00 | INFO | Making flags plots for HCG92.
+2020-07-03 14:31:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob8_spw5.png
+2020-07-03 14:31:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob8_spw5.png
+2020-07-03 14:31:13 | INFO | Making flags plots for HCG92.
+2020-07-03 14:31:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG92_freq_ob8_spw6.png
+2020-07-03 14:31:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG92_time_ob8_spw6.png
+2020-07-03 14:31:27 | INFO | Making flags plots for HCG16.
+2020-07-03 14:31:27 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob0_spw3.png
+2020-07-03 14:31:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob0_spw3.png
+2020-07-03 14:31:29 | INFO | Making flags plots for HCG16.
+2020-07-03 14:31:29 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob1_spw3.png
+2020-07-03 14:31:30 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob1_spw3.png
+2020-07-03 14:31:31 | INFO | Making flags plots for HCG16.
+2020-07-03 14:31:31 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob2_spw3.png
+2020-07-03 14:31:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob2_spw3.png
+2020-07-03 14:31:33 | INFO | Making flags plots for HCG16.
+2020-07-03 14:31:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob3_spw3.png
+2020-07-03 14:31:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob3_spw3.png
+2020-07-03 14:32:16 | INFO | Making flags plots for HCG16.
+2020-07-03 14:32:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob4_spw3.png
+2020-07-03 14:32:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob4_spw3.png
+2020-07-03 14:32:22 | INFO | Making flags plots for HCG16.
+2020-07-03 14:32:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob5_spw3.png
+2020-07-03 14:32:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob5_spw3.png
+2020-07-03 14:32:24 | INFO | Making flags plots for HCG16.
+2020-07-03 14:32:24 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob6_spw3.png
+2020-07-03 14:32:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob6_spw3.png
+2020-07-03 14:33:13 | INFO | Making flags plots for HCG16.
+2020-07-03 14:33:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob7_spw3.png
+2020-07-03 14:33:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob7_spw3.png
+2020-07-03 14:33:19 | INFO | Making flags plots for HCG16.
+2020-07-03 14:33:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG16_freq_ob8_spw3.png
+2020-07-03 14:33:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG16_time_ob8_spw3.png
+2020-07-03 14:33:21 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob0_spw2.png
+2020-07-03 14:33:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob0_spw2.png
+2020-07-03 14:33:23 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob0_spw4.png
+2020-07-03 14:33:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob0_spw4.png
+2020-07-03 14:33:25 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob1_spw2.png
+2020-07-03 14:33:25 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob1_spw2.png
+2020-07-03 14:33:26 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob1_spw4.png
+2020-07-03 14:33:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob1_spw4.png
+2020-07-03 14:33:28 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob2_spw2.png
+2020-07-03 14:33:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob2_spw2.png
+2020-07-03 14:33:37 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob2_spw4.png
+2020-07-03 14:33:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob2_spw4.png
+2020-07-03 14:33:40 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob3_spw2.png
+2020-07-03 14:33:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob3_spw2.png
+2020-07-03 14:33:41 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob3_spw4.png
+2020-07-03 14:33:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob3_spw4.png
+2020-07-03 14:33:43 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:43 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob4_spw2.png
+2020-07-03 14:33:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob4_spw2.png
+2020-07-03 14:33:45 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob4_spw4.png
+2020-07-03 14:33:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob4_spw4.png
+2020-07-03 14:33:53 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob5_spw2.png
+2020-07-03 14:33:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob5_spw2.png
+2020-07-03 14:33:55 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:33:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob5_spw4.png
+2020-07-03 14:34:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob5_spw4.png
+2020-07-03 14:34:08 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:08 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob6_spw2.png
+2020-07-03 14:34:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob6_spw2.png
+2020-07-03 14:34:11 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob6_spw4.png
+2020-07-03 14:34:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob6_spw4.png
+2020-07-03 14:34:12 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:12 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob7_spw2.png
+2020-07-03 14:34:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob7_spw2.png
+2020-07-03 14:34:14 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob7_spw4.png
+2020-07-03 14:34:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob7_spw4.png
+2020-07-03 14:34:16 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob8_spw2.png
+2020-07-03 14:34:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob8_spw2.png
+2020-07-03 14:34:18 | INFO | Making flags plots for 1203+645.
+2020-07-03 14:34:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1203+645_freq_ob8_spw4.png
+2020-07-03 14:34:19 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1203+645_time_ob8_spw4.png
+2020-07-03 14:34:19 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw0.png
+2020-07-03 14:34:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw0.png
+2020-07-03 14:34:21 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw1.png
+2020-07-03 14:34:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw1.png
+2020-07-03 14:34:23 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw3.png
+2020-07-03 14:34:24 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw3.png
+2020-07-03 14:34:25 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:25 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw5.png
+2020-07-03 14:34:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw5.png
+2020-07-03 14:34:26 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob0_spw6.png
+2020-07-03 14:34:27 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob0_spw6.png
+2020-07-03 14:34:28 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw0.png
+2020-07-03 14:34:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw0.png
+2020-07-03 14:34:34 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw1.png
+2020-07-03 14:34:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw1.png
+2020-07-03 14:34:39 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw3.png
+2020-07-03 14:34:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw3.png
+2020-07-03 14:34:41 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw5.png
+2020-07-03 14:34:42 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw5.png
+2020-07-03 14:34:43 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:43 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob1_spw6.png
+2020-07-03 14:34:44 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob1_spw6.png
+2020-07-03 14:34:45 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:45 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw0.png
+2020-07-03 14:34:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw0.png
+2020-07-03 14:34:46 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw1.png
+2020-07-03 14:34:47 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw1.png
+2020-07-03 14:34:48 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw3.png
+2020-07-03 14:34:49 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw3.png
+2020-07-03 14:34:50 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:50 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw5.png
+2020-07-03 14:34:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw5.png
+2020-07-03 14:34:52 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob2_spw6.png
+2020-07-03 14:34:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob2_spw6.png
+2020-07-03 14:34:53 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob3_spw0.png
+2020-07-03 14:34:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob3_spw0.png
+2020-07-03 14:34:55 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob3_spw1.png
+2020-07-03 14:34:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob3_spw1.png
+2020-07-03 14:34:57 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob3_spw3.png
+2020-07-03 14:34:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob3_spw3.png
+2020-07-03 14:34:59 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:34:59 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob3_spw5.png
+2020-07-03 14:34:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob3_spw5.png
+2020-07-03 14:35:00 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob3_spw6.png
+2020-07-03 14:35:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob3_spw6.png
+2020-07-03 14:35:02 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob4_spw0.png
+2020-07-03 14:35:03 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob4_spw0.png
+2020-07-03 14:35:04 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:04 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob4_spw1.png
+2020-07-03 14:35:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob4_spw1.png
+2020-07-03 14:35:06 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob4_spw3.png
+2020-07-03 14:35:07 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob4_spw3.png
+2020-07-03 14:35:07 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob4_spw5.png
+2020-07-03 14:35:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob4_spw5.png
+2020-07-03 14:35:09 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob4_spw6.png
+2020-07-03 14:35:10 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob4_spw6.png
+2020-07-03 14:35:11 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob5_spw0.png
+2020-07-03 14:35:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob5_spw0.png
+2020-07-03 14:35:13 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob5_spw1.png
+2020-07-03 14:35:13 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob5_spw1.png
+2020-07-03 14:35:14 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:14 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob5_spw3.png
+2020-07-03 14:35:15 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob5_spw3.png
+2020-07-03 14:35:16 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:16 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob5_spw5.png
+2020-07-03 14:35:17 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob5_spw5.png
+2020-07-03 14:35:18 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:18 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob5_spw6.png
+2020-07-03 14:35:19 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob5_spw6.png
+2020-07-03 14:35:20 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:20 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob6_spw0.png
+2020-07-03 14:35:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob6_spw0.png
+2020-07-03 14:35:21 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob6_spw1.png
+2020-07-03 14:35:22 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob6_spw1.png
+2020-07-03 14:35:23 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:23 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob6_spw3.png
+2020-07-03 14:35:26 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob6_spw3.png
+2020-07-03 14:35:30 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:30 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob6_spw5.png
+2020-07-03 14:35:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob6_spw5.png
+2020-07-03 14:35:32 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob6_spw6.png
+2020-07-03 14:35:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob6_spw6.png
+2020-07-03 14:35:34 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob7_spw0.png
+2020-07-03 14:35:36 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob7_spw0.png
+2020-07-03 14:35:38 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob7_spw1.png
+2020-07-03 14:35:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob7_spw1.png
+2020-07-03 14:35:42 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:42 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob7_spw3.png
+2020-07-03 14:35:43 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob7_spw3.png
+2020-07-03 14:35:44 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob7_spw5.png
+2020-07-03 14:35:46 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob7_spw5.png
+2020-07-03 14:35:48 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob7_spw6.png
+2020-07-03 14:35:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob7_spw6.png
+2020-07-03 14:35:53 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob8_spw0.png
+2020-07-03 14:35:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob8_spw0.png
+2020-07-03 14:35:54 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:54 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob8_spw1.png
+2020-07-03 14:35:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob8_spw1.png
+2020-07-03 14:35:56 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob8_spw3.png
+2020-07-03 14:35:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob8_spw3.png
+2020-07-03 14:35:58 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:35:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob8_spw5.png
+2020-07-03 14:35:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob8_spw5.png
+2020-07-03 14:36:00 | INFO | Making flags plots for 0134+329.
+2020-07-03 14:36:00 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_0134+329_freq_ob8_spw6.png
+2020-07-03 14:36:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_0134+329_time_ob8_spw6.png
+2020-07-03 14:36:02 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob0_spw2.png
+2020-07-03 14:36:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob0_spw2.png
+2020-07-03 14:36:03 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob0_spw4.png
+2020-07-03 14:36:04 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob0_spw4.png
+2020-07-03 14:36:05 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:05 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob1_spw2.png
+2020-07-03 14:36:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob1_spw2.png
+2020-07-03 14:36:07 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:07 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob1_spw4.png
+2020-07-03 14:36:08 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob1_spw4.png
+2020-07-03 14:36:09 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob2_spw2.png
+2020-07-03 14:36:31 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob2_spw2.png
+2020-07-03 14:36:52 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:52 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob2_spw4.png
+2020-07-03 14:36:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob2_spw4.png
+2020-07-03 14:36:57 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:57 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob3_spw2.png
+2020-07-03 14:36:58 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob3_spw2.png
+2020-07-03 14:36:59 | INFO | Making flags plots for HCG49.
+2020-07-03 14:36:59 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob3_spw4.png
+2020-07-03 14:37:00 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob3_spw4.png
+2020-07-03 14:37:01 | INFO | Making flags plots for HCG49.
+2020-07-03 14:37:01 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob4_spw2.png
+2020-07-03 14:37:02 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob4_spw2.png
+2020-07-03 14:37:03 | INFO | Making flags plots for HCG49.
+2020-07-03 14:37:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob4_spw4.png
+2020-07-03 14:37:29 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob4_spw4.png
+2020-07-03 14:37:55 | INFO | Making flags plots for HCG49.
+2020-07-03 14:37:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob5_spw2.png
+2020-07-03 14:38:01 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob5_spw2.png
+2020-07-03 14:38:02 | INFO | Making flags plots for HCG49.
+2020-07-03 14:38:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob5_spw4.png
+2020-07-03 14:38:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob5_spw4.png
+2020-07-03 14:39:02 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:02 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob6_spw2.png
+2020-07-03 14:39:09 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob6_spw2.png
+2020-07-03 14:39:10 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:10 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob6_spw4.png
+2020-07-03 14:39:11 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob6_spw4.png
+2020-07-03 14:39:11 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:11 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob7_spw2.png
+2020-07-03 14:39:12 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob7_spw2.png
+2020-07-03 14:39:13 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:13 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob7_spw4.png
+2020-07-03 14:39:14 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob7_spw4.png
+2020-07-03 14:39:15 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:15 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob8_spw2.png
+2020-07-03 14:39:16 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob8_spw2.png
+2020-07-03 14:39:17 | INFO | Making flags plots for HCG49.
+2020-07-03 14:39:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG49_freq_ob8_spw4.png
+2020-07-03 14:39:18 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG49_time_ob8_spw4.png
+2020-07-03 14:39:19 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:19 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob0_spw2.png
+2020-07-03 14:39:20 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob0_spw2.png
+2020-07-03 14:39:21 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob0_spw4.png
+2020-07-03 14:39:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob0_spw4.png
+2020-07-03 14:39:22 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:22 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob1_spw2.png
+2020-07-03 14:39:23 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob1_spw2.png
+2020-07-03 14:39:24 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:24 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob1_spw4.png
+2020-07-03 14:39:25 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob1_spw4.png
+2020-07-03 14:39:26 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:26 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob2_spw2.png
+2020-07-03 14:39:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob2_spw2.png
+2020-07-03 14:39:31 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:31 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob2_spw4.png
+2020-07-03 14:39:32 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob2_spw4.png
+2020-07-03 14:39:33 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:33 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob3_spw2.png
+2020-07-03 14:39:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob3_spw2.png
+2020-07-03 14:39:34 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:34 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob3_spw4.png
+2020-07-03 14:39:35 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob3_spw4.png
+2020-07-03 14:39:36 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob4_spw2.png
+2020-07-03 14:39:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob4_spw2.png
+2020-07-03 14:39:38 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob4_spw4.png
+2020-07-03 14:39:39 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob4_spw4.png
+2020-07-03 14:39:40 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:40 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob5_spw2.png
+2020-07-03 14:39:40 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob5_spw2.png
+2020-07-03 14:39:41 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob5_spw4.png
+2020-07-03 14:39:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob5_spw4.png
+2020-07-03 14:39:49 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:49 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob6_spw2.png
+2020-07-03 14:39:50 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob6_spw2.png
+2020-07-03 14:39:51 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:51 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob6_spw4.png
+2020-07-03 14:39:52 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob6_spw4.png
+2020-07-03 14:39:53 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:53 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob7_spw2.png
+2020-07-03 14:39:54 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob7_spw2.png
+2020-07-03 14:39:55 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:55 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob7_spw4.png
+2020-07-03 14:39:55 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob7_spw4.png
+2020-07-03 14:39:56 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:56 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob8_spw2.png
+2020-07-03 14:39:57 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob8_spw2.png
+2020-07-03 14:39:58 | INFO | Making flags plots for 1328+307.
+2020-07-03 14:39:58 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob8_spw4.png
+2020-07-03 14:39:59 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob8_spw4.png
+2020-07-03 14:40:00 | INFO | Completed flags plots 
+2020-07-03 14:40:00 | INFO | Starting split fields.
+2020-07-03 14:40:00 | INFO | Create directory: ./sources/
+2020-07-03 14:40:00 | INFO | A manual SPW combination scheme has been set in the configuration file.
+2020-07-03 14:40:00 | INFO | SPWs [5, 6] will now be combined for HCG92.
+2020-07-03 14:40:00 | INFO | Executing command: mstransform(vis='AW500.ms', outputvis='sources/HCG92.split', field='HCG92', spw='5,6', combinespws=True)
+2020-07-03 14:40:09 | INFO | Writing listobs summary for split data set to: ./summary/HCG92.listobs.summary
+2020-07-03 14:40:09 | INFO | The following SPWs for HCG92 will be split into separate MSs: [0, 1]
+2020-07-03 14:40:09 | INFO | Executing command: mstransform(vis='AW500.ms', outputvis='sources/HCG92.spw0.split', field='HCG92', spw='0')
+2020-07-03 14:40:16 | INFO | Writing listobs summary for split data set to: ./summary/HCG92.spw0.listobs.summary
+2020-07-03 14:40:17 | INFO | Executing command: mstransform(vis='AW500.ms', outputvis='sources/HCG92.spw1.split', field='HCG92', spw='1')
+2020-07-03 14:40:23 | INFO | Writing listobs summary for split data set to: ./summary/HCG92.spw1.listobs.summary
+2020-07-03 14:40:24 | INFO | A manual SPW combination scheme has been set in the configuration file.
+2020-07-03 14:40:24 | INFO | The following SPWs for HCG49 will be split into separate MSs: [2, 4]
+2020-07-03 14:40:24 | INFO | Executing command: mstransform(vis='AW500.ms', outputvis='sources/HCG49.spw2.split', field='HCG49', spw='2')
+2020-07-03 14:40:30 | INFO | Writing listobs summary for split data set to: ./summary/HCG49.spw2.listobs.summary
+2020-07-03 14:40:30 | INFO | Executing command: mstransform(vis='AW500.ms', outputvis='sources/HCG49.spw4.split', field='HCG49', spw='4')
+2020-07-03 14:40:38 | INFO | Writing listobs summary for split data set to: ./summary/HCG49.spw4.listobs.summary
+2020-07-03 14:40:39 | INFO | Splitting HCG16 into separate file: HCG16.split.
+2020-07-03 14:40:39 | INFO | Executing command: split(vis='AW500.ms', outputvis='sources/HCG16.split', field='HCG16')
+2020-07-03 14:40:44 | INFO | Writing listobs summary for split data set to: ./summary/HCG16.listobs.summary
+2020-07-03 14:40:44 | INFO | Updating config file to set target names with separate SPWs.
+2020-07-03 14:40:44 | INFO | Replacing old target names (['HCG92', 'HCG49', 'HCG16'])
+2020-07-03 14:40:44 | INFO | With new target names: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16']
+2020-07-03 14:40:44 | INFO | Completed split fields.
+2020-07-03 14:40:44 | INFO | The parameters in AW500_params.cfg have been modified during this pipeline step.
+2020-07-03 14:40:45 | INFO | Deleted: diff_params.txt
+2020-07-03 14:40:45 | INFO | The changes are as follows:
+2020-07-03 14:40:45 | INFO | 41c41
+
+2020-07-03 14:40:45 | INFO | < man_comb_spws = {'HCG16': {}, 'HCG49': {}, 'HCG92': {5: [6]}}
+
+2020-07-03 14:40:45 | INFO | ---
+
+2020-07-03 14:40:45 | INFO | > man_comb_spws = {'HCG16': {}, 'HCG92': {5: [6]}, 'HCG49': {}}
+
+2020-07-03 14:40:45 | INFO | Backing up AW500_params.cfg to backup.AW500_params.cfg.
+2020-07-03 14:40:48 | INFO | CASA version: 5.4.2
+2020-07-03 14:40:48 | INFO | Starting making dirty continuum image.
+2020-07-03 14:40:48 | INFO | Removing any existing dirty continuum images.
+2020-07-03 14:40:48 | INFO | Checking clean parameters for dirty image (inc. continuum).
+2020-07-03 14:40:48 | INFO | Pixel sizes set as: ['4arcsec', '4arcsec', '4arcsec', '3arcsec', '6arcsec', '3arcsec'].
+2020-07-03 14:40:48 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:40:48 | INFO | Image sizes set as: ['256', '256', '256', '256', '256', '768'] pixels.
+2020-07-03 14:40:48 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:40:48 | INFO | Making dirty image of HCG92 (inc. continuum).
+2020-07-03 14:40:48 | INFO | Executing command: tclean(vis='sources/HCG92.split', field='HCG92', imagename='images/HCG92.cont.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:41:16 | INFO | Making dirty image of HCG92.spw0 (inc. continuum).
+2020-07-03 14:41:16 | INFO | Executing command: tclean(vis='sources/HCG92.spw0.split', field='HCG92', imagename='images/HCG92.spw0.cont.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:42:25 | INFO | Making dirty image of HCG92.spw1 (inc. continuum).
+2020-07-03 14:42:25 | INFO | Executing command: tclean(vis='sources/HCG92.spw1.split', field='HCG92', imagename='images/HCG92.spw1.cont.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:43:31 | INFO | Making dirty image of HCG49.spw2 (inc. continuum).
+2020-07-03 14:43:31 | INFO | Executing command: tclean(vis='sources/HCG49.spw2.split', field='HCG49', imagename='images/HCG49.spw2.cont.dirty', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:44:23 | INFO | Making dirty image of HCG49.spw4 (inc. continuum).
+2020-07-03 14:44:23 | INFO | Executing command: tclean(vis='sources/HCG49.spw4.split', field='HCG49', imagename='images/HCG49.spw4.cont.dirty', cell='6arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:45:20 | CRITICAL | There were severe errors in the CASA log:
+2020-07-03 14:45:20 | CRITICAL | 2020-07-03 14:44:53	SEVERE	task_tclean::StokesImageUtil::FitGaussianPSF() (file ../../synthesis/TransformMachines/StokesImageUtil.cc, line 558)	Caught Exception: NonLinearFitLM: error in loop solution
+
+2020-07-03 14:45:20 | INFO | Making dirty image of HCG16 (inc. continuum).
+2020-07-03 14:45:20 | INFO | Executing command: tclean(vis='sources/HCG16.split', field='HCG16', imagename='images/HCG16.cont.dirty', cell='3arcsec', imsize=[768,768], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-03 14:46:30 | CRITICAL | There were severe errors in the CASA log:
+2020-07-03 14:46:30 | CRITICAL | 2020-07-03 14:44:53	SEVERE	task_tclean::StokesImageUtil::FitGaussianPSF() (file ../../synthesis/TransformMachines/StokesImageUtil.cc, line 558)	Caught Exception: NonLinearFitLM: error in loop solution
+
+2020-07-03 14:46:30 | INFO | Completed making dirty continuum image.
+2020-07-03 14:46:30 | INFO | Backing up AW500_params.cfg to backup.AW500_params.cfg.
+2020-07-03 14:46:33 | INFO | CASA version: 5.4.2
+2020-07-03 14:46:33 | INFO | Starting plotting amplitude spectrum.
+2020-07-03 14:46:33 | INFO | Plotting amplitude vs channel to ./plots/HCG92_amp_chn.png
+2020-07-03 14:46:40 | INFO | Plotting amplitude vs velocity to ./plots/HCG92_amp_vel.png
+2020-07-03 14:46:48 | INFO | Plotting amplitude vs channel to ./plots/HCG92.spw0_amp_chn.png
+2020-07-03 14:47:03 | INFO | Plotting amplitude vs velocity to ./plots/HCG92.spw0_amp_vel.png
+2020-07-03 14:47:19 | INFO | Plotting amplitude vs channel to ./plots/HCG92.spw1_amp_chn.png
+2020-07-03 14:47:39 | INFO | Plotting amplitude vs velocity to ./plots/HCG92.spw1_amp_vel.png
+2020-07-03 14:48:00 | INFO | Plotting amplitude vs channel to ./plots/HCG49.spw2_amp_chn.png
+2020-07-03 14:48:19 | INFO | Plotting amplitude vs velocity to ./plots/HCG49.spw2_amp_vel.png
+2020-07-03 14:48:38 | INFO | Plotting amplitude vs channel to ./plots/HCG49.spw4_amp_chn.png
+2020-07-03 14:49:11 | INFO | Plotting amplitude vs velocity to ./plots/HCG49.spw4_amp_vel.png
+2020-07-03 14:49:50 | INFO | Plotting amplitude vs channel to ./plots/HCG16_amp_chn.png
+2020-07-03 14:50:25 | INFO | Plotting amplitude vs velocity to ./plots/HCG16_amp_vel.png
+2020-07-03 14:51:00 | INFO | Completed plotting amplitude spectrum.
+2020-07-03 14:51:00 | INFO | Starting continuum subtraction.
+2020-07-03 14:51:00 | INFO | Checking for line free channel ranges in parameters.
+2020-07-03 14:51:00 | INFO | Line free channels set as: ['0:0~5;54~55', '0:15~27', '0:1~3;28~30', '0:1~4', '0:1~4;47~60', '3:1~12;50~56'].
+2020-07-03 14:51:00 | INFO | Fit order(s) set as: [0, 0, 0, 0, 0, 1].
+2020-07-03 14:51:00 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:51:00 | INFO | Subtracting the continuum from field: HCG92
+2020-07-03 14:51:00 | INFO | Executing command: uvcontsub(vis='sources/HCG92'+'.split', field='HCG92', fitspw='0:0~5;54~55', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-07-03 14:51:16 | INFO | Subtracting the continuum from field: HCG92.spw0
+2020-07-03 14:51:16 | INFO | Executing command: uvcontsub(vis='sources/HCG92.spw0'+'.split', field='HCG92', fitspw='0:15~27', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-07-03 14:52:22 | INFO | Subtracting the continuum from field: HCG92.spw1
+2020-07-03 14:52:22 | INFO | Executing command: uvcontsub(vis='sources/HCG92.spw1'+'.split', field='HCG92', fitspw='0:1~3;28~30', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-07-03 14:53:18 | INFO | Subtracting the continuum from field: HCG49.spw2
+2020-07-03 14:53:18 | INFO | Executing command: uvcontsub(vis='sources/HCG49.spw2'+'.split', field='HCG49', fitspw='0:1~4', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-07-03 14:54:09 | INFO | Subtracting the continuum from field: HCG49.spw4
+2020-07-03 14:54:09 | INFO | Executing command: uvcontsub(vis='sources/HCG49.spw4'+'.split', field='HCG49', fitspw='0:1~4;47~60', spw='0', excludechans=False, combine='spw', solint='int', fitorder=0, want_cont=False)
+2020-07-03 14:55:13 | INFO | Subtracting the continuum from field: HCG16
+2020-07-03 14:55:13 | INFO | Executing command: uvcontsub(vis='sources/HCG16'+'.split', field='HCG16', fitspw='3:1~12;50~56', spw='3', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2020-07-03 14:56:22 | INFO | Completed continuum subtraction.
+2020-07-03 14:56:22 | INFO | Starting plotting amplitude spectrum.
+2020-07-03 14:56:22 | INFO | Plotting amplitude vs channel to ./plots/HCG92_contsub_amp_chn.png
+2020-07-03 14:56:28 | INFO | Plotting amplitude vs channel to ./plots/HCG92.spw0_contsub_amp_chn.png
+2020-07-03 14:56:45 | INFO | Plotting amplitude vs channel to ./plots/HCG92.spw1_contsub_amp_chn.png
+2020-07-03 14:57:05 | INFO | Plotting amplitude vs channel to ./plots/HCG49.spw2_contsub_amp_chn.png
+2020-07-03 14:57:26 | INFO | Plotting amplitude vs channel to ./plots/HCG49.spw4_contsub_amp_chn.png
+2020-07-03 14:58:02 | INFO | Plotting amplitude vs channel to ./plots/HCG16_contsub_amp_chn.png
+2020-07-03 14:58:41 | INFO | Completed plotting amplitude spectrum.
+2020-07-03 14:58:41 | INFO | Starting making dirty image.
+2020-07-03 14:58:41 | INFO | Removing any existing dirty images.
+2020-07-03 14:58:41 | INFO | Checking clean parameters for dirty image.
+2020-07-03 14:58:41 | INFO | Pixel sizes set as: ['4arcsec', '4arcsec', '4arcsec', '3arcsec', '6arcsec', '3arcsec'].
+2020-07-03 14:58:41 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:58:41 | INFO | Image sizes set as: ['256', '256', '256', '256', '256', '768'] pixels.
+2020-07-03 14:58:41 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:58:41 | INFO | Line emission channels set as: ['0:0~55', '0:0~27', '0:0~29', '0:1~30', '0:1~60', '0:1~56'].
+2020-07-03 14:58:41 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 14:58:41 | INFO | Making dirty image of HCG92 (line only).
+2020-07-03 14:58:41 | INFO | Executing command: tclean(vis='sources/HCG92'+'.split.contsub', field='HCG92', imagename='images/HCG92'+'.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 14:59:15 | INFO | Making dirty image of HCG92.spw0 (line only).
+2020-07-03 14:59:15 | INFO | Executing command: tclean(vis='sources/HCG92.spw0'+'.split.contsub', field='HCG92', imagename='images/HCG92.spw0'+'.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 15:00:36 | INFO | Making dirty image of HCG92.spw1 (line only).
+2020-07-03 15:00:36 | INFO | Executing command: tclean(vis='sources/HCG92.spw1'+'.split.contsub', field='HCG92', imagename='images/HCG92.spw1'+'.dirty', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 15:01:57 | INFO | Making dirty image of HCG49.spw2 (line only).
+2020-07-03 15:01:57 | INFO | Executing command: tclean(vis='sources/HCG49.spw2'+'.split.contsub', field='HCG49', imagename='images/HCG49.spw2'+'.dirty', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 15:03:16 | INFO | Making dirty image of HCG49.spw4 (line only).
+2020-07-03 15:03:16 | INFO | Executing command: tclean(vis='sources/HCG49.spw4'+'.split.contsub', field='HCG49', imagename='images/HCG49.spw4'+'.dirty', cell='6arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 15:05:09 | CRITICAL | There were severe errors in the CASA log:
+2020-07-03 15:05:09 | CRITICAL | 2020-07-03 15:04:12	SEVERE	task_tclean::StokesImageUtil::FitGaussianPSF() (file ../../synthesis/TransformMachines/StokesImageUtil.cc, line 558)	Caught Exception: NonLinearFitLM: error in loop solution
+
+2020-07-03 15:05:09 | INFO | Making dirty image of HCG16 (line only).
+2020-07-03 15:05:09 | INFO | Executing command: tclean(vis='sources/HCG16'+'.split.contsub', field='HCG16', imagename='images/HCG16'+'.dirty', cell='3arcsec', imsize=[768,768], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-03 15:07:19 | CRITICAL | There were severe errors in the CASA log:
+2020-07-03 15:07:19 | CRITICAL | 2020-07-03 15:04:12	SEVERE	task_tclean::StokesImageUtil::FitGaussianPSF() (file ../../synthesis/TransformMachines/StokesImageUtil.cc, line 558)	Caught Exception: NonLinearFitLM: error in loop solution
+
+2020-07-03 15:07:19 | INFO | Completed making dirty image.
+2020-07-03 15:07:19 | INFO | Backing up AW500_params.cfg to backup.AW500_params.cfg.
+2020-07-03 15:07:23 | INFO | CASA version: 5.4.2
+2020-07-03 15:07:23 | INFO | Deleting any existing clean image(s).
+2020-07-03 15:07:23 | INFO | Starting making noise estimation.
+2020-07-03 15:07:24 | INFO | Effective integration time for HCG92: 584 s
+2020-07-03 15:07:24 | INFO | Expected rms noise for HCG92: 0.000882110010375 Jy/beam
+2020-07-03 15:07:26 | INFO | Effective integration time for HCG92.spw0: 286 s
+2020-07-03 15:07:26 | INFO | Expected rms noise for HCG92.spw0: 0.00125946166959 Jy/beam
+2020-07-03 15:07:27 | INFO | Effective integration time for HCG92.spw1: 167 s
+2020-07-03 15:07:27 | INFO | Expected rms noise for HCG92.spw1: 0.00165028620677 Jy/beam
+2020-07-03 15:07:29 | INFO | Effective integration time for HCG49.spw2: 3791 s
+2020-07-03 15:07:29 | INFO | Expected rms noise for HCG49.spw2: 0.00048998680761 Jy/beam
+2020-07-03 15:07:32 | INFO | Effective integration time for HCG49.spw4: 3410 s
+2020-07-03 15:07:32 | INFO | Expected rms noise for HCG49.spw4: 0.000516637130652 Jy/beam
+2020-07-03 15:07:34 | INFO | Effective integration time for HCG16: 3271 s
+2020-07-03 15:07:34 | INFO | Expected rms noise for HCG16: 0.000372976194059 Jy/beam
+2020-07-03 15:07:34 | INFO | Completed making noise estimation.
+2020-07-03 15:07:34 | INFO | Starting generation of clean image(s).
+2020-07-03 15:07:34 | INFO | Line emission channels set as: ['0:0~55', '0:0~27', '0:0~29', '0:1~30', '0:1~60', '0:1~56'].
+2020-07-03 15:07:34 | INFO | For the targets: ['HCG92', 'HCG92.spw0', 'HCG92.spw1', 'HCG49.spw2', 'HCG49.spw4', 'HCG16'].
+2020-07-03 15:07:34 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-07-03 15:07:34 | INFO | Starting HCG92 image.
+2020-07-03 15:07:34 | INFO | Automasking parameters set as:
+2020-07-03 15:07:34 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:07:34 | INFO | noisethreshold = 3.0
+2020-07-03 15:07:34 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:07:34 | INFO | minbeamfraction = 0.3
+2020-07-03 15:07:34 | INFO | negativethreshold = 15.0
+2020-07-03 15:07:35 | INFO | The maximum recoverable scale for HCG92 is 928 arcsec.
+2020-07-03 15:07:35 | INFO | CLEANing with scales of [0, 15, 45, 136] pixels.
+2020-07-03 15:07:35 | INFO | CLEANing HCG92 to a threshold of 0.00220527502594 Jy.
+2020-07-03 15:07:35 | INFO | Executing command: tclean(vis='sources/HCG92'+'.split.contsub', field='HCG92', spw='0:0~55', imagename='images/HCG92', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 15, 45, 136], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00220527502594Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 15:13:32 | INFO | CLEANing finished. Image cube saved as HCG92.image.
+2020-07-03 15:13:32 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 15:13:32 | INFO | Executing command: imregrid(imagename='images/HCG92'+'.image', template='J2000', output='images/HCG92'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:13:32 | INFO | HCG92.image.J2000 regridded in J2000 coordinates.
+2020-07-03 15:13:32 | INFO | Executing command: imregrid(imagename='images/HCG92'+'.image.pbcor', template='J2000', output='images/HCG92'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:13:33 | INFO | HCG92.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 15:13:33 | INFO | Saving image cube as HCG92_HI.fits
+2020-07-03 15:13:33 | INFO | Executing command: exportfits(imagename='images/HCG92.image.J2000', fitsimage='images/HCG92_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:13:33 | INFO | Saving primary beam corrected image cube as HCG92_HI.pbcor.fits
+2020-07-03 15:13:33 | INFO | Executing command: exportfits(imagename='images/HCG92.image.pbcor.J2000', fitsimage='images/HCG92_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:13:33 | INFO | Starting HCG92.spw0 image.
+2020-07-03 15:13:33 | INFO | Automasking parameters set as:
+2020-07-03 15:13:33 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:13:33 | INFO | noisethreshold = 3.0
+2020-07-03 15:13:33 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:13:33 | INFO | minbeamfraction = 0.3
+2020-07-03 15:13:33 | INFO | negativethreshold = 15.0
+2020-07-03 15:13:35 | INFO | The maximum recoverable scale for HCG92.spw0 is 925 arcsec.
+2020-07-03 15:13:35 | INFO | CLEANing with scales of [0, 16, 48, 145] pixels.
+2020-07-03 15:13:35 | INFO | CLEANing HCG92.spw0 to a threshold of 0.00314865417396 Jy.
+2020-07-03 15:13:35 | INFO | Executing command: tclean(vis='sources/HCG92.spw0'+'.split.contsub', field='HCG92', spw='0:0~27', imagename='images/HCG92.spw0', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 16, 48, 145], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00314865417396Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 15:18:14 | INFO | CLEANing finished. Image cube saved as HCG92.spw0.image.
+2020-07-03 15:18:14 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 15:18:14 | INFO | Executing command: imregrid(imagename='images/HCG92.spw0'+'.image', template='J2000', output='images/HCG92.spw0'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:18:15 | INFO | HCG92.spw0.image.J2000 regridded in J2000 coordinates.
+2020-07-03 15:18:15 | INFO | Executing command: imregrid(imagename='images/HCG92.spw0'+'.image.pbcor', template='J2000', output='images/HCG92.spw0'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:18:15 | INFO | HCG92.spw0.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 15:18:15 | INFO | Saving image cube as HCG92.spw0_HI.fits
+2020-07-03 15:18:15 | INFO | Executing command: exportfits(imagename='images/HCG92.spw0.image.J2000', fitsimage='images/HCG92.spw0_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:18:15 | INFO | Saving primary beam corrected image cube as HCG92.spw0_HI.pbcor.fits
+2020-07-03 15:18:15 | INFO | Executing command: exportfits(imagename='images/HCG92.spw0.image.pbcor.J2000', fitsimage='images/HCG92.spw0_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:18:15 | INFO | Starting HCG92.spw1 image.
+2020-07-03 15:18:15 | INFO | Automasking parameters set as:
+2020-07-03 15:18:15 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:18:15 | INFO | noisethreshold = 3.0
+2020-07-03 15:18:15 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:18:15 | INFO | minbeamfraction = 0.3
+2020-07-03 15:18:15 | INFO | negativethreshold = 15.0
+2020-07-03 15:18:17 | INFO | The maximum recoverable scale for HCG92.spw1 is 910 arcsec.
+2020-07-03 15:18:17 | WARNING | Some MS-CLEAN scale(s) is (are) larger than largest recoverable angular scales.
+2020-07-03 15:18:17 | INFO | Removing offending scales.
+2020-07-03 15:18:17 | INFO | CLEANing with scales of [0, 28, 86] pixels.
+2020-07-03 15:18:17 | INFO | CLEANing HCG92.spw1 to a threshold of 0.00412571551693 Jy.
+2020-07-03 15:18:17 | INFO | Executing command: tclean(vis='sources/HCG92.spw1'+'.split.contsub', field='HCG92', spw='0:0~29', imagename='images/HCG92.spw1', cell='4arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 28, 86], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00412571551693Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 15:27:33 | INFO | CLEANing finished. Image cube saved as HCG92.spw1.image.
+2020-07-03 15:27:33 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 15:27:33 | INFO | Executing command: imregrid(imagename='images/HCG92.spw1'+'.image', template='J2000', output='images/HCG92.spw1'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:27:34 | INFO | HCG92.spw1.image.J2000 regridded in J2000 coordinates.
+2020-07-03 15:27:34 | INFO | Executing command: imregrid(imagename='images/HCG92.spw1'+'.image.pbcor', template='J2000', output='images/HCG92.spw1'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:27:34 | INFO | HCG92.spw1.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 15:27:34 | INFO | Saving image cube as HCG92.spw1_HI.fits
+2020-07-03 15:27:34 | INFO | Executing command: exportfits(imagename='images/HCG92.spw1.image.J2000', fitsimage='images/HCG92.spw1_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:27:34 | INFO | Saving primary beam corrected image cube as HCG92.spw1_HI.pbcor.fits
+2020-07-03 15:27:34 | INFO | Executing command: exportfits(imagename='images/HCG92.spw1.image.pbcor.J2000', fitsimage='images/HCG92.spw1_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:27:34 | INFO | Starting HCG49.spw2 image.
+2020-07-03 15:27:34 | INFO | Automasking parameters set as:
+2020-07-03 15:27:34 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:27:34 | INFO | noisethreshold = 3.0
+2020-07-03 15:27:34 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:27:34 | INFO | minbeamfraction = 0.3
+2020-07-03 15:27:34 | INFO | negativethreshold = 15.0
+2020-07-03 15:27:34 | INFO | The maximum recoverable scale for HCG49.spw2 is 10003578 arcsec.
+2020-07-03 15:27:34 | INFO | CLEANing with scales of [0, 6, 20, 61] pixels.
+2020-07-03 15:27:34 | INFO | CLEANing HCG49.spw2 to a threshold of 0.00122496701903 Jy.
+2020-07-03 15:27:34 | INFO | Executing command: tclean(vis='sources/HCG49.spw2'+'.split.contsub', field='HCG49', spw='0:1~30', imagename='images/HCG49.spw2', cell='3arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 6, 20, 61], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00122496701903Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 15:34:36 | INFO | CLEANing finished. Image cube saved as HCG49.spw2.image.
+2020-07-03 15:34:36 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 15:34:36 | INFO | Executing command: imregrid(imagename='images/HCG49.spw2'+'.image', template='J2000', output='images/HCG49.spw2'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:34:36 | INFO | HCG49.spw2.image.J2000 regridded in J2000 coordinates.
+2020-07-03 15:34:36 | INFO | Executing command: imregrid(imagename='images/HCG49.spw2'+'.image.pbcor', template='J2000', output='images/HCG49.spw2'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:34:37 | INFO | HCG49.spw2.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 15:34:37 | INFO | Saving image cube as HCG49.spw2_HI.fits
+2020-07-03 15:34:37 | INFO | Executing command: exportfits(imagename='images/HCG49.spw2.image.J2000', fitsimage='images/HCG49.spw2_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:34:37 | INFO | Saving primary beam corrected image cube as HCG49.spw2_HI.pbcor.fits
+2020-07-03 15:34:37 | INFO | Executing command: exportfits(imagename='images/HCG49.spw2.image.pbcor.J2000', fitsimage='images/HCG49.spw2_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:34:37 | INFO | Starting HCG49.spw4 image.
+2020-07-03 15:34:37 | INFO | Automasking parameters set as:
+2020-07-03 15:34:37 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:34:37 | INFO | noisethreshold = 3.0
+2020-07-03 15:34:37 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:34:37 | INFO | minbeamfraction = 0.3
+2020-07-03 15:34:37 | INFO | negativethreshold = 15.0
+2020-07-03 15:34:38 | INFO | The maximum recoverable scale for HCG49.spw4 is 938 arcsec.
+2020-07-03 15:34:38 | INFO | CLEANing with scales of [0, 7, 23, 71] pixels.
+2020-07-03 15:34:38 | INFO | CLEANing HCG49.spw4 to a threshold of 0.00129159282663 Jy.
+2020-07-03 15:34:38 | INFO | Executing command: tclean(vis='sources/HCG49.spw4'+'.split.contsub', field='HCG49', spw='0:1~60', imagename='images/HCG49.spw4', cell='6arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 7, 23, 71], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00129159282663Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 15:49:16 | INFO | CLEANing finished. Image cube saved as HCG49.spw4.image.
+2020-07-03 15:49:16 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 15:49:16 | INFO | Executing command: imregrid(imagename='images/HCG49.spw4'+'.image', template='J2000', output='images/HCG49.spw4'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:49:16 | INFO | HCG49.spw4.image.J2000 regridded in J2000 coordinates.
+2020-07-03 15:49:16 | INFO | Executing command: imregrid(imagename='images/HCG49.spw4'+'.image.pbcor', template='J2000', output='images/HCG49.spw4'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 15:49:17 | INFO | HCG49.spw4.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 15:49:17 | INFO | Saving image cube as HCG49.spw4_HI.fits
+2020-07-03 15:49:17 | INFO | Executing command: exportfits(imagename='images/HCG49.spw4.image.J2000', fitsimage='images/HCG49.spw4_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:49:17 | INFO | Saving primary beam corrected image cube as HCG49.spw4_HI.pbcor.fits
+2020-07-03 15:49:17 | INFO | Executing command: exportfits(imagename='images/HCG49.spw4.image.pbcor.J2000', fitsimage='images/HCG49.spw4_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 15:49:18 | INFO | Starting HCG16 image.
+2020-07-03 15:49:18 | INFO | Automasking parameters set as:
+2020-07-03 15:49:18 | INFO | sidelobethreshold = 2.0
+2020-07-03 15:49:18 | INFO | noisethreshold = 3.0
+2020-07-03 15:49:18 | INFO | lownoisethreshold = 1.5
+2020-07-03 15:49:18 | INFO | minbeamfraction = 0.3
+2020-07-03 15:49:18 | INFO | negativethreshold = 15.0
+2020-07-03 15:49:19 | INFO | The maximum recoverable scale for HCG16 is 822 arcsec.
+2020-07-03 15:49:19 | INFO | CLEANing with scales of [0, 8, 24, 73] pixels.
+2020-07-03 15:49:19 | INFO | CLEANing HCG16 to a threshold of 0.000932440485147 Jy.
+2020-07-03 15:49:19 | INFO | Executing command: tclean(vis='sources/HCG16'+'.split.contsub', field='HCG16', spw='0:1~56', imagename='images/HCG16', cell='3arcsec', imsize=[768,768], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 73], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.000932440485147Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-03 16:45:18 | INFO | CLEANing finished. Image cube saved as HCG16.image.
+2020-07-03 16:45:18 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-07-03 16:45:18 | INFO | Executing command: imregrid(imagename='images/HCG16'+'.image', template='J2000', output='images/HCG16'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 16:45:21 | INFO | HCG16.image.J2000 regridded in J2000 coordinates.
+2020-07-03 16:45:21 | INFO | Executing command: imregrid(imagename='images/HCG16'+'.image.pbcor', template='J2000', output='images/HCG16'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-07-03 16:45:24 | INFO | HCG16.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-07-03 16:45:24 | INFO | Saving image cube as HCG16_HI.fits
+2020-07-03 16:45:24 | INFO | Executing command: exportfits(imagename='images/HCG16.image.J2000', fitsimage='images/HCG16_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:25 | INFO | Saving primary beam corrected image cube as HCG16_HI.pbcor.fits
+2020-07-03 16:45:25 | INFO | Executing command: exportfits(imagename='images/HCG16.image.pbcor.J2000', fitsimage='images/HCG16_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:26 | INFO | Completed generation of clean image(s).
+2020-07-03 16:45:26 | INFO | Backing up AW500_params.cfg to backup.AW500_params.cfg.
+2020-07-03 16:45:33 | INFO | CASA version: 5.4.2
+2020-07-03 16:45:33 | INFO | Deleting any existing moment(s).
+2020-07-03 16:45:33 | INFO | Starting making noise estimation.
+2020-07-03 16:45:34 | INFO | Effective integration time for HCG92: 584 s
+2020-07-03 16:45:34 | INFO | Expected rms noise for HCG92: 0.000882110010375 Jy/beam
+2020-07-03 16:45:36 | INFO | Effective integration time for HCG92.spw0: 286 s
+2020-07-03 16:45:36 | INFO | Expected rms noise for HCG92.spw0: 0.00125946166959 Jy/beam
+2020-07-03 16:45:38 | INFO | Effective integration time for HCG92.spw1: 167 s
+2020-07-03 16:45:38 | INFO | Expected rms noise for HCG92.spw1: 0.00165028620677 Jy/beam
+2020-07-03 16:45:40 | INFO | Effective integration time for HCG49.spw2: 3791 s
+2020-07-03 16:45:40 | INFO | Expected rms noise for HCG49.spw2: 0.00048998680761 Jy/beam
+2020-07-03 16:45:42 | INFO | Effective integration time for HCG49.spw4: 3410 s
+2020-07-03 16:45:42 | INFO | Expected rms noise for HCG49.spw4: 0.000516637130652 Jy/beam
+2020-07-03 16:45:44 | INFO | Effective integration time for HCG16: 3271 s
+2020-07-03 16:45:44 | INFO | Expected rms noise for HCG16: 0.000372976194059 Jy/beam
+2020-07-03 16:45:44 | INFO | Completed making noise estimation.
+2020-07-03 16:45:44 | INFO | Create directory: ./moments/
+2020-07-03 16:45:44 | INFO | Starting generation of moment map(s).
+2020-07-03 16:45:44 | INFO | Executing command: immoments(imagename='images/HCG92.image.J2000',includepix=[0.00264633003113,2646.33003113],chans='',outfile='moments/HCG92.mom0')
+2020-07-03 16:45:45 | INFO | Executing command: exportfits(imagename='moments/HCG92.mom0', fitsimage='moments/HCG92.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:46 | INFO | Executing command: immoments(imagename='images/HCG92.spw0.image.J2000',includepix=[0.00377838500876,3778.38500876],chans='',outfile='moments/HCG92.spw0.mom0')
+2020-07-03 16:45:46 | INFO | Executing command: exportfits(imagename='moments/HCG92.spw0.mom0', fitsimage='moments/HCG92.spw0.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:46 | INFO | Executing command: immoments(imagename='images/HCG92.spw1.image.J2000',includepix=[0.00495085862032,4950.85862032],chans='',outfile='moments/HCG92.spw1.mom0')
+2020-07-03 16:45:47 | INFO | Executing command: exportfits(imagename='moments/HCG92.spw1.mom0', fitsimage='moments/HCG92.spw1.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:47 | INFO | Executing command: immoments(imagename='images/HCG49.spw2.image.J2000',includepix=[0.00146996042283,1469.96042283],chans='',outfile='moments/HCG49.spw2.mom0')
+2020-07-03 16:45:47 | INFO | Executing command: exportfits(imagename='moments/HCG49.spw2.mom0', fitsimage='moments/HCG49.spw2.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:47 | INFO | Executing command: immoments(imagename='images/HCG49.spw4.image.J2000',includepix=[0.00154991139196,1549.91139196],chans='',outfile='moments/HCG49.spw4.mom0')
+2020-07-03 16:45:48 | INFO | Executing command: exportfits(imagename='moments/HCG49.spw4.mom0', fitsimage='moments/HCG49.spw4.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:48 | INFO | Executing command: immoments(imagename='images/HCG16.image.J2000',includepix=[0.00111892858218,1118.92858218],chans='',outfile='moments/HCG16.mom0')
+2020-07-03 16:45:49 | INFO | Executing command: exportfits(imagename='moments/HCG16.mom0', fitsimage='moments/HCG16.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-03 16:45:49 | INFO | Completed generation of moment map(s).

@@ -1,0 +1,263 @@
+2020-07-17 17:04:42 | INFO | CASA version: 5.4.2
+2020-07-17 17:04:42 | INFO | Starting listobs summary.
+2020-07-17 17:04:42 | INFO | Create directory: ./summary/
+2020-07-17 17:04:42 | INFO | Writing listobs summary of data set to: ./summary/13A-387_11.ms.listobs.summary
+2020-07-17 17:04:43 | INFO | Completed listobs summary.
+2020-07-17 17:04:43 | INFO | Starting data transform.
+2020-07-17 17:04:43 | INFO | Executing command: mstransform(vis='13A-387_11.ms', outputvis='13A-387_11.ms_1', field='1,2,3', spw='0', observation='', datacolumn='data', hanning=True, chanaverage=True, chanbin=3)
+2020-07-17 17:07:53 | INFO | Updating config file (13A-387_11_params.cfg) to set mstransform values.
+2020-07-17 17:07:53 | INFO | 13A-387_11.ms.flagversions is a symbolic link. It will now be unlinked.
+2020-07-17 17:07:53 | INFO | Create directory: 13A-387_11.ms.flagversions
+2020-07-17 17:07:53 | INFO | 13A-387_11.ms is a symbolic link. It will now be unlinked.
+2020-07-17 17:07:53 | INFO | Moved 13A-387_11.ms_1 to 13A-387_11.ms
+2020-07-17 17:07:53 | INFO | Completed data transformation.
+2020-07-17 17:07:53 | INFO | Starting listobs summary.
+2020-07-17 17:07:53 | INFO | Deleted: ./summary/13A-387_11.ms.listobs.summary
+2020-07-17 17:07:53 | INFO | Writing listobs summary of data set to: ./summary/13A-387_11.ms.listobs.summary
+2020-07-17 17:07:53 | INFO | Completed listobs summary.
+2020-07-17 17:07:53 | INFO | Reading ms file information for MS: 13A-387_11.ms
+2020-07-17 17:07:53 | INFO | Sources in MS 13A-387_11.ms: 3C286,HCG59,J1120+1420
+2020-07-17 17:07:54 | INFO | > Sources (3): 3C286,HCG59,J1120+1420
+2020-07-17 17:07:54 | INFO | > Number of spw: 1
+2020-07-17 17:07:54 | INFO | > Channels per spw: 682
+2020-07-17 17:07:54 | INFO | Starting plotting elevation.
+2020-07-17 17:07:54 | INFO | Create directory: ./plots/
+2020-07-17 17:07:54 | INFO | Plotting elevation to: ./plots/13A-387_11.ms_elevation.png
+2020-07-17 17:08:23 | INFO | Completed plotting elevation.
+2020-07-17 17:08:23 | INFO | Starting plotting antenna positions.
+2020-07-17 17:08:23 | INFO | Plotting antenna positions to: ./plots/13A-387_11.ms_antpos.png
+2020-07-17 17:08:23 | INFO | Completed plotting antenna positions.
+2020-07-17 17:08:23 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-07-17 17:08:26 | INFO | CASA version: 5.4.2
+2020-07-17 17:08:26 | INFO | Saving flag version as: Original.
+2020-07-17 17:08:26 | INFO | Executing command: flagmanager(vis='13A-387_11.ms', mode='save', versionname='Original')
+2020-07-17 17:08:28 | INFO | Completed saving flag version.
+2020-07-17 17:08:28 | INFO | Starting manual flagging.
+2020-07-17 17:08:28 | INFO | Applying flags from manual_flags.list
+2020-07-17 17:08:28 | INFO | Executing command: flagdata(vis='13A-387_11.ms', mode='list', action='apply', inpfile=["mode='manual' antenna='ea19'\n", "mode='manual' field='0' spw='0:279~281'\n", "mode='manual' field='1,2' spw='0:279~283'\n", "mode='manual' field='1,2' spw='0:621~623'\n", "mode='manual' timerange='2013/07/17/02:01:45~2013/07/17/02:02:35'\n", "mode='manual' scan='4~12' antenna='ea10&ea13;ea13&ea14;ea13&ea15;ea14&ea15'\n", "mode='manual' scan='14~23' antenna='ea03&ea12;ea13&ea14;ea14&ea15;ea14&ea22'\n", "mode='manual' scan='25~33' antenna='ea04&ea10;ea04&ea12;ea10&ea14;ea13&ea14;ea13&ea22;ea14&ea15;ea17&ea28;ea18&ea28'"])
+2020-07-17 17:08:37 | INFO | Completed manual flagging.
+2020-07-17 17:08:37 | INFO | Starting basic flagging.
+2020-07-17 17:08:37 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-07-17 17:08:37 | INFO | Executing command: flagdata(vis='13A-387_11.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-07-17 17:08:45 | INFO | Flagging zero amplitude data.
+2020-07-17 17:08:45 | INFO | Executing command: flagdata(vis='13A-387_11.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-07-17 17:10:01 | INFO | Flagging first 5.0 s of every scan.
+2020-07-17 17:10:01 | INFO | Executing command: flagdata(vis='13A-387_11.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-07-17 17:10:06 | INFO | Completed basic flagging.
+2020-07-17 17:10:06 | INFO | Starting running TFCrop.
+2020-07-17 17:10:06 | INFO | Executing command: flagdata(vis='13A-387_11.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-07-17 17:16:01 | INFO | Completed running TFCrop.
+2020-07-17 17:16:01 | INFO | Removing flag version: initial.
+2020-07-17 17:16:01 | INFO | Executing command: flagmanager(vis='13A-387_11.ms', mode='delete', versionname='initial')
+2020-07-17 17:16:01 | INFO | Completed removing flag version.
+2020-07-17 17:16:01 | INFO | Saving flag version as: initial.
+2020-07-17 17:16:01 | INFO | Executing command: flagmanager(vis='13A-387_11.ms', mode='save', versionname='initial')
+2020-07-17 17:16:03 | INFO | Completed saving flag version.
+2020-07-17 17:16:03 | INFO | Starting writing flag summary to: ./summary/13A-387_11.ms.initialflags.summary.
+2020-07-17 17:16:17 | INFO | Total flagged data: 18.20%
+2020-07-17 17:16:17 | INFO | Completed writing flag summary.
+2020-07-17 17:16:17 | INFO | Starting reference antenna selection.
+2020-07-17 17:16:17 | INFO | Reference antenna already set as: ea10.
+2020-07-17 17:16:17 | INFO | Starting set field purposes.
+2020-07-17 17:16:17 | INFO | Target field(s) already set as: ['HCG59'].
+2020-07-17 17:16:17 | INFO | Flux calibrator already set as: ['3C286'].
+2020-07-17 17:16:17 | INFO | Flux models already set as: ['3C286_L.im'].
+2020-07-17 17:16:17 | INFO | Bandpass calibrator already set as: ['3C286'].
+2020-07-17 17:16:17 | INFO | Phase calibrator already set as: ['J1120+1420'].
+2020-07-17 17:16:17 | INFO | No changes made to preset target and calibrator fields.
+2020-07-17 17:16:17 | INFO | Completed setting field purposes.
+2020-07-17 17:16:17 | INFO | Making flags plots for flag version: initial
+2020-07-17 17:16:17 | INFO | Making flags plots for HCG59.
+2020-07-17 17:16:17 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG59_freq_ob0_spw0.png
+2020-07-17 17:17:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG59_time_ob0_spw0.png
+2020-07-17 17:21:09 | INFO | Making flags plots for J1120+1420.
+2020-07-17 17:21:09 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_J1120+1420_freq_ob0_spw0.png
+2020-07-17 17:22:53 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_J1120+1420_time_ob0_spw0.png
+2020-07-17 17:23:48 | INFO | Making flags plots for 3C286.
+2020-07-17 17:23:48 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_3C286_freq_ob0_spw0.png
+2020-07-17 17:24:28 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_3C286_time_ob0_spw0.png
+2020-07-17 17:25:14 | INFO | Completed flags plots 
+2020-07-17 17:25:14 | INFO | Starting calibration.
+2020-07-17 17:25:14 | INFO | Create directory: ./cal_tabs/
+2020-07-17 17:25:14 | INFO | Looking up antenna position offsets (./cal_tabs/antpos.cal).
+2020-07-17 17:25:14 | INFO | Executing command: gencal(vis='13A-387_11.ms', caltable='./cal_tabs/antpos.cal', caltype='antpos', antenna='')
+2020-07-17 17:25:20 | INFO | Calibrating gain vs elevation (./cal_tabs/gaincurve.cal).
+2020-07-17 17:25:20 | INFO | Executing command: gencal(vis='13A-387_11.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-07-17 17:25:21 | INFO | Load model for flux calibrator 3C286 (3C286_L.im).
+2020-07-17 17:25:21 | INFO | Executing command: setjy(vis='13A-387_11.ms', field='3C286', scalebychan=True, model='3C286_L.im')
+2020-07-17 17:25:23 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-07-17 17:25:34 | INFO | Calibrating delays for bandpass calibrators ['3C286'] (./cal_tabs/delays.cal).
+2020-07-17 17:25:34 | INFO | Executing command: gaincal(vis='13A-387_11.ms', field='3C286', caltable='./cal_tabs/delays.cal', refant='ea10', gaintype='K', gaintable=['./cal_tabs/antpos.cal','./cal_tabs/gaincurve.cal'], spw='0')
+2020-07-17 17:25:58 | INFO | Make bandpass calibrator phase solutions for ['3C286'] (./cal_tabs/bpphase.gcal).
+2020-07-17 17:25:58 | INFO | Executing command: gaincal(vis='13A-387_11.ms', field='3C286',  caltable='./cal_tabs/bpphase.gcal', refant='ea10', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal','./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0')
+2020-07-17 17:26:25 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-07-17 17:26:27 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-07-17 17:26:27 | INFO | Executing command: bandpass(vis='13A-387_11.ms', caltable='./cal_tabs/bandpass.bcal', field='3C286', refant='ea10', solint='inf', solnorm=True, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0')
+2020-07-17 17:26:56 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-07-17 17:26:58 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-07-17 17:26:58 | INFO | Executing command: gaincal(vis='13A-387_11.ms', field='J1120+1420,3C286', caltable='./cal_tabs/intphase.gcal', refant='ea10', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-07-17 17:27:49 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-07-17 17:27:49 | INFO | Executing command: gaincal(vis='13A-387_11.ms', field='J1120+1420,3C286', caltable='./cal_tabs/scanphase.gcal', refant='ea10', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-07-17 17:28:38 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-07-17 17:28:38 | INFO | Executing command: gaincal(vis='13A-387_11.ms', field='J1120+1420,3C286', caltable='./cal_tabs/amp.gcal', refant='ea10', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0')
+2020-07-17 17:29:31 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-07-17 17:29:33 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-07-17 17:29:34 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-07-17 17:29:34 | INFO | Executing command: flux_info = fluxscale(vis='13A-387_11.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='3C286', incremental=True)
+2020-07-17 17:29:36 | INFO | Writing calibrator fluxes summary to: ./summary/13A-387_11.ms.flux.summary.
+2020-07-17 17:29:36 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-07-17 17:29:36 | INFO | Applying calibration to: 3C286
+2020-07-17 17:29:36 | INFO | Executing command: applycal(vis='13A-387_11.ms', field='3C286', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '', '3C286', '3C286', '3C286', '3C286'], calwt=False)
+2020-07-17 17:30:12 | INFO | Plotting corrected phases for ['3C286'] to: ./plots/corr_phase.png
+2020-07-17 17:30:15 | INFO | Plotting corrected amplitudes for ['3C286'] to: ./plots/corr_amp.png
+2020-07-17 17:30:19 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-07-17 17:30:19 | INFO | Applying calibration to: J1120+1420
+2020-07-17 17:30:19 | INFO | Executing command: applycal(vis='13A-387_11.ms', field='J1120+1420', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '', '3C286', '3C286', 'J1120+1420', 'J1120+1420', 'J1120+1420'], calwt=False)
+2020-07-17 17:30:40 | INFO | Applying calibration to: HCG59
+2020-07-17 17:30:40 | INFO | Executing command: applycal(vis='13A-387_11.ms', field='HCG59', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '', '3C286', '3C286', 'J1120+1420', 'J1120+1420', 'J1120+1420'], calwt=False)
+2020-07-17 17:32:50 | INFO | Completed calibration.
+2020-07-17 17:32:50 | INFO | Removing flag version: final.
+2020-07-17 17:32:50 | INFO | Executing command: flagmanager(vis='13A-387_11.ms', mode='delete', versionname='final')
+2020-07-17 17:32:50 | INFO | Completed removing flag version.
+2020-07-17 17:32:50 | INFO | Saving flag version as: final.
+2020-07-17 17:32:50 | INFO | Executing command: flagmanager(vis='13A-387_11.ms', mode='save', versionname='final')
+2020-07-17 17:32:52 | INFO | Completed saving flag version.
+2020-07-17 17:32:52 | INFO | Starting writing flag summary to: ./summary/13A-387_11.ms.finalflags.summary.
+2020-07-17 17:33:06 | INFO | Total flagged data: 23.75%
+2020-07-17 17:33:06 | INFO | Completed writing flag summary.
+2020-07-17 17:33:06 | INFO | Making flags plots for flag version: final
+2020-07-17 17:33:06 | INFO | Making flags plots for HCG59.
+2020-07-17 17:33:06 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG59_freq_ob0_spw0.png
+2020-07-17 17:35:05 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG59_time_ob0_spw0.png
+2020-07-17 17:39:39 | INFO | Making flags plots for J1120+1420.
+2020-07-17 17:39:39 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_J1120+1420_freq_ob0_spw0.png
+2020-07-17 17:41:45 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_J1120+1420_time_ob0_spw0.png
+2020-07-17 17:42:41 | INFO | Making flags plots for 3C286.
+2020-07-17 17:42:41 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_3C286_freq_ob0_spw0.png
+2020-07-17 17:43:21 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_3C286_time_ob0_spw0.png
+2020-07-17 17:44:07 | INFO | Completed flags plots 
+2020-07-17 17:44:07 | INFO | Starting split fields.
+2020-07-17 17:44:07 | INFO | Create directory: ./sources/
+2020-07-17 17:44:07 | INFO | Splitting HCG59 into separate file: HCG59.split.
+2020-07-17 17:44:07 | INFO | Executing command: split(vis='13A-387_11.ms', outputvis='sources/HCG59.split', field='HCG59')
+2020-07-17 17:44:28 | INFO | Writing listobs summary for split data set to: ./summary/HCG59.listobs.summary
+2020-07-17 17:44:28 | INFO | Completed split fields.
+2020-07-17 17:44:28 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-07-17 17:44:31 | INFO | CASA version: 5.4.2
+2020-07-17 17:44:31 | INFO | Starting making dirty continuum image.
+2020-07-17 17:44:31 | INFO | Removing any existing dirty continuum images.
+2020-07-17 17:44:31 | INFO | Checking clean parameters for dirty image (inc. continuum).
+2020-07-17 17:44:31 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-07-17 17:44:31 | INFO | For the targets: ['HCG59'].
+2020-07-17 17:44:31 | INFO | Image sizes set as: ['512'] pixels.
+2020-07-17 17:44:31 | INFO | For the targets: ['HCG59'].
+2020-07-17 17:44:31 | INFO | Making dirty image of HCG59 (inc. continuum).
+2020-07-17 17:44:31 | INFO | Executing command: tclean(vis='sources/HCG59.split', field='HCG59', imagename='images/HCG59.cont.dirty', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-07-17 17:54:05 | INFO | Completed making dirty continuum image.
+2020-07-17 17:54:05 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-07-17 17:54:10 | INFO | CASA version: 5.4.2
+2020-07-17 17:54:10 | INFO | Starting plotting amplitude spectrum.
+2020-07-17 17:54:10 | INFO | Plotting amplitude vs channel to ./plots/HCG59_amp_chn.png
+2020-07-17 17:58:14 | INFO | Plotting amplitude vs velocity to ./plots/HCG59_amp_vel.png
+2020-07-17 18:08:06 | INFO | Completed plotting amplitude spectrum.
+2020-07-17 18:08:06 | INFO | Starting continuum subtraction.
+2020-07-17 18:08:06 | INFO | Checking for line free channel ranges in parameters.
+2020-07-17 18:08:06 | INFO | Line free channels set as: ['0:85~170;512~598'].
+2020-07-17 18:08:06 | INFO | Fit order(s) set as: 1.
+2020-07-17 18:08:06 | INFO | For the targets: ['HCG59'].
+2020-07-17 18:08:06 | INFO | Subtracting the continuum from field: HCG59
+2020-07-17 18:08:06 | INFO | Executing command: uvcontsub(vis='sources/HCG59'+'.split', field='HCG59', fitspw='0:85~170;512~598', spw='0', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2020-07-17 18:13:37 | INFO | Completed continuum subtraction.
+2020-07-17 18:13:37 | INFO | Starting plotting amplitude spectrum.
+2020-07-17 18:13:37 | INFO | Plotting amplitude vs channel to ./plots/HCG59_contsub_amp_chn.png
+2020-07-17 18:20:39 | INFO | Completed plotting amplitude spectrum.
+2020-07-17 18:20:39 | INFO | Starting making dirty image.
+2020-07-17 18:20:39 | INFO | Removing any existing dirty images.
+2020-07-17 18:20:39 | INFO | Checking clean parameters for dirty image.
+2020-07-17 18:20:39 | INFO | Pixel sizes set as: ['3arcsec'].
+2020-07-17 18:20:39 | INFO | For the targets: ['HCG59'].
+2020-07-17 18:20:39 | INFO | Image sizes set as: ['512'] pixels.
+2020-07-17 18:20:39 | INFO | For the targets: ['HCG59'].
+2020-07-17 18:20:39 | INFO | Line emission channels set as: ['0:170~512'].
+2020-07-17 18:20:39 | INFO | For the targets: ['HCG59'].
+2020-07-17 18:20:39 | INFO | Making dirty image of HCG59 (line only).
+2020-07-17 18:20:39 | INFO | Executing command: tclean(vis='sources/HCG59'+'.split.contsub', field='HCG59', imagename='images/HCG59'+'.dirty', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-07-17 18:30:18 | INFO | Completed making dirty image.
+2020-07-17 18:30:18 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-07-17 18:30:22 | INFO | CASA version: 5.4.2
+2020-07-17 18:30:22 | INFO | Deleting any existing clean image(s).
+2020-07-17 18:30:22 | INFO | Starting making noise estimation.
+2020-07-17 18:30:30 | INFO | Effective integration time for HCG59: 6433 s
+2020-07-17 18:30:30 | INFO | Expected rms noise for HCG59: 0.00105404766403 Jy/beam
+2020-07-17 18:30:30 | INFO | Completed making noise estimation.
+2020-07-17 18:30:30 | INFO | Starting generation of clean image(s).
+2020-07-17 18:30:30 | INFO | Line emission channels set as: ['0:170~512'].
+2020-07-17 18:30:30 | INFO | For the targets: ['HCG59'].
+2020-07-17 18:30:30 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-07-17 18:30:30 | INFO | Starting HCG59 image.
+2020-07-17 18:30:30 | INFO | Automasking parameters set as:
+2020-07-17 18:30:30 | INFO | sidelobethreshold = 2.0
+2020-07-17 18:30:30 | INFO | noisethreshold = 3.0
+2020-07-17 18:30:30 | INFO | lownoisethreshold = 1.5
+2020-07-17 18:30:30 | INFO | minbeamfraction = 0.3
+2020-07-17 18:30:30 | INFO | negativethreshold = 15.0
+2020-07-17 18:30:30 | INFO | The maximum recoverable scale for HCG59 is 826 arcsec.
+2020-07-17 18:30:30 | INFO | CLEANing with scales of [0, 8, 24, 73] pixels.
+2020-07-17 18:30:30 | INFO | CLEANing HCG59 to a threshold of 0.00263511916008 Jy.
+2020-07-17 18:30:30 | INFO | Executing command: tclean(vis='sources/HCG59'+'.split.contsub', field='HCG59', spw='0:170~512', imagename='images/HCG59', cell='3arcsec', imsize=[512,512], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 73], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00263511916008Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-07-17 19:33:30 | INFO | CLEANing finished. Image cube saved as HCG59.image.
+2020-07-17 19:33:30 | INFO | Saving image cube as HCG59_HI.fits
+2020-07-17 19:33:30 | INFO | Executing command: exportfits(imagename='images/HCG59.image', fitsimage='images/HCG59_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-17 19:33:32 | INFO | Saving primary beam corrected image cube as HCG59_HI.pbcor.fits
+2020-07-17 19:33:32 | INFO | Executing command: exportfits(imagename='images/HCG59.image.pbcor', fitsimage='images/HCG59_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-17 19:33:33 | INFO | Completed generation of clean image(s).
+2020-07-17 19:33:33 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-07-17 19:33:36 | INFO | CASA version: 5.4.2
+2020-07-17 19:33:36 | INFO | Deleting any existing moment(s).
+2020-07-17 19:33:36 | INFO | Starting making noise estimation.
+2020-07-17 19:33:45 | INFO | Effective integration time for HCG59: 6433 s
+2020-07-17 19:33:45 | INFO | Expected rms noise for HCG59: 0.00105404766403 Jy/beam
+2020-07-17 19:33:45 | INFO | Completed making noise estimation.
+2020-07-17 19:33:45 | INFO | Create directory: ./moments/
+2020-07-17 19:33:45 | INFO | Starting generation of moment map(s).
+2020-07-17 19:33:45 | INFO | Executing command: immoments(imagename='images/HCG59.image',includepix=[0.00316214299209,3162.14299209],chans='',outfile='moments/HCG59.mom0')
+2020-07-17 19:33:47 | INFO | Executing command: exportfits(imagename='moments/HCG59.mom0', fitsimage='moments/HCG59.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-07-17 19:33:47 | INFO | Completed generation of moment map(s).
+2020-09-08 11:37:27 | INFO | CASA version: 5.4.2
+2020-09-08 11:37:27 | INFO | Deleting any existing clean image(s).
+2020-09-08 11:37:27 | INFO | Starting making noise estimation.
+2020-09-08 11:37:37 | INFO | Effective integration time for HCG59: 6433 s
+2020-09-08 11:37:37 | INFO | Expected rms noise for HCG59: 0.00105404766403 Jy/beam
+2020-09-08 11:37:37 | INFO | Completed making noise estimation.
+2020-09-08 11:37:37 | INFO | Starting generation of clean image(s).
+2020-09-08 11:37:37 | INFO | Line emission channels set as: ['0:170~512'].
+2020-09-08 11:37:37 | INFO | For the targets: ['HCG59'].
+2020-09-08 11:37:37 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-09-08 11:37:37 | INFO | Starting HCG59 image.
+2020-09-08 11:37:37 | INFO | Automasking parameters set as:
+2020-09-08 11:37:37 | INFO | sidelobethreshold = 2.0
+2020-09-08 11:37:37 | INFO | noisethreshold = 3.0
+2020-09-08 11:37:37 | INFO | lownoisethreshold = 1.5
+2020-09-08 11:37:37 | INFO | minbeamfraction = 0.3
+2020-09-08 11:37:37 | INFO | negativethreshold = 15.0
+2020-09-08 11:37:37 | INFO | The maximum recoverable scale for HCG59 is 826 arcsec.
+2020-09-08 11:37:37 | INFO | CLEANing with scales of [0, 8, 24, 73] pixels.
+2020-09-08 11:37:37 | INFO | CLEANing HCG59 to a threshold of 0.00263511916008 Jy.
+2020-09-08 11:37:37 | INFO | Executing command: tclean(vis='sources/HCG59'+'.split.contsub', field='HCG59', spw='0:170~512', imagename='images/HCG59', cell='3arcsec', imsize=[1024,1024], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 73], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00263511916008Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-09-08 13:13:09 | INFO | CLEANing finished. Image cube saved as HCG59.image.
+2020-09-08 13:13:09 | INFO | Saving image cube as HCG59_HI.fits
+2020-09-08 13:13:09 | INFO | Executing command: exportfits(imagename='images/HCG59.image', fitsimage='images/HCG59_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-09-08 13:13:17 | INFO | Saving primary beam corrected image cube as HCG59_HI.pbcor.fits
+2020-09-08 13:13:17 | INFO | Executing command: exportfits(imagename='images/HCG59.image.pbcor', fitsimage='images/HCG59_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-09-08 13:13:24 | INFO | Completed generation of clean image(s).
+2020-09-08 13:13:24 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2020-09-08 13:13:33 | INFO | CASA version: 5.4.2
+2020-09-08 13:13:33 | INFO | Deleting any existing moment(s).
+2020-09-08 13:13:33 | INFO | Starting making noise estimation.
+2020-09-08 13:13:44 | INFO | Effective integration time for HCG59: 6433 s
+2020-09-08 13:13:44 | INFO | Expected rms noise for HCG59: 0.00105404766403 Jy/beam
+2020-09-08 13:13:44 | INFO | Completed making noise estimation.
+2020-09-08 13:13:44 | INFO | Starting generation of moment map(s).
+2020-09-08 13:13:44 | INFO | Executing command: immoments(imagename='images/HCG59.image',includepix=[0.00316214299209,3162.14299209],chans='',outfile='moments/HCG59.mom0')
+2020-09-08 13:13:52 | INFO | Executing command: exportfits(imagename='moments/HCG59.mom0', fitsimage='moments/HCG59.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-09-08 13:13:52 | INFO | Completed generation of moment map(s).

@@ -1,0 +1,145 @@
+2020-09-09 13:20:10 | INFO | CASA version: 5.4.2
+2020-09-09 13:20:10 | INFO | Starting listobs summary.
+2020-09-09 13:20:10 | INFO | Create directory: ./summary/
+2020-09-09 13:20:10 | INFO | Writing listobs summary of data set to: ./summary/13A-387_15.ms.listobs.summary
+2020-09-09 13:20:11 | INFO | Completed listobs summary.
+2020-09-09 13:20:11 | INFO | Starting data transform.
+2020-09-09 13:20:11 | INFO | Executing command: mstransform(vis='13A-387_15.ms', outputvis='13A-387_15.ms_1', field='1,2,3', spw='0', observation='', datacolumn='data', hanning=True, chanaverage=True, chanbin=3)
+2020-09-09 13:21:53 | INFO | Updating config file (13A-387_15_params.cfg) to set mstransform values.
+2020-09-09 13:21:53 | INFO | 13A-387_15.ms.flagversions is a symbolic link. It will now be unlinked.
+2020-09-09 13:21:53 | INFO | Create directory: 13A-387_15.ms.flagversions
+2020-09-09 13:21:53 | INFO | 13A-387_15.ms is a symbolic link. It will now be unlinked.
+2020-09-09 13:21:53 | INFO | Moved 13A-387_15.ms_1 to 13A-387_15.ms
+2020-09-09 13:21:53 | INFO | Completed data transformation.
+2020-09-09 13:21:53 | INFO | Starting listobs summary.
+2020-09-09 13:21:53 | INFO | Deleted: ./summary/13A-387_15.ms.listobs.summary
+2020-09-09 13:21:53 | INFO | Writing listobs summary of data set to: ./summary/13A-387_15.ms.listobs.summary
+2020-09-09 13:21:53 | INFO | Completed listobs summary.
+2020-09-09 13:21:53 | INFO | Reading ms file information for MS: 13A-387_15.ms
+2020-09-09 13:21:53 | INFO | Sources in MS 13A-387_15.ms: 3C286,HCG59,J1120+1420
+2020-09-09 13:21:53 | INFO | > Sources (3): 3C286,HCG59,J1120+1420
+2020-09-09 13:21:53 | INFO | > Number of spw: 1
+2020-09-09 13:21:53 | INFO | > Channels per spw: 682
+2020-09-09 13:21:53 | INFO | Starting plotting elevation.
+2020-09-09 13:21:53 | INFO | Create directory: ./plots/
+2020-09-09 13:21:53 | INFO | Plotting elevation to: ./plots/13A-387_15.ms_elevation.png
+2020-09-09 13:22:11 | INFO | Completed plotting elevation.
+2020-09-09 13:22:11 | INFO | Starting plotting antenna positions.
+2020-09-09 13:22:11 | INFO | Plotting antenna positions to: ./plots/13A-387_15.ms_antpos.png
+2020-09-09 13:22:11 | INFO | Completed plotting antenna positions.
+2020-09-09 13:22:11 | INFO | Backing up 13A-387_15_params.cfg to backup.13A-387_15_params.cfg.
+2020-09-09 13:22:15 | INFO | CASA version: 5.4.2
+2020-09-09 13:22:15 | INFO | Saving flag version as: Original.
+2020-09-09 13:22:15 | INFO | Executing command: flagmanager(vis='13A-387_15.ms', mode='save', versionname='Original')
+2020-09-09 13:22:16 | INFO | Completed saving flag version.
+2020-09-09 13:22:16 | INFO | Starting manual flagging.
+2020-09-09 13:22:16 | INFO | Applying flags from manual_flags.list
+2020-09-09 13:22:16 | INFO | Executing command: flagdata(vis='13A-387_15.ms', mode='list', action='apply', inpfile=["mode='manual' antenna='ea25'\n", "mode='manual' timerange='2013/03/24/07:49:40~07:49:50,2013/03/24/09:09:55~09:10:10'\n", "mode='manual' field='0,1' spw='0:276~278,0:618~619'\n", "mode='manual' field='2' spw='0:128~130,0:275~278,0:617~620'"])
+2020-09-09 13:22:22 | INFO | Completed manual flagging.
+2020-09-09 13:22:22 | INFO | Starting basic flagging.
+2020-09-09 13:22:22 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-09-09 13:22:22 | INFO | Executing command: flagdata(vis='13A-387_15.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-09-09 13:22:27 | INFO | Flagging zero amplitude data.
+2020-09-09 13:22:27 | INFO | Executing command: flagdata(vis='13A-387_15.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-09-09 13:23:08 | INFO | Flagging first 5.0 s of every scan.
+2020-09-09 13:23:08 | INFO | Executing command: flagdata(vis='13A-387_15.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-09-09 13:23:13 | INFO | Completed basic flagging.
+2020-09-09 13:23:13 | INFO | Starting running TFCrop.
+2020-09-09 13:23:13 | INFO | Executing command: flagdata(vis='13A-387_15.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-09-09 13:26:24 | INFO | Completed running TFCrop.
+2020-09-09 13:26:24 | INFO | Removing flag version: initial.
+2020-09-09 13:26:24 | INFO | Executing command: flagmanager(vis='13A-387_15.ms', mode='delete', versionname='initial')
+2020-09-09 13:26:24 | INFO | Completed removing flag version.
+2020-09-09 13:26:24 | INFO | Saving flag version as: initial.
+2020-09-09 13:26:24 | INFO | Executing command: flagmanager(vis='13A-387_15.ms', mode='save', versionname='initial')
+2020-09-09 13:26:25 | INFO | Completed saving flag version.
+2020-09-09 13:26:25 | INFO | Starting writing flag summary to: ./summary/13A-387_15.ms.initialflags.summary.
+2020-09-09 13:26:32 | INFO | Total flagged data: 20.84%
+2020-09-09 13:26:32 | INFO | Completed writing flag summary.
+2020-09-09 13:26:32 | INFO | Starting reference antenna selection.
+2020-09-09 13:26:32 | INFO | Reference antenna already set as: ea15.
+2020-09-09 13:26:32 | INFO | Starting set field purposes.
+2020-09-09 13:26:32 | INFO | Target field(s) already set as: ['HCG59'].
+2020-09-09 13:26:32 | INFO | Flux calibrator already set as: ['3C286'].
+2020-09-09 13:26:32 | INFO | Flux models already set as: ['3C286_L.im'].
+2020-09-09 13:26:32 | INFO | Bandpass calibrator already set as: ['3C286'].
+2020-09-09 13:26:32 | INFO | Phase calibrator already set as: ['J1120+1420'].
+2020-09-09 13:26:32 | INFO | No changes made to preset target and calibrator fields.
+2020-09-09 13:26:32 | INFO | Completed setting field purposes.
+2020-09-09 13:26:32 | INFO | Making flags plots for flag version: initial
+2020-09-09 13:26:32 | INFO | Making flags plots for HCG59.
+2020-09-09 13:26:32 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_HCG59_freq_ob0_spw0.png
+2020-09-09 13:27:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_HCG59_time_ob0_spw0.png
+2020-09-09 13:28:44 | INFO | Making flags plots for J1120+1420.
+2020-09-09 13:28:44 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_J1120+1420_freq_ob0_spw0.png
+2020-09-09 13:29:37 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_J1120+1420_time_ob0_spw0.png
+2020-09-09 13:30:21 | INFO | Making flags plots for 3C286.
+2020-09-09 13:30:21 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_3C286_freq_ob0_spw0.png
+2020-09-09 13:30:56 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_3C286_time_ob0_spw0.png
+2020-09-09 13:31:38 | INFO | Completed flags plots 
+2020-09-09 13:31:38 | INFO | Starting calibration.
+2020-09-09 13:31:38 | INFO | Create directory: ./cal_tabs/
+2020-09-09 13:31:38 | INFO | Looking up antenna position offsets (./cal_tabs/antpos.cal).
+2020-09-09 13:31:38 | INFO | Executing command: gencal(vis='13A-387_15.ms', caltable='./cal_tabs/antpos.cal', caltype='antpos', antenna='')
+2020-09-09 13:31:44 | INFO | Calibrating gain vs elevation (./cal_tabs/gaincurve.cal).
+2020-09-09 13:31:44 | INFO | Executing command: gencal(vis='13A-387_15.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-09-09 13:31:44 | INFO | Load model for flux calibrator 3C286 (3C286_L.im).
+2020-09-09 13:31:44 | INFO | Executing command: setjy(vis='13A-387_15.ms', field='3C286', scalebychan=True, model='3C286_L.im')
+2020-09-09 13:31:47 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-09-09 13:31:57 | INFO | Calibrating delays for bandpass calibrators ['3C286'] (./cal_tabs/delays.cal).
+2020-09-09 13:31:57 | INFO | Executing command: gaincal(vis='13A-387_15.ms', field='3C286', caltable='./cal_tabs/delays.cal', refant='ea15', gaintype='K', gaintable=['./cal_tabs/antpos.cal','./cal_tabs/gaincurve.cal'], spw='0')
+2020-09-09 13:32:22 | INFO | Make bandpass calibrator phase solutions for ['3C286'] (./cal_tabs/bpphase.gcal).
+2020-09-09 13:32:22 | INFO | Executing command: gaincal(vis='13A-387_15.ms', field='3C286',  caltable='./cal_tabs/bpphase.gcal', refant='ea15', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal','./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0')
+2020-09-09 13:32:52 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-09-09 13:32:53 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-09-09 13:32:53 | INFO | Executing command: bandpass(vis='13A-387_15.ms', caltable='./cal_tabs/bandpass.bcal', field='3C286', refant='ea15', solint='inf', solnorm=True, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0')
+2020-09-09 13:33:25 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-09-09 13:33:27 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-09-09 13:33:27 | INFO | Executing command: gaincal(vis='13A-387_15.ms', field='J1120+1420,3C286', caltable='./cal_tabs/intphase.gcal', refant='ea15', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-09-09 13:34:10 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-09-09 13:34:10 | INFO | Executing command: gaincal(vis='13A-387_15.ms', field='J1120+1420,3C286', caltable='./cal_tabs/scanphase.gcal', refant='ea15', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-09-09 13:34:51 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-09-09 13:34:51 | INFO | Executing command: gaincal(vis='13A-387_15.ms', field='J1120+1420,3C286', caltable='./cal_tabs/amp.gcal', refant='ea15', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0')
+2020-09-09 13:35:35 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-09-09 13:35:37 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-09-09 13:35:38 | INFO | Applying flux scale to calibrators (./cal_tabs/fluxsol.cal).
+2020-09-09 13:35:38 | INFO | Executing command: flux_info = fluxscale(vis='13A-387_15.ms', caltable='./cal_tabs/amp.gcal', fluxtable='./cal_tabs/fluxsol.cal', reference='3C286', incremental=True)
+2020-09-09 13:35:39 | INFO | Writing calibrator fluxes summary to: ./summary/13A-387_15.ms.flux.summary.
+2020-09-09 13:35:39 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-09-09 13:35:39 | INFO | Applying calibration to: 3C286
+2020-09-09 13:35:39 | INFO | Executing command: applycal(vis='13A-387_15.ms', field='3C286', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '', '3C286', '3C286', '3C286', '3C286'], calwt=False)
+2020-09-09 13:36:11 | INFO | Plotting corrected phases for ['3C286'] to: ./plots/corr_phase.png
+2020-09-09 13:36:14 | INFO | Plotting corrected amplitudes for ['3C286'] to: ./plots/corr_amp.png
+2020-09-09 13:36:17 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-09-09 13:36:17 | INFO | Applying calibration to: J1120+1420
+2020-09-09 13:36:17 | INFO | Executing command: applycal(vis='13A-387_15.ms', field='J1120+1420', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '', '3C286', '3C286', 'J1120+1420', 'J1120+1420', 'J1120+1420'], calwt=False)
+2020-09-09 13:36:29 | INFO | Applying calibration to: HCG59
+2020-09-09 13:36:29 | INFO | Executing command: applycal(vis='13A-387_15.ms', field='HCG59', gaintable=['./cal_tabs/antpos.cal', './cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal', './cal_tabs/fluxsol.cal'], gainfield=['', '', '3C286', '3C286', 'J1120+1420', 'J1120+1420', 'J1120+1420'], calwt=False)
+2020-09-09 13:37:29 | INFO | Completed calibration.
+2020-09-09 13:37:29 | INFO | Removing flag version: final.
+2020-09-09 13:37:29 | INFO | Executing command: flagmanager(vis='13A-387_15.ms', mode='delete', versionname='final')
+2020-09-09 13:37:29 | INFO | Completed removing flag version.
+2020-09-09 13:37:29 | INFO | Saving flag version as: final.
+2020-09-09 13:37:29 | INFO | Executing command: flagmanager(vis='13A-387_15.ms', mode='save', versionname='final')
+2020-09-09 13:37:30 | INFO | Completed saving flag version.
+2020-09-09 13:37:30 | INFO | Starting writing flag summary to: ./summary/13A-387_15.ms.finalflags.summary.
+2020-09-09 13:37:37 | INFO | Total flagged data: 73.52%
+2020-09-09 13:37:37 | INFO | Completed writing flag summary.
+2020-09-09 13:37:37 | INFO | Making flags plots for flag version: final
+2020-09-09 13:37:38 | INFO | Making flags plots for HCG59.
+2020-09-09 13:37:38 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_HCG59_freq_ob0_spw0.png
+2020-09-09 13:40:06 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_HCG59_time_ob0_spw0.png
+2020-09-09 13:46:28 | INFO | Making flags plots for J1120+1420.
+2020-09-09 13:46:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_J1120+1420_freq_ob0_spw0.png
+2020-09-09 13:49:19 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_J1120+1420_time_ob0_spw0.png
+2020-09-09 13:50:03 | INFO | Making flags plots for 3C286.
+2020-09-09 13:50:03 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_3C286_freq_ob0_spw0.png
+2020-09-09 13:50:38 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_3C286_time_ob0_spw0.png
+2020-09-09 13:51:20 | INFO | Completed flags plots 
+2020-09-09 13:51:20 | INFO | Starting split fields.
+2020-09-09 13:51:20 | INFO | Create directory: ./sources/
+2020-09-09 13:51:20 | INFO | Splitting HCG59 into separate file: HCG59.split.
+2020-09-09 13:51:20 | INFO | Executing command: split(vis='13A-387_15.ms', outputvis='sources/HCG59.split', field='HCG59')
+2020-09-09 13:51:31 | INFO | Writing listobs summary for split data set to: ./summary/HCG59.listobs.summary
+2020-09-09 13:51:31 | INFO | Completed split fields.
+2020-09-09 13:51:31 | INFO | Backing up 13A-387_15_params.cfg to backup.13A-387_15_params.cfg.

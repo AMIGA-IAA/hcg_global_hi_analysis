@@ -1,0 +1,5 @@
+initweights(vis='../AW351/sources/HCG92.split.contsub', wtmode='nyq')
+initweights(vis='../AW500/sources/HCG92.split.contsub', wtmode='nyq')
+initweights(vis='../AY155/sources/HCG92.spw0.split.contsub', wtmode='nyq')
+initweights(vis='../AY155/sources/HCG92.spw1.split.contsub', wtmode='nyq')
+tclean(vis=['../AW351/sources/HCG92.split.contsub', '../AW500/sources/HCG92.split.contsub', '../AY155/sources/HCG92.spw1.split.contsub', '../AY155/sources/HCG92.spw0.split.contsub'], imagename='HCG92/HCG92.dirty', cell='2arcsec', imsize=1024, spw='', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0], weighting='briggs', robust=2, pbcor=True, niter=0, gain=0.1, cyclefactor=2.0, interactive=False, threshold='0.25mJy', usemask='auto-multithresh', phasecenter='J2000 338.996250deg 33.958611deg')

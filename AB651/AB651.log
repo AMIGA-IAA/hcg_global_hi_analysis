@@ -1,0 +1,283 @@
+2020-03-25 17:19:56 | INFO | CASA version: 5.4.2
+2020-03-25 17:19:56 | INFO | Starting import vla data
+2020-03-25 17:19:56 | INFO | Create directory: ./summary/
+2020-03-25 17:19:56 | INFO | Input files: ['../../data/VLA/AB651/AB651_B920801.xp1', '../../data/VLA/AB651/AB651_B920801.xp2', '../../data/VLA/AB651/AB651_B920802.xp3']
+2020-03-25 17:19:56 | INFO | Output msfile: AB651.ms
+2020-03-25 17:19:56 | INFO | Executing command: importvla(archivefiles = ['../../data/VLA/AB651/AB651_B920801.xp1', '../../data/VLA/AB651/AB651_B920801.xp2', '../../data/VLA/AB651/AB651_B920802.xp3'], vis = 'AB651.ms')
+2020-03-25 17:20:08 | INFO | Completed import vla data
+2020-03-25 17:20:08 | INFO | Starting archive file summary.
+2020-03-25 17:20:08 | INFO | To find the exact files imported here search the VLA archive (https://archive.nrao.edu/archive/advquery.jsp) for:
+2020-03-25 17:20:08 | INFO | Project: AB651	Start Time: 1992-08-01 18:04:15	End Time: 1992-08-01 20:59:15
+2020-03-25 17:20:08 | INFO | Project: AB651	Start Time: 1992-08-01 20:59:45	End Time: 1992-08-02 07:46:30
+2020-03-25 17:20:08 | INFO | Project: AB651	Start Time: 1992-08-02 07:47:30	End Time: 1992-08-02 09:56:15
+2020-03-25 17:20:08 | INFO | Completed archive file summary.
+2020-03-25 17:20:08 | INFO | Starting listobs summary.
+2020-03-25 17:20:08 | INFO | Writing listobs summary of data set to: ./summary/AB651.ms.listobs.summary
+2020-03-25 17:20:08 | INFO | Completed listobs summary.
+2020-03-25 17:20:08 | INFO | Starting data transform.
+2020-03-25 17:20:08 | INFO | Executing command: mstransform(vis='AB651.ms', outputvis='AB651.ms_1', field='N5350, 1328+307', spw='5', observation='1', datacolumn='data')
+2020-03-25 17:20:10 | INFO | Updating config file (AB651_params.cfg) to set mstransform values.
+2020-03-25 17:20:10 | INFO | Deleted: AB651.ms.flagversions
+2020-03-25 17:20:10 | INFO | Create directory: AB651.ms.flagversions
+2020-03-25 17:20:10 | INFO | Deleted: AB651.ms
+2020-03-25 17:20:10 | INFO | Moved AB651.ms_1 to AB651.ms
+2020-03-25 17:20:10 | INFO | Completed data transformation.
+2020-03-25 17:20:10 | INFO | Starting listobs summary.
+2020-03-25 17:20:10 | INFO | Deleted: ./summary/AB651.ms.listobs.summary
+2020-03-25 17:20:10 | INFO | Writing listobs summary of data set to: ./summary/AB651.ms.listobs.summary
+2020-03-25 17:20:10 | INFO | Completed listobs summary.
+2020-03-25 17:20:10 | INFO | Reading ms file information for MS: AB651.ms
+2020-03-25 17:20:10 | INFO | Sources in MS AB651.ms: 1328+307,N5350
+2020-03-25 17:20:10 | INFO | > Sources (2): 1328+307,N5350
+2020-03-25 17:20:10 | INFO | > Number of spw: 1
+2020-03-25 17:20:10 | INFO | > Channels per spw: 63
+2020-03-25 17:20:10 | INFO | Starting plotting elevation.
+2020-03-25 17:20:10 | INFO | Create directory: ./plots/
+2020-03-25 17:20:10 | INFO | Plotting elevation to: ./plots/AB651.ms_elevation.png
+2020-03-25 17:20:15 | INFO | Completed plotting elevation.
+2020-03-25 17:20:15 | INFO | Starting plotting antenna positions.
+2020-03-25 17:20:15 | INFO | Plotting antenna positions to: ./plots/AB651.ms_antpos.png
+2020-03-25 17:20:15 | INFO | Completed plotting antenna positions.
+2020-03-25 17:20:15 | INFO | Backing up AB651_params.cfg to backup.AB651_params.cfg.
+2020-03-25 17:20:18 | INFO | CASA version: 5.4.2
+2020-03-25 17:20:18 | INFO | Saving flag version as: Original.
+2020-03-25 17:20:18 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='save', versionname='Original')
+2020-03-25 17:20:18 | INFO | Completed saving flag version.
+2020-03-25 17:20:18 | INFO | Starting manual flagging.
+2020-03-25 17:20:18 | INFO | Applying flags from manual_flags.list
+2020-03-25 17:20:18 | WARNING | 'manual_flags.list' does not exist. Continuing without manual flagging.
+2020-03-25 17:20:18 | INFO | Starting basic flagging.
+2020-03-25 17:20:18 | INFO | Flagging antennae with more than 5.0 m of shadowing.
+2020-03-25 17:20:18 | INFO | Executing command: flagdata(vis='AB651.ms', mode='shadow', tolerance=5.0, flagbackup=False)
+2020-03-25 17:20:20 | INFO | Flagging zero amplitude data.
+2020-03-25 17:20:20 | INFO | Executing command: flagdata(vis='AB651.ms', mode='clip', clipzeros=True, flagbackup=False)
+2020-03-25 17:20:22 | INFO | Flagging first 5.0 s of every scan.
+2020-03-25 17:20:22 | INFO | Executing command: flagdata(vis='AB651.ms', mode='quack', quackinterval=5.0, quackmode='beg', flagbackup=False)
+2020-03-25 17:20:24 | INFO | Completed basic flagging.
+2020-03-25 17:20:24 | INFO | Starting running TFCrop.
+2020-03-25 17:20:24 | INFO | Executing command: flagdata(vis='AB651.ms', mode='tfcrop', action='apply', display='', timecutoff=4.0, freqcutoff=4.0, flagbackup=False)
+2020-03-25 17:20:28 | INFO | Completed running TFCrop.
+2020-03-25 17:20:28 | INFO | Removing flag version: initial.
+2020-03-25 17:20:28 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='delete', versionname='initial')
+2020-03-25 17:20:28 | INFO | Completed removing flag version.
+2020-03-25 17:20:28 | INFO | Saving flag version as: initial.
+2020-03-25 17:20:28 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='save', versionname='initial')
+2020-03-25 17:20:28 | INFO | Completed saving flag version.
+2020-03-25 17:20:28 | INFO | Starting writing flag summary to: ./summary/AB651.ms.initialflags.summary.
+2020-03-25 17:20:28 | INFO | Total flagged data: 9.78%
+2020-03-25 17:20:28 | INFO | Completed writing flag summary.
+2020-03-25 17:20:28 | INFO | Starting reference antenna selection.
+2020-03-25 17:20:28 | INFO | Reference antenna already set as: VA02.
+2020-03-25 17:20:28 | INFO | Starting set field purposes.
+2020-03-25 17:20:28 | INFO | Target field(s) already set as: ['N5350'].
+2020-03-25 17:20:28 | INFO | Flux calibrator already set as: ['1328+307'].
+2020-03-25 17:20:28 | INFO | Flux models already set as: ['3C286_L.im'].
+2020-03-25 17:20:28 | INFO | Bandpass calibrator already set as: ['1328+307'].
+2020-03-25 17:20:28 | INFO | Phase calibrator already set as: ['1328+307'].
+2020-03-25 17:20:28 | INFO | No changes made to preset target and calibrator fields.
+2020-03-25 17:20:28 | INFO | Completed setting field purposes.
+2020-03-25 17:20:28 | INFO | Making flags plots for flag version: initial
+2020-03-25 17:20:28 | INFO | Making flags plots for N5350.
+2020-03-25 17:20:28 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_N5350_freq_ob0_spw0.png
+2020-03-25 17:20:33 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_N5350_time_ob0_spw0.png
+2020-03-25 17:20:37 | INFO | Making flags plots for 1328+307.
+2020-03-25 17:20:37 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_initial_1328+307_freq_ob0_spw0.png
+2020-03-25 17:20:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_initial_1328+307_time_ob0_spw0.png
+2020-03-25 17:20:45 | INFO | Completed flags plots 
+2020-03-25 17:20:45 | INFO | Starting calibration.
+2020-03-25 17:20:45 | INFO | Create directory: ./cal_tabs/
+2020-03-25 17:20:45 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-03-25 17:20:45 | INFO | Executing command: gencal(vis='AB651.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-03-25 17:20:45 | INFO | Load model for flux calibrator 1328+307 (3C286_L.im).
+2020-03-25 17:20:45 | INFO | Executing command: setjy(vis='AB651.ms', field='1328+307', scalebychan=True, model='3C286_L.im')
+2020-03-25 17:20:46 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-03-25 17:20:48 | INFO | Calibrating delays for bandpass calibrators ['1328+307'] (./cal_tabs/delays.cal).
+2020-03-25 17:20:48 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/delays.cal', refant='VA02', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0')
+2020-03-25 17:20:49 | INFO | Make bandpass calibrator phase solutions for ['1328+307'] (./cal_tabs/bpphase.gcal).
+2020-03-25 17:20:49 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307',  caltable='./cal_tabs/bpphase.gcal', refant='VA02', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0')
+2020-03-25 17:20:50 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-03-25 17:20:52 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-03-25 17:20:52 | INFO | Executing command: bandpass(vis='AB651.ms', caltable='./cal_tabs/bandpass.bcal', field='1328+307', refant='VA02', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0')
+2020-03-25 17:20:53 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-03-25 17:20:55 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-03-25 17:20:55 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/intphase.gcal', refant='VA02', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-03-25 17:20:56 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-03-25 17:20:56 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/scanphase.gcal', refant='VA02', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-03-25 17:20:57 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-03-25 17:20:57 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/amp.gcal', refant='VA02', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0')
+2020-03-25 17:20:58 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-03-25 17:21:00 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-03-25 17:21:01 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-03-25 17:21:01 | INFO | Applying calibration to: 1328+307
+2020-03-25 17:21:01 | INFO | Executing command: applycal(vis='AB651.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-03-25 17:21:02 | INFO | Plotting corrected phases for ['1328+307'] to: ./plots/corr_phase.png
+2020-03-25 17:21:04 | INFO | Plotting corrected amplitudes for ['1328+307'] to: ./plots/corr_amp.png
+2020-03-25 17:21:05 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-03-25 17:21:05 | INFO | Applying calibration to: N5350
+2020-03-25 17:21:05 | INFO | Executing command: applycal(vis='AB651.ms', field='N5350', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-03-25 17:21:06 | INFO | Completed calibration.
+2020-03-25 17:21:06 | INFO | Starting running rflag with a threshold of 4.0.
+2020-03-25 17:21:06 | INFO | Executing command: flagdata(vis='AB651.ms', mode='rflag', action='apply', datacolumn='corrected', freqdevscale=4.0, timedevscale=4.0, display='', flagbackup=False)
+2020-03-25 17:21:10 | INFO | Completed running rflag.
+2020-03-25 17:21:10 | INFO | Removing flag version: rflag.
+2020-03-25 17:21:10 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='delete', versionname='rflag')
+2020-03-25 17:21:10 | INFO | Completed removing flag version.
+2020-03-25 17:21:10 | INFO | Saving flag version as: rflag.
+2020-03-25 17:21:10 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='save', versionname='rflag')
+2020-03-25 17:21:10 | INFO | Completed saving flag version.
+2020-03-25 17:21:10 | INFO | Starting writing flag summary to: ./summary/AB651.ms.rflagflags.summary.
+2020-03-25 17:21:11 | INFO | Total flagged data: 26.92%
+2020-03-25 17:21:11 | INFO | Completed writing flag summary.
+2020-03-25 17:21:11 | INFO | Starting extending existing flags.
+2020-03-25 17:21:11 | INFO | Executing command: flagdata(vis='AB651.ms', mode='extend', spw='', extendpols=True, action='apply', display='', flagbackup=False)
+2020-03-25 17:21:12 | INFO | Executing command: flagdata(vis='AB651.ms', mode='extend', spw='', growtime=75.0, growfreq=90.0, action='apply', display='', flagbackup=False)
+2020-03-25 17:21:14 | INFO | Completed extending existing flags.
+2020-03-25 17:21:14 | INFO | Removing flag version: extended.
+2020-03-25 17:21:14 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='delete', versionname='extended')
+2020-03-25 17:21:14 | INFO | Completed removing flag version.
+2020-03-25 17:21:14 | INFO | Saving flag version as: extended.
+2020-03-25 17:21:14 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='save', versionname='extended')
+2020-03-25 17:21:14 | INFO | Completed saving flag version.
+2020-03-25 17:21:14 | INFO | Starting writing flag summary to: ./summary/AB651.ms.extendedflags.summary.
+2020-03-25 17:21:15 | INFO | Total flagged data: 27.12%
+2020-03-25 17:21:15 | INFO | Completed writing flag summary.
+2020-03-25 17:21:15 | INFO | Starting calibration.
+2020-03-25 17:21:15 | INFO | Calibrating gain vs elevation(./cal_tabs/gaincurve.cal).
+2020-03-25 17:21:15 | INFO | Executing command: gencal(vis='AB651.ms', caltable='./cal_tabs/gaincurve.cal', caltype='gceff')
+2020-03-25 17:21:15 | INFO | Load model for flux calibrator 1328+307 (3C286_L.im).
+2020-03-25 17:21:15 | INFO | Executing command: setjy(vis='AB651.ms', field='1328+307', scalebychan=True, model='3C286_L.im')
+2020-03-25 17:21:16 | INFO | Plotting bandpass phase vs. time for reference antenna to: ./plots/bpphaseint.png
+2020-03-25 17:21:17 | INFO | Calibrating delays for bandpass calibrators ['1328+307'] (./cal_tabs/delays.cal).
+2020-03-25 17:21:17 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/delays.cal', refant='VA02', gaintype='K', gaintable=['./cal_tabs/gaincurve.cal'], spw='0')
+2020-03-25 17:21:19 | INFO | Make bandpass calibrator phase solutions for ['1328+307'] (./cal_tabs/bpphase.gcal).
+2020-03-25 17:21:19 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307',  caltable='./cal_tabs/bpphase.gcal', refant='VA02', calmode='p', solint='int', combine='', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal','./cal_tabs/delays.cal'], spw='0')
+2020-03-25 17:21:20 | INFO | Plotting bandpass phase solutions to: ./plots/bpphasesol_ob0.png
+2020-03-25 17:21:22 | INFO | Determining bandpass solution(s) (./cal_tabs/bandpass.bcal).
+2020-03-25 17:21:22 | INFO | Executing command: bandpass(vis='AB651.ms', caltable='./cal_tabs/bandpass.bcal', field='1328+307', refant='VA02', solint='inf', solnorm=True, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bpphase.gcal'], spw='0')
+2020-03-25 17:21:23 | INFO | Plotting bandpass amplitude solutions to: ./plots/bandpasssol_.png
+2020-03-25 17:21:24 | INFO | Determining integration phase solutions (./cal_tabs/intphase.gcal).
+2020-03-25 17:21:24 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/intphase.gcal', refant='VA02', calmode='p', solint='int', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-03-25 17:21:26 | INFO | Determining scan phase solutions (./cal_tabs/scanphase.gcal).
+2020-03-25 17:21:26 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/scanphase.gcal', refant='VA02', calmode='p', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal'],spw='0')
+2020-03-25 17:21:27 | INFO | Determining amplitude solutions (./cal_tabs/amp.gcal).
+2020-03-25 17:21:27 | INFO | Executing command: gaincal(vis='AB651.ms', field='1328+307', caltable='./cal_tabs/amp.gcal', refant='VA02', calmode='ap', solint='inf', minsnr=2.0, gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal'],spw='0')
+2020-03-25 17:21:28 | INFO | Plotting phase solutions to: ./plots/phasesol_ob0.png
+2020-03-25 17:21:29 | INFO | Plotting amplitude solutions to: ./plots/ampsol_ob0.png
+2020-03-25 17:21:31 | INFO | Apply all calibrations to bandpass and flux calibrators.
+2020-03-25 17:21:31 | INFO | Applying calibration to: 1328+307
+2020-03-25 17:21:31 | INFO | Executing command: applycal(vis='AB651.ms', field='1328+307', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-03-25 17:21:32 | INFO | Plotting corrected phases for ['1328+307'] to: ./plots/corr_phase.png
+2020-03-25 17:21:33 | INFO | Plotting corrected amplitudes for ['1328+307'] to: ./plots/corr_amp.png
+2020-03-25 17:21:34 | INFO | Apply all calibrations to phase calibrators and targets.
+2020-03-25 17:21:34 | INFO | Applying calibration to: N5350
+2020-03-25 17:21:34 | INFO | Executing command: applycal(vis='AB651.ms', field='N5350', gaintable=['./cal_tabs/gaincurve.cal', './cal_tabs/delays.cal', './cal_tabs/bandpass.bcal', './cal_tabs/intphase.gcal', './cal_tabs/amp.gcal'], gainfield=['', '1328+307', '1328+307', '1328+307', '1328+307'], calwt=False)
+2020-03-25 17:21:36 | INFO | Completed calibration.
+2020-03-25 17:21:36 | INFO | Removing flag version: final.
+2020-03-25 17:21:36 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='delete', versionname='final')
+2020-03-25 17:21:36 | INFO | Completed removing flag version.
+2020-03-25 17:21:36 | INFO | Saving flag version as: final.
+2020-03-25 17:21:36 | INFO | Executing command: flagmanager(vis='AB651.ms', mode='save', versionname='final')
+2020-03-25 17:21:36 | INFO | Completed saving flag version.
+2020-03-25 17:21:36 | INFO | Starting writing flag summary to: ./summary/AB651.ms.finalflags.summary.
+2020-03-25 17:21:36 | INFO | Total flagged data: 27.12%
+2020-03-25 17:21:36 | INFO | Completed writing flag summary.
+2020-03-25 17:21:36 | INFO | Making flags plots for flag version: final
+2020-03-25 17:21:36 | INFO | Making flags plots for N5350.
+2020-03-25 17:21:36 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_N5350_freq_ob0_spw0.png
+2020-03-25 17:21:41 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_N5350_time_ob0_spw0.png
+2020-03-25 17:21:46 | INFO | Making flags plots for 1328+307.
+2020-03-25 17:21:46 | INFO | Plotting amplitude vs frequency to ./plots/flag_plot_final_1328+307_freq_ob0_spw0.png
+2020-03-25 17:21:51 | INFO | Plotting amplitude vs time to ./plots/flag_plot_final_1328+307_time_ob0_spw0.png
+2020-03-25 17:21:54 | INFO | Completed flags plots 
+2020-03-25 17:21:54 | INFO | Starting split fields.
+2020-03-25 17:21:54 | INFO | Create directory: ./sources/
+2020-03-25 17:21:54 | INFO | Splitting N5350 into separate file: HCG68.split.
+2020-03-25 17:21:54 | INFO | Executing command: split(vis='AB651.ms', outputvis='sources/HCG68.split', field='N5350')
+2020-03-25 17:21:55 | INFO | Writing listobs summary for split data set to: ./summary/HCG68.listobs.summary
+2020-03-25 17:21:56 | INFO | Completed split fields.
+2020-03-25 17:21:56 | INFO | Backing up AB651_params.cfg to backup.AB651_params.cfg.
+2020-03-25 17:21:58 | INFO | CASA version: 5.4.2
+2020-03-25 17:21:58 | INFO | Starting making dirty continuum image.
+2020-03-25 17:21:58 | INFO | Removing any existing dirty continuum images.
+2020-03-25 17:21:58 | INFO | Checking clean parameters for dirty image (inc. continuum).
+2020-03-25 17:21:58 | INFO | Pixel sizes set as: ['8arcsec'].
+2020-03-25 17:21:58 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:21:58 | INFO | Image sizes set as: ['256'] pixels.
+2020-03-25 17:21:58 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:21:58 | INFO | Making dirty image of HCG68 (inc. continuum).
+2020-03-25 17:21:58 | INFO | Executing command: tclean(vis='sources/HCG68.split', field='N5350', imagename='images/HCG68.cont.dirty', cell='8arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, niter=0, phasecenter='', interactive=False)
+2020-03-25 17:22:06 | INFO | Completed making dirty continuum image.
+2020-03-25 17:22:06 | INFO | Backing up AB651_params.cfg to backup.AB651_params.cfg.
+2020-03-25 17:22:09 | INFO | CASA version: 5.4.2
+2020-03-25 17:22:09 | INFO | Starting plotting amplitude spectrum.
+2020-03-25 17:22:09 | INFO | Plotting amplitude vs channel to ./plots/HCG68_amp_chn.png
+2020-03-25 17:22:14 | INFO | Plotting amplitude vs velocity to ./plots/HCG68_amp_vel.png
+2020-03-25 17:22:16 | INFO | Completed plotting amplitude spectrum.
+2020-03-25 17:22:16 | INFO | Starting continuum subtraction.
+2020-03-25 17:22:16 | INFO | Checking for line free channel ranges in parameters.
+2020-03-25 17:22:16 | INFO | Line free channels set as: ['0:3~8;54~59'].
+2020-03-25 17:22:16 | INFO | Fit order(s) set as: 1.
+2020-03-25 17:22:16 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:22:16 | INFO | Subtracting the continuum from field: HCG68
+2020-03-25 17:22:16 | INFO | Executing command: uvcontsub(vis='sources/HCG68'+'.split', field='N5350', fitspw='0:3~8;54~59', spw='0', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2020-03-25 17:22:20 | INFO | Completed continuum subtraction.
+2020-03-25 17:22:20 | INFO | Starting plotting amplitude spectrum.
+2020-03-25 17:22:20 | INFO | Plotting amplitude vs channel to ./plots/HCG68_contsub_amp_chn.png
+2020-03-25 17:22:22 | INFO | Completed plotting amplitude spectrum.
+2020-03-25 17:22:22 | INFO | Starting making dirty image.
+2020-03-25 17:22:22 | INFO | Removing any existing dirty images.
+2020-03-25 17:22:22 | INFO | Checking clean parameters for dirty image.
+2020-03-25 17:22:22 | INFO | Pixel sizes set as: ['8arcsec'].
+2020-03-25 17:22:22 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:22:22 | INFO | Image sizes set as: ['256'] pixels.
+2020-03-25 17:22:22 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:22:22 | INFO | Line emission channels set as: ['0:3~59'].
+2020-03-25 17:22:22 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:22:22 | INFO | Making dirty image of HCG68 (line only).
+2020-03-25 17:22:22 | INFO | Executing command: tclean(vis='sources/HCG68'+'.split.contsub', field='N5350', imagename='images/HCG68'+'.dirty', cell='8arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2020-03-25 17:22:29 | INFO | Completed making dirty image.
+2020-03-25 17:22:29 | INFO | Backing up AB651_params.cfg to backup.AB651_params.cfg.
+2020-03-25 17:22:32 | INFO | CASA version: 5.4.2
+2020-03-25 17:22:32 | INFO | Deleting any existing clean image(s).
+2020-03-25 17:22:32 | INFO | Starting making noise estimation.
+2020-03-25 17:22:32 | INFO | Effective integration time for HCG68: 1776 s
+2020-03-25 17:22:32 | INFO | Expected rms noise for HCG68: 0.00133737102564 Jy/beam
+2020-03-25 17:22:32 | INFO | Completed making noise estimation.
+2020-03-25 17:22:32 | INFO | Starting generation of clean image(s).
+2020-03-25 17:22:32 | INFO | Line emission channels set as: ['0:3~59'].
+2020-03-25 17:22:32 | INFO | For the targets: ['HCG68'].
+2020-03-25 17:22:32 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2020-03-25 17:22:32 | INFO | Starting HCG68 image.
+2020-03-25 17:22:32 | INFO | Automasking parameters set as:
+2020-03-25 17:22:32 | INFO | sidelobethreshold = 2.0
+2020-03-25 17:22:32 | INFO | noisethreshold = 3.0
+2020-03-25 17:22:32 | INFO | lownoisethreshold = 1.5
+2020-03-25 17:22:32 | INFO | minbeamfraction = 0.3
+2020-03-25 17:22:32 | INFO | negativethreshold = 15.0
+2020-03-25 17:22:32 | INFO | The maximum recoverable scale for HCG68 is 915 arcsec.
+2020-03-25 17:22:32 | INFO | CLEANing with scales of [0, 11, 33, 99] pixels.
+2020-03-25 17:22:32 | INFO | CLEANing HCG68 to a threshold of 0.00334342756409 Jy.
+2020-03-25 17:22:32 | INFO | Executing command: tclean(vis='sources/HCG68'+'.split.contsub', field='N5350', spw='0:3~59', imagename='images/HCG68', cell='8arcsec', imsize=[256,256], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 11, 33, 99], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00334342756409Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2020-03-25 17:25:20 | INFO | CLEANing finished. Image cube saved as HCG68.image.
+2020-03-25 17:25:20 | INFO | Coordinate system not J2000. Image will be regridded.
+2020-03-25 17:25:20 | INFO | Executing command: imregrid(imagename='images/HCG68'+'.image', template='J2000', output='images/HCG68'+'.image.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-25 17:25:21 | INFO | HCG68.image.J2000 regridded in J2000 coordinates.
+2020-03-25 17:25:21 | INFO | Executing command: imregrid(imagename='images/HCG68'+'.image.pbcor', template='J2000', output='images/HCG68'+'.image.pbcor.J2000', asvelocity=True, interpolation='linear', decimate=10, overwrite=True)
+2020-03-25 17:25:21 | INFO | HCG68.image.pbcor.J2000 regridded in J2000 coordinates.
+2020-03-25 17:25:21 | INFO | Saving image cube as HCG68_HI.fits
+2020-03-25 17:25:21 | INFO | Executing command: exportfits(imagename='images/HCG68.image.J2000', fitsimage='images/HCG68_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-25 17:25:22 | INFO | Saving primary beam corrected image cube as HCG68_HI.pbcor.fits
+2020-03-25 17:25:22 | INFO | Executing command: exportfits(imagename='images/HCG68.image.pbcor.J2000', fitsimage='images/HCG68_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-25 17:25:22 | INFO | Completed generation of clean image(s).
+2020-03-25 17:25:22 | INFO | Backing up AB651_params.cfg to backup.AB651_params.cfg.
+2020-03-25 17:25:25 | INFO | CASA version: 5.4.2
+2020-03-25 17:25:25 | INFO | Deleting any existing moment(s).
+2020-03-25 17:25:25 | INFO | Starting making noise estimation.
+2020-03-25 17:25:25 | INFO | Effective integration time for HCG68: 1776 s
+2020-03-25 17:25:25 | INFO | Expected rms noise for HCG68: 0.00133737102564 Jy/beam
+2020-03-25 17:25:25 | INFO | Completed making noise estimation.
+2020-03-25 17:25:25 | INFO | Create directory: ./moments/
+2020-03-25 17:25:25 | INFO | Starting generation of moment map(s).
+2020-03-25 17:25:25 | INFO | Executing command: immoments(imagename='images/HCG68.image.J2000',includepix=[0.00401211307691,4012.11307691],chans='',outfile='moments/HCG68.mom0')
+2020-03-25 17:25:25 | INFO | Executing command: exportfits(imagename='moments/HCG68.mom0', fitsimage='moments/HCG68.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-03-25 17:25:25 | INFO | Completed generation of moment map(s).

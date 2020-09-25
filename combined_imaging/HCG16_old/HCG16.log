@@ -1,0 +1,26 @@
+2020-06-24 14:12:16 | INFO | Starting joint (dirty) imaging of HCG 16 from the projects: ['AW234', 'AW500']
+2020-06-24 14:12:16 | INFO | MS file(s) added to combine list: ['../AW234/sources/HCG16.split.contsub']
+2020-06-24 14:12:16 | INFO | MS file(s) added to combine list: ['../AW500/sources/HCG16.split.contsub']
+2020-06-24 14:12:16 | INFO | Setting relative weights of each MS.
+2020-06-24 14:12:16 | INFO | Executing command: initweights(vis='../AW234/sources/HCG16.split.contsub', wtmode='nyq')
+2020-06-24 14:12:23 | INFO | Executing command: initweights(vis='../AW500/sources/HCG16.split.contsub', wtmode='nyq')
+2020-06-24 14:12:31 | INFO | Starting to make combined dirty image.
+2020-06-24 14:12:31 | INFO | Executing command: tclean(vis=['../AW234/sources/HCG16.split.contsub', '../AW500/sources/HCG16.split.contsub'], imagename='HCG16/HCG16.dirty', cell='4arcsec', imsize=512, spw='0:8~55', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 72], weighting='briggs', robust=2, pbcor=True, niter=0, gain=0.1, cyclefactor=2.0, interactive=False, threshold='0.75mJy', usemask='auto-multithresh', phasecenter='J2000 32.38052deg -10.15851deg')
+2020-06-24 14:15:13 | INFO | Completed joint (dirty) imaging of HCG 16.
+2020-06-24 14:15:13 | INFO | Moving CASA log to source directory.
+2020-06-24 14:21:45 | INFO | Starting joint (clean) imaging of HCG 16 from the projects: ['AW234', 'AW500']
+2020-06-24 14:21:45 | INFO | MS file(s) added to combine list: ['../AW234/sources/HCG16.split.contsub']
+2020-06-24 14:21:45 | INFO | MS file(s) added to combine list: ['../AW500/sources/HCG16.split.contsub']
+2020-06-24 14:21:45 | INFO | Setting relative weights of each MS.
+2020-06-24 14:21:45 | INFO | Executing command: initweights(vis='../AW234/sources/HCG16.split.contsub', wtmode='nyq')
+2020-06-24 14:21:47 | INFO | Executing command: initweights(vis='../AW500/sources/HCG16.split.contsub', wtmode='nyq')
+2020-06-24 14:21:50 | INFO | Starting to make combined clean image.
+2020-06-24 14:21:50 | INFO | Executing command: tclean(vis=['../AW234/sources/HCG16.split.contsub', '../AW500/sources/HCG16.split.contsub'], imagename='HCG16/HCG16', cell='4arcsec', imsize=512, spw='0:8~55', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 72], weighting='briggs', robust=2, restoringbeam='common', pbcor=True, niter=100000, gain=0.1, cyclefactor=2.0, interactive=False, threshold='0.75mJy', usemask='auto-multithresh', phasecenter='J2000 32.38052deg -10.15851deg', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0)
+2020-06-24 15:17:35 | INFO | Completed joint (clean) imaging of HCG 16.
+2020-06-24 15:17:35 | INFO | Starting generation of fits files.
+2020-06-24 15:17:35 | INFO | Saving image cube as HCG16_HI.fits
+2020-06-24 15:17:35 | INFO | Executing command: exportfits(imagename='HCG16/HCG16.image', fitsimage='HCG16/HCG16_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-06-24 15:17:36 | INFO | Saving primary beam corrected image cube as HCG16_HI.pbcor.fits
+2020-06-24 15:17:36 | INFO | Executing command: exportfits(imagename='HCG16/HCG16.image.pbcor', fitsimage='HCG16/HCG16_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-06-24 15:17:36 | INFO | Completed generating fits files.
+2020-06-24 15:17:36 | INFO | Moving logs to source directory.
