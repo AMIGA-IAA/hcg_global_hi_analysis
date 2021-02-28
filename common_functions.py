@@ -1,4 +1,4 @@
-import numpy, astropy
+import numpy, astropy, astropy.io.fits
 
 #Speed of light
 c = 299792.458 #km/s
@@ -120,3 +120,36 @@ def read_fitscube(filename,need_beam=False,widths=False,mask=False,verbose=False
         return cube,cube_ra,cube_dec,cube_vel,cube_dx,cube_dy,cube_dv
     else:
         return cube,cube_ra,cube_dec,cube_vel
+    
+def gaussian(x, mu, sig):
+    '''
+    Gaussian with mean mu and standard deviation sig.
+    
+    Inputs:
+        x: Independent variable.
+        mu: Mean of Gaussian distribution.
+        sig: Standard deviation of Gaussian.
+        
+    Outputs:
+        y: Value of Gaussian distribution at x.
+    '''
+    
+    return numpy.exp(-numpy.power((x - mu)/sig, 2.)/2.)
+    
+def gaussian2d(x, y, mux, muy, sigx, sigy):
+    '''
+    Two dimensional Gaussian with mean (mux,muy) and standard deviations sigx and sigy in the x and y directions respectively.
+    
+    Inputs:
+        x: x coordinate.
+        y: y coordinate.
+        mux: Mean of Gaussian distribution in the x-direction.
+        muy: Mean of Gaussian distribution in the y-direction.
+        sigx: Standard deviation of Gaussian in the x-direction.
+        sigy: Standard deviation of Gaussian in the y-direction.
+        
+    Outputs:
+        val: Value of Gaussian distribution at x,y.
+    '''
+    
+    return numpy.exp(-numpy.power((x - mux)/sigx, 2.)/2.)*numpy.exp(-numpy.power((y - muy)/sigy, 2.)/2.)
