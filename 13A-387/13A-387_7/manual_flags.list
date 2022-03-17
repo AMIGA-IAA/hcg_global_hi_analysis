@@ -1,0 +1,4 @@
+mode='manual' scan='17' antenna='ea05&ea23'
+mode='manual' antenna='ea25'
+mode='manual' timerange='2013/04/01/03:31:37.5~2013/04/01/03:31:47.5'
+mode='manual' timerange='2013/04/01/04:16:47.5~2013/04/01/04:17:12.5'

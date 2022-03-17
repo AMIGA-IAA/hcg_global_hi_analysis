@@ -1,0 +1,4 @@
+mode='manual' antenna='ea25'
+mode='manual' timerange='2013/03/24/07:49:40~07:49:50,2013/03/24/09:09:55~09:10:10'
+mode='manual' field='0,1' spw='0:276~278,0:618~619'
+mode='manual' field='2' spw='0:128~130,0:275~278,0:617~620'

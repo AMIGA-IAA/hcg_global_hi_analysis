@@ -1,24 +1,26 @@
-2020-08-20 09:18:15 | INFO | Starting joint (dirty) imaging of HCG 57 from the projects: ['13A-387/13A-387_9', '13A-387/13A-387_18']
-2020-08-20 09:18:15 | WARNING | MS not found: ../13A-387/13A-387_9/sources/HCG57*.*split.contsub
-2020-08-20 09:18:15 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_18/sources/HCG57.split.contsub']
-2020-08-20 09:18:15 | INFO | Setting relative weights of each MS.
-2020-08-20 09:18:15 | INFO | Executing command: initweights(vis='../13A-387/13A-387_18/sources/HCG57.split.contsub', wtmode='nyq')
-2020-08-20 09:18:27 | INFO | Starting to make combined dirty image.
-2020-08-20 09:18:27 | INFO | Executing command: tclean(vis=['../13A-387/13A-387_18/sources/HCG57.split.contsub'], imagename='HCG57/HCG57.dirty', cell='3arcsec', imsize=512, spw='0:171~512', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 7, 21, 63], weighting='briggs', robust=2, pbcor=True, niter=0, gain=0.1, cyclefactor=2.0, interactive=False, threshold='5.5mJy', usemask='auto-multithresh', phasecenter='')
-2020-08-20 09:26:18 | INFO | Completed joint (dirty) imaging of HCG 57.
-2020-08-20 09:26:18 | INFO | Moving CASA log to source directory.
-2020-09-16 11:04:47 | INFO | Starting joint (clean) imaging of HCG 57 from the projects: ['13A-387/13A-387_9', '13A-387/13A-387_18']
-2020-09-16 11:04:47 | WARNING | MS not found: ../13A-387/13A-387_9/sources/HCG57*.*split.contsub
-2020-09-16 11:04:47 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_18/sources/HCG57.split.contsub']
-2020-09-16 11:04:47 | INFO | Setting relative weights of each MS.
-2020-09-16 11:04:47 | INFO | Executing command: initweights(vis='../13A-387/13A-387_18/sources/HCG57.split.contsub', wtmode='nyq')
-2020-09-16 11:05:07 | INFO | Starting to make combined clean image.
-2020-09-16 11:05:07 | INFO | Executing command: tclean(vis=['../13A-387/13A-387_18/sources/HCG57.split.contsub'], imagename='HCG57/HCG57', cell='3arcsec', imsize=512, spw='0:171~512', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 7, 21, 63], weighting='briggs', robust=2, restoringbeam='common', pbcor=True, niter=100000, gain=0.1, cyclefactor=2.0, interactive=False, threshold='2.25mJy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=1.25, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0)
-2020-09-16 13:56:09 | INFO | Completed joint (clean) imaging of HCG 57.
-2020-09-16 13:56:09 | INFO | Starting generation of fits files.
-2020-09-16 13:56:09 | INFO | Saving image cube as HCG57_HI.fits
-2020-09-16 13:56:09 | INFO | Executing command: exportfits(imagename='HCG57/HCG57.image', fitsimage='HCG57/HCG57_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
-2020-09-16 13:56:11 | INFO | Saving primary beam corrected image cube as HCG57_HI.pbcor.fits
-2020-09-16 13:56:11 | INFO | Executing command: exportfits(imagename='HCG57/HCG57.image.pbcor', fitsimage='HCG57/HCG57_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
-2020-09-16 13:56:13 | INFO | Completed generating fits files.
-2020-09-16 13:56:13 | INFO | Moving logs to source directory.
+2021-04-29 18:36:06 | INFO | Starting joint (dirty) imaging of HCG 57 from the projects: ['13A-387/13A-387_9', '13A-387/13A-387_18']
+2021-04-29 18:36:06 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_9/sources/HCG57.split.contsub']
+2021-04-29 18:36:06 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_18/sources/HCG57.split.contsub']
+2021-04-29 18:36:06 | INFO | Setting relative weights of each MS.
+2021-04-29 18:36:06 | INFO | Executing command: initweights(vis='../13A-387/13A-387_9/sources/HCG57.split.contsub', wtmode='nyq')
+2021-04-29 18:36:21 | INFO | Executing command: initweights(vis='../13A-387/13A-387_18/sources/HCG57.split.contsub', wtmode='nyq')
+2021-04-29 18:36:35 | INFO | Starting to make combined dirty image.
+2021-04-29 18:36:35 | INFO | Executing command: tclean(vis=['../13A-387/13A-387_9/sources/HCG57.split.contsub', '../13A-387/13A-387_18/sources/HCG57.split.contsub'], imagename='HCG57/HCG57.dirty', cell='3arcsec', imsize=512, spw='0:171~512', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 7, 21, 63], weighting='briggs', robust=2, pbcor=True, niter=0, gain=0.1, cyclefactor=2.0, interactive=False, threshold='1.5mJy', usemask='auto-multithresh', phasecenter='')
+2021-04-29 18:53:11 | INFO | Completed joint (dirty) imaging of HCG 57.
+2021-04-29 18:53:11 | INFO | Moving CASA log to source directory.
+2021-04-29 18:53:18 | INFO | Starting joint (clean) imaging of HCG 57 from the projects: ['13A-387/13A-387_9', '13A-387/13A-387_18']
+2021-04-29 18:53:18 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_9/sources/HCG57.split.contsub']
+2021-04-29 18:53:18 | INFO | MS file(s) added to combine list: ['../13A-387/13A-387_18/sources/HCG57.split.contsub']
+2021-04-29 18:53:18 | INFO | Setting relative weights of each MS.
+2021-04-29 18:53:18 | INFO | Executing command: initweights(vis='../13A-387/13A-387_9/sources/HCG57.split.contsub', wtmode='nyq')
+2021-04-29 18:53:30 | INFO | Executing command: initweights(vis='../13A-387/13A-387_18/sources/HCG57.split.contsub', wtmode='nyq')
+2021-04-29 18:53:41 | INFO | Starting to make combined clean image.
+2021-04-29 18:53:41 | INFO | Executing command: tclean(vis=['../13A-387/13A-387_9/sources/HCG57.split.contsub', '../13A-387/13A-387_18/sources/HCG57.split.contsub'], imagename='HCG57/HCG57', cell='3arcsec', imsize=512, spw='0:171~512', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 7, 21, 63], weighting='briggs', robust=2, restoringbeam='common', pbcor=True, niter=100000, gain=0.1, cyclefactor=2.0, interactive=False, threshold='1.5mJy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=1.25, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0)
+2021-04-30 00:09:15 | INFO | Completed joint (clean) imaging of HCG 57.
+2021-04-30 00:09:15 | INFO | Starting generation of fits files.
+2021-04-30 00:09:15 | INFO | Saving image cube as HCG57_HI.fits
+2021-04-30 00:09:15 | INFO | Executing command: exportfits(imagename='HCG57/HCG57.image', fitsimage='HCG57/HCG57_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2021-04-30 00:09:17 | INFO | Saving primary beam corrected image cube as HCG57_HI.pbcor.fits
+2021-04-30 00:09:17 | INFO | Executing command: exportfits(imagename='HCG57/HCG57.image.pbcor', fitsimage='HCG57/HCG57_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2021-04-30 00:09:19 | INFO | Completed generating fits files.
+2021-04-30 00:09:19 | INFO | Moving logs to source directory.

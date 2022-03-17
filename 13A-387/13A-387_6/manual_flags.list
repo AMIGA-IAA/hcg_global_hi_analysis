@@ -1,0 +1,8 @@
+mode='manual' antenna='ea25'
+mode='manual' antenna='ea19'
+mode='manual' antenna='ea26'
+mode='manual' field='0,1,2' spw='0:249~252'
+mode='manual' scan='35' antenna='ea03&ea10'
+mode='manual' field='1,2' spw='0:591~593'
+mode='manual' field='2' spw='0:253' antenna='ea05&ea11'
+mode='manual' field='2' spw='0:248~253' antenna='ea13&ea14'

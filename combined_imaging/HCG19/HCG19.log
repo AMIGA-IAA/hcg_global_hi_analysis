@@ -1,0 +1,26 @@
+2020-11-12 21:50:36 | INFO | Starting joint (dirty) imaging of HCG 19 from the projects: ['AV206/AV206a', 'AV206/AV206b']
+2020-11-12 21:50:36 | INFO | MS file(s) added to combine list: ['../AV206/AV206a/sources/HCG19.split.contsub']
+2020-11-12 21:50:36 | INFO | MS file(s) added to combine list: ['../AV206/AV206b/sources/HCG19.split.contsub']
+2020-11-12 21:50:36 | INFO | Setting relative weights of each MS.
+2020-11-12 21:50:36 | INFO | Executing command: initweights(vis='../AV206/AV206a/sources/HCG19.split.contsub', wtmode='nyq')
+2020-11-12 21:50:36 | INFO | Executing command: initweights(vis='../AV206/AV206b/sources/HCG19.split.contsub', wtmode='nyq')
+2020-11-12 21:50:37 | INFO | Starting to make combined dirty image.
+2020-11-12 21:50:37 | INFO | Executing command: tclean(vis=['../AV206/AV206a/sources/HCG19.split.contsub', '../AV206/AV206b/sources/HCG19.split.contsub'], imagename='HCG19/HCG19.dirty', cell='5arcsec', imsize=512, spw='', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 5, 15, 45], weighting='briggs', robust=2, pbcor=True, niter=0, gain=0.1, cyclefactor=2.0, interactive=False, threshold='1.125mJy', usemask='auto-multithresh', phasecenter='J2000 40.688090deg -12.411806deg')
+2020-11-12 21:51:48 | INFO | Completed joint (dirty) imaging of HCG 19.
+2020-11-12 21:51:48 | INFO | Moving CASA log to source directory.
+2020-11-12 21:54:06 | INFO | Starting joint (clean) imaging of HCG 19 from the projects: ['AV206/AV206a', 'AV206/AV206b']
+2020-11-12 21:54:06 | INFO | MS file(s) added to combine list: ['../AV206/AV206a/sources/HCG19.split.contsub']
+2020-11-12 21:54:06 | INFO | MS file(s) added to combine list: ['../AV206/AV206b/sources/HCG19.split.contsub']
+2020-11-12 21:54:06 | INFO | Setting relative weights of each MS.
+2020-11-12 21:54:06 | INFO | Executing command: initweights(vis='../AV206/AV206a/sources/HCG19.split.contsub', wtmode='nyq')
+2020-11-12 21:54:06 | INFO | Executing command: initweights(vis='../AV206/AV206b/sources/HCG19.split.contsub', wtmode='nyq')
+2020-11-12 21:54:07 | INFO | Starting to make combined clean image.
+2020-11-12 21:54:07 | INFO | Executing command: tclean(vis=['../AV206/AV206a/sources/HCG19.split.contsub', '../AV206/AV206b/sources/HCG19.split.contsub'], imagename='HCG19/HCG19', cell='5arcsec', imsize=512, spw='', specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='mosaic', wprojplanes=128, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 5, 15, 45], weighting='briggs', robust=2, restoringbeam=['41arcsec', '27arcsec', '3deg'], pbcor=True, niter=100000, gain=0.1, cyclefactor=2.0, interactive=False, threshold='1.125mJy', usemask='auto-multithresh', phasecenter='J2000 40.688090deg -12.411806deg', sidelobethreshold=1.25, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0)
+2020-11-12 22:11:23 | INFO | Completed joint (clean) imaging of HCG 19.
+2020-11-12 22:11:23 | INFO | Starting generation of fits files.
+2020-11-12 22:11:23 | INFO | Saving image cube as HCG19_HI.fits
+2020-11-12 22:11:23 | INFO | Executing command: exportfits(imagename='HCG19/HCG19.image', fitsimage='HCG19/HCG19_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-11-12 22:11:23 | INFO | Saving primary beam corrected image cube as HCG19_HI.pbcor.fits
+2020-11-12 22:11:23 | INFO | Executing command: exportfits(imagename='HCG19/HCG19.image.pbcor', fitsimage='HCG19/HCG19_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2020-11-12 22:11:24 | INFO | Completed generating fits files.
+2020-11-12 22:11:24 | INFO | Moving logs to source directory.

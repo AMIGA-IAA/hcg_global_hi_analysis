@@ -1,6 +1,6 @@
 # SoFiA parameter file
 # Creator: SoFiA 1.3.2
-# Date:    Fri Sep  4 17:32:07 2020
+# Date:    Tue Apr 27 04:06:49 2021
 
 CNHI.maxScale	=	-1
 CNHI.medianTest	=	true
@@ -70,7 +70,7 @@ reliability.negPerBin	=	1.0
 reliability.parSpace	=	['snr_mean', 'snr_sum', 'snr_max']
 reliability.scaleKernel	=	0.50
 reliability.skellamTol	=	-0.5
-reliability.threshold	=	0.95
+reliability.threshold	=	0.85
 reliability.usecov	=	true
 scaleNoise.edgeX	=	0
 scaleNoise.edgeY	=	0

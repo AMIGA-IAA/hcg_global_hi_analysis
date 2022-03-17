@@ -1,0 +1,8 @@
+mode='manual' antenna='ea19'
+mode='manual' field='0' spw='0:279~281'
+mode='manual' field='1,2' spw='0:279~283'
+mode='manual' field='1,2' spw='0:621~623'
+mode='manual' timerange='2013/07/17/02:01:45~2013/07/17/02:02:35'
+mode='manual' scan='4~12' antenna='ea10&ea13;ea13&ea14;ea13&ea15;ea14&ea15'
+mode='manual' scan='14~23' antenna='ea03&ea12;ea13&ea14;ea14&ea15;ea14&ea22'
+mode='manual' scan='25~33' antenna='ea04&ea10;ea04&ea12;ea10&ea14;ea13&ea14;ea13&ea22;ea14&ea15;ea17&ea28;ea18&ea28'

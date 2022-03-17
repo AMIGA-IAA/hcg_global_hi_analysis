@@ -1,0 +1,8 @@
+mode='manual' antenna='ea25'
+mode='manual' antenna='ea19'
+mode='manual' antenna='ea03'
+mode='manual' timerange='2013/07/06/23:41:00~2013/07/06/23:41:40'
+mode='manual' timerange='2013/07/06/23:53:00~2013/07/06/23:54:20'
+mode='manual' timerange='2013/07/07/00:57:30~2013/07/07/00:59:25'
+mode='manual' antenna='ea04&ea10;ea10&ea13;ea10&ea14;ea10&ea15;ea13&ea14;ea13&ea15;ea14&ea15;ea14&ea22;ea15&ea22;ea20&ea22'
+mode='manual' scan='14~35' antenna='ea04&ea12;ea04&ea13;ea04&ea14;ea04&ea15;ea07&ea17;ea10&ea12;ea10&ea22;ea10&ea24;ea12&ea13;ea12&ea14;ea12&ea15;ea13&ea22;ea17&ea28;ea18&ea28'

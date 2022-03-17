@@ -1,0 +1,6 @@
+mode='manual' antenna='ea02'
+mode='manual' antenna='ea28'
+mode='manual' antenna='ea25'
+mode='manual' timerange='2013/03/18/07:08:20~07:09:00'
+mode='manual' field='0' spw='0:170~172'
+mode='manual' field='1,2' spw='0:169~173'

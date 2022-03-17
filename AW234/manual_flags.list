@@ -1,0 +1,6 @@
+mode='manual' scan='39,40,41,97'
+mode='manual' timerange='1989/07/11/07:12:00~1989/07/11/07:24:00'
+mode='manual' timerange='1989/07/11/06:28:00~1989/07/11/06:38:00'
+mode='manual' timerange='1989/07/11/10:46:30~1989/07/11/10:47:30'
+mode='manual' timerange='1989/07/11/13:04:00~1989/07/11/20:52:00' antenna='VA12,VA15,VA17,VA26'
+mode='manual' timerange='1989/07/11/10:50:00~1989/07/11/10:53:00'

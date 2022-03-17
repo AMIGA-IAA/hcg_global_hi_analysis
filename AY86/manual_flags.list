@@ -1,0 +1,7 @@
+mode='manual' observation='4,7,8'
+mode='manual' field='HCG40' observation='1' antenna='VA05&VA10;VA05&VA13;VA05&VA23;VA10&VA13;VA10&VA21;VA13&VA18;VA13&VA20;VA13&VA21;VA17&VA20;VA18&VA19;VA18&VA21;VA19&VA21;VA20&VA24'
+mode='manual' field='HCG40' scan='3' antenna='VA08&VA17'
+mode='manual' field='HCG40' scan='7' antenna='VA05&VA24;VA08&VA17;VA09&VA22;VA13&VA24;VA18&VA22;VA19&VA22;VA21&VA24;VA25&VA26'
+mode='manual' field='HCG40' scan='9' antenna='VA13&VA24'
+mode='manual' field='HCG40' observation='5~6' antenna='VA03&VA27;VA15&VA21;VA15&VA27;VA15&VA28;VA20&VA28;VA21&VA28;VA27&VA28'
+mode='manual' field='HCG40' scan='40' antenna='VA03&VA28;VA07&VA20;VA15&VA20;VA25&VA28'

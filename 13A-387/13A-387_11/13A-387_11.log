@@ -261,3 +261,71 @@
 2020-09-08 13:13:44 | INFO | Executing command: immoments(imagename='images/HCG59.image',includepix=[0.00316214299209,3162.14299209],chans='',outfile='moments/HCG59.mom0')
 2020-09-08 13:13:52 | INFO | Executing command: exportfits(imagename='moments/HCG59.mom0', fitsimage='moments/HCG59.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
 2020-09-08 13:13:52 | INFO | Completed generation of moment map(s).
+2021-08-27 18:09:22 | INFO | CASA version: 5.4.2
+2021-08-27 18:09:22 | INFO | Starting plotting amplitude spectrum.
+2021-08-27 18:09:22 | INFO | Plotting amplitude vs channel to ./plots/HCG59_amp_chn.png
+2021-08-27 18:13:33 | INFO | Plotting amplitude vs velocity to ./plots/HCG59_amp_vel.png
+2021-08-27 18:23:17 | INFO | Completed plotting amplitude spectrum.
+2021-08-27 18:23:17 | INFO | Starting continuum subtraction.
+2021-08-27 18:23:17 | INFO | Checking for line free channel ranges in parameters.
+2021-08-27 18:23:17 | INFO | Line free channels set as: ['0:85~120;512~598'].
+2021-08-27 18:23:17 | INFO | Fit order(s) set as: 1.
+2021-08-27 18:23:17 | INFO | For the targets: ['HCG59'].
+2021-08-27 18:23:17 | INFO | Subtracting the continuum from field: HCG59
+2021-08-27 18:23:17 | INFO | Executing command: uvcontsub(vis='sources/HCG59'+'.split', field='HCG59', fitspw='0:85~120;512~598', spw='0', excludechans=False, combine='spw', solint='int', fitorder=1, want_cont=False)
+2021-08-27 18:28:04 | INFO | Completed continuum subtraction.
+2021-08-27 18:28:04 | INFO | Starting plotting amplitude spectrum.
+2021-08-27 18:28:04 | INFO | Plotting amplitude vs channel to ./plots/HCG59_contsub_amp_chn.png
+2021-08-27 18:34:58 | INFO | Completed plotting amplitude spectrum.
+2021-08-27 18:34:58 | INFO | Deleting existing dirty image(s): ['images/HCG59.dirty.sumwt', 'images/HCG59.dirty.pb', 'images/HCG59.dirty.psf', 'images/HCG59.dirty.image', 'images/HCG59.dirty.residual', 'images/HCG59.dirty.model']
+2021-08-27 18:34:58 | INFO | Starting making dirty image.
+2021-08-27 18:34:58 | INFO | Removing any existing dirty images.
+2021-08-27 18:34:58 | INFO | Checking clean parameters for dirty image.
+2021-08-27 18:34:58 | INFO | Pixel sizes set as: ['3arcsec'].
+2021-08-27 18:34:58 | INFO | For the targets: ['HCG59'].
+2021-08-27 18:34:58 | INFO | Image sizes set as: ['1024'] pixels.
+2021-08-27 18:34:58 | INFO | For the targets: ['HCG59'].
+2021-08-27 18:34:58 | INFO | Line emission channels set as: ['0:120~512'].
+2021-08-27 18:34:58 | INFO | For the targets: ['HCG59'].
+2021-08-27 18:34:58 | INFO | Making dirty image of HCG59 (line only).
+2021-08-27 18:34:58 | INFO | Executing command: tclean(vis='sources/HCG59'+'.split.contsub', field='HCG59', imagename='images/HCG59'+'.dirty', cell='3arcsec', imsize=[1024,1024], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='hogbom', weighting='briggs', robust=2, restoringbeam='common', niter=0, phasecenter='', interactive=False)
+2021-08-27 18:51:11 | INFO | Completed making dirty image.
+2021-08-27 18:51:11 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2021-08-27 18:51:21 | INFO | CASA version: 5.4.2
+2021-08-27 18:51:21 | INFO | Deleting any existing clean image(s).
+2021-08-27 18:51:22 | INFO | Starting making noise estimation.
+2021-08-27 18:51:30 | INFO | Effective integration time for HCG59: 6433 s
+2021-08-27 18:51:30 | INFO | Expected rms noise for HCG59: 0.000912832053851 Jy/beam
+2021-08-27 18:51:30 | INFO | Completed making noise estimation.
+2021-08-27 18:51:30 | INFO | Starting generation of clean image(s).
+2021-08-27 18:51:30 | INFO | Line emission channels set as: ['0:120~512'].
+2021-08-27 18:51:30 | INFO | For the targets: ['HCG59'].
+2021-08-27 18:51:30 | INFO | Setting CLEAN algorithm to MS-CLEAN.
+2021-08-27 18:51:30 | INFO | Starting HCG59 image.
+2021-08-27 18:51:30 | INFO | Automasking parameters set as:
+2021-08-27 18:51:30 | INFO | sidelobethreshold = 2.0
+2021-08-27 18:51:30 | INFO | noisethreshold = 3.0
+2021-08-27 18:51:30 | INFO | lownoisethreshold = 1.5
+2021-08-27 18:51:30 | INFO | minbeamfraction = 0.3
+2021-08-27 18:51:30 | INFO | negativethreshold = 15.0
+2021-08-27 18:51:31 | INFO | The maximum recoverable scale for HCG59 is 826 arcsec.
+2021-08-27 18:51:31 | INFO | CLEANing with scales of [0, 8, 24, 73] pixels.
+2021-08-27 18:51:31 | INFO | CLEANing HCG59 to a threshold of 0.00228208013463 Jy.
+2021-08-27 18:51:31 | INFO | Executing command: tclean(vis='sources/HCG59'+'.split.contsub', field='HCG59', spw='0:120~512', imagename='images/HCG59', cell='3arcsec', imsize=[1024,1024], specmode='cube', outframe='bary', veltype='radio', restfreq='1420405751.786Hz', gridder='wproject', wprojplanes=-1, pblimit=0.1, normtype='flatnoise', deconvolver='multiscale', scales=[0, 8, 24, 73], restoringbeam='common', pbcor=True, weighting='briggs', robust=2, niter=100000, gain=0.1, threshold='0.00228208013463Jy', usemask='auto-multithresh', phasecenter='', sidelobethreshold=2.0, noisethreshold=3.0, lownoisethreshold=1.5, minbeamfrac=0.3, negativethreshold=15.0, cyclefactor=2.0,interactive=False)
+2021-08-27 20:56:36 | INFO | CLEANing finished. Image cube saved as HCG59.image.
+2021-08-27 20:56:36 | INFO | Saving image cube as HCG59_HI.fits
+2021-08-27 20:56:36 | INFO | Executing command: exportfits(imagename='images/HCG59.image', fitsimage='images/HCG59_HI.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2021-08-27 20:56:43 | INFO | Saving primary beam corrected image cube as HCG59_HI.pbcor.fits
+2021-08-27 20:56:43 | INFO | Executing command: exportfits(imagename='images/HCG59.image.pbcor', fitsimage='images/HCG59_HI.pbcor.fits', velocity=True,optical=False,overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2021-08-27 20:56:50 | INFO | Completed generation of clean image(s).
+2021-08-27 20:56:50 | INFO | Backing up 13A-387_11_params.cfg to backup.13A-387_11_params.cfg.
+2021-08-27 20:57:00 | INFO | CASA version: 5.4.2
+2021-08-27 20:57:00 | INFO | Deleting any existing moment(s).
+2021-08-27 20:57:00 | INFO | Starting making noise estimation.
+2021-08-27 20:57:08 | INFO | Effective integration time for HCG59: 6433 s
+2021-08-27 20:57:08 | INFO | Expected rms noise for HCG59: 0.00105404766403 Jy/beam
+2021-08-27 20:57:08 | INFO | Completed making noise estimation.
+2021-08-27 20:57:08 | INFO | Starting generation of moment map(s).
+2021-08-27 20:57:08 | INFO | Executing command: immoments(imagename='images/HCG59.image',includepix=[0.00273849616155,2738.49616155],chans='',outfile='moments/HCG59.mom0')
+2021-08-27 20:57:19 | INFO | Executing command: exportfits(imagename='moments/HCG59.mom0', fitsimage='moments/HCG59.mom0.fits',overwrite=True,dropstokes=True,stokeslast=True,history=True,dropdeg=True)
+2021-08-27 20:57:19 | INFO | Completed generation of moment map(s).
