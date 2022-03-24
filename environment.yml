@@ -1,0 +1,15 @@
+name: hcg_hi_analysis
+channels:
+    - conda-forge
+    - astropy
+dependencies:
+    - python=3.7
+    - numpy=1.16
+    - matplotlib=3.1
+    - aplpy=2.0
+    - jupyterlab
+    - astroquery=0.4
+    - requests=2.22
+    - tqdm
+    - pip:
+        - pycf3==2020.12
