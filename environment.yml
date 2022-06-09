@@ -9,7 +9,7 @@ dependencies:
     - matplotlib=3.1
     - aplpy=2.0
     - jupyterlab
-    - astroquery=0.4
+    - astroquery=0.4.1
     - requests=2.22
     - tqdm
     - pip:
