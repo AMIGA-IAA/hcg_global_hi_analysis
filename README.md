@@ -8,21 +8,67 @@ If you wish to re-generate figures and tables from Jones et al. (in prep.) witho
 
 ## Prerequisites
 
-The only prerequistite of the analysis scripts is [Conda](https://docs.conda.io/en/latest/), which is required to construct the Python environment to execute the scripts. The [environment.yml](https://github.com/AMIGA-IAA/hcg_global_hi_analysis/blob/master/environment.yml) can be used to construct this environment as described [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
+The only software prerequistite of the analysis scripts is [Conda](https://docs.conda.io/en/latest/), which is required to construct the Python environment to execute the scripts. The [environment.yml](https://github.com/AMIGA-IAA/hcg_global_hi_analysis/blob/master/environment.yml) can be used to construct this environment as described [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file), or see instructions below.
+
+## Minimum system requirements
+
+To succesfully download all the data products and run all the analysis notebooks will require approximately 30 GB of disk space and 16 GB of RAM. This repository was tested on Ubuntu 18.04 and should run on any similar Unix-based system.
 
 ## Downloading and extract the VLA and GBT data products
 
-The HI image cubes of HCGs and cubelets of separated features (from Jones et al. in prep.), as well as the GBT spectra from [Borthakur et al. 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...710..385B/abstract) can be downloaded from our [Zenodo repository](https://doi.org/10.5281/zenodo.6366659). If you make use of these data, please cite the associated papers. The repository also includes optical images for each HCG from [DECaLS](https://www.legacysurvey.org/decamls/), [SDSS](http://skyserver.sdss.org), or [POSS](https://stdatu.stsci.edu/cgi-bin/dss_form) (depending on the region of sky). The directory structure of this repository is constructed to match that of the downloaded data products and the zip file must be extracted in the correct location. 
+The HI image cubes of HCGs and cubelets of separated features (from Jones et al. in prep.), as well as the GBT spectra from [Borthakur et al. 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...710..385B/abstract) can be downloaded from our [Zenodo repository](https://doi.org/10.5281/zenodo.6629552). If you make use of these data, please cite the associated papers. The repository also includes optical images for each HCG from [DECaLS](https://www.legacysurvey.org/decamls/), [SDSS](http://skyserver.sdss.org), or [POSS](https://stdatu.stsci.edu/cgi-bin/dss_form) (depending on the region of sky). The directory structure of this repository is constructed to match that of the downloaded data products and the zip file must be extracted in the correct location. This can be achieved with the commands in the next section.
 
-After downloading the zip file from Zenodo move it inside the top direcory of this repository (e.g. "hcg\_global\_hi\_analysis"). Then run the following command in the terminal:
+## Setup instructions
 
+These commands will install [Miniconda](https://docs.conda.io/en/latest/miniconda.html), create the required Python environment, and download and extract the data products from Zenodo.
+
+Create a working directory for the project.
 ```bash
-tar -xvzf hcg_hi_data_products_20220318.tar.gz
+mkdir workdir
+cd workdir
+```
+
+Download and install Miniconda.
+```bash
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b -p conda-install
+source conda-install/etc/profile.d/conda.sh
+conda install mamba -c conda-forge -y
+```
+
+Download this repository.
+```bash
+curl -LO https://github.com/AMIGA-IAA/hcg_global_hi_analysis/archive/refs/heads/master.zip
+unzip master.zip
+cd hcg_global_hi_analysis-master/
+```
+
+Create the Python environment.
+```bash
+mamba env create -f environment.yml
+conda activate hcg_hi_analysis
+```
+
+Download the data products from Zenodo. Note this make take some time.
+```bash
+zenodo_get -r 6629552
+```
+
+Extract the data products.
+```bash
+unzip HCG_VLA_HI_data_products.zip
+unzip GBT_spectra.zip
+unzip optical_images.zip
+```
+
+Start the Jupyter notebook session.
+```bash
+jupyter notebook
 ```
 
 ## Running the analysis notebooks
 
-After downloading and extracting both the VLA and GBT data products from the [Zenodo repository](https://zenodo.org/record/6368247). The analysis notebooks can be run to reproduce the figure and table shown in Jones et al. (in prep.). Note that the notebooks depend on the output of each other and they must be executed in order (with some exceptions, as indicated below).
+After downloading and extracting both the VLA and GBT data products from the [Zenodo repository](https://zenodo.org/record/6629552). The analysis notebooks can be run to reproduce the figure and table shown in Jones et al. (in prep.). Note that the notebooks depend on the output of each other and they must be executed in order (with some exceptions, as indicated below).
 
 After constructing the Python environment with Conda it can be activate with the following terminal command:
 
