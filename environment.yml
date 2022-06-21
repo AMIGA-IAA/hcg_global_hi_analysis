@@ -14,5 +14,6 @@ dependencies:
     - tqdm
     - zenodo_get
     - pip
+    - unzip
     - pip:
         - pycf3==2020.12
