@@ -106,10 +106,14 @@ This notebook produces HI contour overlays on optical images from DECaLS, SDSS, 
 
 This notebook makes additional contour overlays where emission from member galaxies, non-member galaxies, and extended features are colour coded so that they can be easily distinguished. Either all cells can be run or just those for specific groups. This notebook depends on step 1.
 
-6. make\_paper\_tables
+6. make\_velocity\_overlays
+
+This notebook makes velocity map contour overlays on optical images from DECaLS, SDSS, or POSS. Either all cells can be run or just those for specific groups. This notebook depends on step 1.
+
+7. make\_paper\_tables
 
 This notebook produces all the tables in the paper in latex format. It depends on steps 1, 2, and 3.
 
-7. make\_paper\_plots
+8. make\_paper\_plots
 
 This notebook produces all the analysis figures in the paper. It depends on steps 1, 2, and 3.
