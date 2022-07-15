@@ -4,7 +4,7 @@ Analysis scripts, parameters files and logs for the global study of the HI conte
 
 The parameters files are intended to be used to re-run the data reduction using the associated reduction pipeline ([hcg_hi_pipeline](https://github.com/AMIGA-IAA/hcg_hi_pipeline/tree/v1.0)), see the documentation and examples within that repository for full instructions. The required raw data can be obtained from the [VLA archive](https://data.nrao.edu/portal) and the exact files imported are listed at the beginning of the log file of each project.
 
-If you wish to re-generate figures and tables from Jones et al. (in prep.) without re-reducing all the data (recommended) then the required data products for the analysis scripts can be obtained from our [Zenodo repository](https://zenodo.org/record/6368247). 
+If you wish to re-generate figures and tables from Jones et al. (in prep.) without re-reducing all the data (recommended) then the required data products for the analysis scripts can be obtained from our [Zenodo repository](https://zenodo.org/record/6629552). 
 
 ## Prerequisites
 
