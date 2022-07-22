@@ -12,5 +12,8 @@ dependencies:
     - astroquery=0.4.1
     - requests=2.22
     - tqdm
+    - zenodo_get
+    - pip
+    - unzip
     - pip:
         - pycf3==2020.12
