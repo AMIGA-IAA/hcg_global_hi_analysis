@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # download data
-zenodo_get -r 6629552
+zenodo_get -r 6366659
 
 unzip HCG_VLA_HI_data_products.zip
 unzip GBT_spectra.zip
