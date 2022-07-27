@@ -14,7 +14,15 @@ The only software prerequistite of the analysis scripts is [Conda](https://docs.
 
 To succesfully download all the data products and run all the analysis notebooks will require approximately 30 GB of disk space and 16 GB of RAM. This repository was tested on Ubuntu 18.04 and should run on any similar Unix-based system.
 
-## Downloading and extract the VLA and GBT data products
+## Launching through Binder 
+
+If your system does not meet the minimum requirements and prerequistites, or if, for example, you only intend to reproduce a few figures from the paper, then we suggest launching this repository in the [Binder](https://mybinder.org/) service by clicking the following button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/HEAD)
+
+However, we note that because of the large volume of data contained in the associated [Zenodo repository](https://zenodo.org/record/6629552) the Binder container may take over 10 minutes to load, or may stall during loading and need to be restarted. Your experience may depend on your physical location as well as the current load on the infrastructure where Binder attempts to launch the container. 
+
+If you launch the notebooks in Binder then you can skip ahead to the section titled "Running the analysis notebooks" below and ignore the first two commands.
+
+## Downloading and extracting the VLA and GBT data products
 
 The HI image cubes of HCGs and cubelets of separated features (from Jones et al. in prep.), as well as the GBT spectra from [Borthakur et al. 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...710..385B/abstract) can be downloaded from our [Zenodo repository](https://doi.org/10.5281/zenodo.6629552). If you make use of these data, please cite the associated papers. The repository also includes optical images for each HCG from [DECaLS](https://www.legacysurvey.org/decamls/), [SDSS](http://skyserver.sdss.org), or [POSS](https://stdatu.stsci.edu/cgi-bin/dss_form) (depending on the region of sky). The directory structure of this repository is constructed to match that of the downloaded data products and the zip file must be extracted in the correct location. This can be achieved with the commands in the next section.
 
