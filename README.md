@@ -67,6 +67,7 @@ Extract the data products.
 unzip HCG_VLA_HI_data_products.zip
 unzip GBT_spectra.zip
 unzip optical_images.zip
+unzip HCG_VLA_HI_mom1_maps.zip
 ```
 
 Start the Jupyter notebook session.
