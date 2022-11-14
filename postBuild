@@ -7,7 +7,7 @@ mamba create \
 mamba clean -yaf # clean up downloaded files and indexes
 
 # download data
-zenodo_get -r 6366659
+#zenodo_get -r 6366659
 
 unzip HCG_VLA_HI_data_products.zip
 unzip GBT_spectra.zip
