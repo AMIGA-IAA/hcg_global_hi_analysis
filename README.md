@@ -16,7 +16,7 @@ To succesfully download all the data products and run all the analysis notebooks
 
 ## Launching through Binder 
 
-If your system does not meet the minimum requirements and prerequistites, or if, for example, you only intend to reproduce a few figures from the paper, then we suggest launching this repository in the [Binder](https://mybinder.org/) service by clicking the following button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/HEAD)
+If your system does not meet the minimum requirements and prerequistites, or if, for example, you only intend to reproduce a few figures from the paper, then we suggest launching this repository in the [Binder](https://mybinder.org/) service by clicking the following button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/HEAD). You can also try the [![Binder](https://binder.notebooks.egi.eu/badge_logo.svg)](https://binder.notebooks.egi.eu/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/binder) offered by [EGI](https://marketplace.eosc-portal.eu/services/egi-notebooks).
 
 However, we note that because of the large volume of data contained in the associated [Zenodo repository](https://doi.org/10.5281/zenodo.6366659) the Binder container may take over 10 minutes to load, or may stall during loading and need to be restarted. Your experience may depend on your physical location as well as the current load on the infrastructure where Binder attempts to launch the container. 
 
