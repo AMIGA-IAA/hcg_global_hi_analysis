@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -eux
+
+# waiting for solution with conda-lock
+# https://github.com/conda-incubator/conda-lock/issues/285
+pip install pycf3==2020.12
+
+# download data
+zenodo_get -r 6366659
+
+unzip HCG_VLA_HI_data_products.zip
+unzip GBT_spectra.zip
+unzip optical_images.zip
+unzip HCG_VLA_HI_mom1_maps.zip
+
+# https://repo2docker.readthedocs.io/en/latest/config_files.html#start-run-code-before-the-user-sessions-starts
+exec "$@"
