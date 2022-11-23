@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -eux
-mamba create \
-  -y \
-  --file conda-linux-64.lock \
-  --prefix ${NB_PYTHON_PREFIX}
-mamba clean -yaf # clean up downloaded files and indexes
+conda-lock install --mamba --prefix ${NB_PYTHON_PREFIX}
+#mamba create \
+#  -y \
+#  --file conda-linux-64.lock \
+#  --prefix ${NB_PYTHON_PREFIX}
+#mamba clean -yaf # clean up downloaded files and indexes
 
 # download data
 #zenodo_get -r 6366659
