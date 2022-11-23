@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eux
-conda-lock install --mamba --prefix ${NB_PYTHON_PREFIX}
+micromamba create --yes --file conda-lock.yml --prefix ${NB_PYTHON_PREFIX}
 #mamba create \
 #  -y \
 #  --file conda-linux-64.lock \
