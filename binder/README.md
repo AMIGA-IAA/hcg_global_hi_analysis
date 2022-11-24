@@ -19,4 +19,6 @@ This creates a `conda-linux-64.lock` file that can be installed with:
 conda-lock install --mamba -n hcg conda-lock.yml
 ```
 
-See `postBuild` script to see steps for binder.
+See `postBuild` script to see steps for binder using `micromamba` instead.
+
+xref: https://github.com/AMIGA-IAA/hcg_global_hi_analysis/pull/3
