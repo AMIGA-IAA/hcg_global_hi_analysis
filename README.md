@@ -126,3 +126,5 @@ This notebook produces all the tables in the paper in latex format. It depends o
 8. make\_paper\_plots
 
 This notebook produces all the analysis figures in the paper. It depends on steps 1, 2, and 3.
+
+Note: If you wish to run notebooks 4-8 without first running notebooks 1-3, or you just wish to use the data tables exactly as they are in the paper, then you can skip notebooks 1-3 if you first unzip the archive ```HCG_HI_tables.zip```, which will have been downloaded from Zenodo. Before extracting, move this archive to a new directory called ```tables```, then unzip it and launch any notebook 4-8.
