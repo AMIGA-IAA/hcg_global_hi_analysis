@@ -18,7 +18,15 @@ To succesfully download all the data products and run all the analysis notebooks
 
 If your system does not meet the minimum requirements and prerequistites, or if, for example, you only intend to reproduce a few figures from the paper, then we suggest launching this repository in the [Binder](https://mybinder.org/) service by clicking the following button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/HEAD). You can also try the [![Binder](https://binder.notebooks.egi.eu/badge_logo.svg)](https://binder.notebooks.egi.eu/v2/gh/AMIGA-IAA/hcg_global_hi_analysis/binder) offered by [EGI](https://marketplace.eosc-portal.eu/services/egi-notebooks).
 
-However, we note that because of the large volume of data contained in the associated [Zenodo repository](https://doi.org/10.5281/zenodo.6366659) the Binder container may take over 10 minutes to load, or may stall during loading and need to be restarted. Your experience may depend on your physical location as well as the current load on the infrastructure where Binder attempts to launch the container. 
+However, we note that because of the large volume of data contained in the associated [Zenodo repository](https://doi.org/10.5281/zenodo.6366659) it is not possible to populate the Binder container it. Instead, it is required that you download the data manually by opening a `Terminal` when JupyterLab starts in Binder and run the following commands:
+
+```
+zenodo_get -r 6366659
+unzip HCG_VLA_HI_data_products.zip
+unzip GBT_spectra.zip
+unzip optical_images.zip
+unzip HCG_VLA_HI_mom1_maps.zip
+```
 
 If you launch the notebooks in Binder then you can skip ahead to the section titled "Running the analysis notebooks" below and ignore the first two commands.
 
