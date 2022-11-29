@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -eux
+micromamba create --yes --file conda-lock.yml --prefix ${NB_PYTHON_PREFIX}
+#mamba create \
+#  -y \
+#  --file conda-linux-64.lock \
+#  --prefix ${NB_PYTHON_PREFIX}
+#mamba clean -yaf # clean up downloaded files and indexes
+
+# download data
+#zenodo_get -r 6366659
+
+#unzip HCG_VLA_HI_data_products.zip
+#unzip GBT_spectra.zip
+#unzip optical_images.zip
+#unzip HCG_VLA_HI_mom1_maps.zip
